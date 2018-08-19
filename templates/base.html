@@ -1,0 +1,61 @@
+<!--
+filename: base.html
+authors: Angelina Li
+last modified: 08/19/2018
+description: basic html template that other html pages inherit from
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Bachelor & Race">
+  <meta name="author" content="Angelina Li">
+
+  <title>{%title%}</title>
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- site specific css -->
+  <link rel="stylesheet" href="static/css/style.css">
+  <!-- page specific css -->
+  {%css%}
+</head>
+
+<body>
+<!-- navbar -->
+<header class="navbar navbar-expand navbar-light bg-light">
+
+  <a href="/">
+    <img class="navbar-brand img-fluid" alt="Bachelor & Race" 
+      src="static/img/med_title.png"></img>
+  </a>
+
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="the-numbers">Representation</a>
+    </li>
+  </ul>
+  
+</header>
+
+  <div class="container text-center">
+    <br>
+    {%app_entry%}
+  </div>
+
+  <footer>
+    <div class="container text-muted text-center">
+      Copyright © Angelina Li 2018. <a href="https://github.com/angelinahli/bachelorette/">Source code</a>.
+    </div>
+  </footer>
+
+  {%config%}
+  {%scripts%}
+
+</body>
+</html>

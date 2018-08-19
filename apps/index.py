@@ -3,7 +3,10 @@ import dash_html_components as html
 
 from app import app, base_template
 
-main_content = html.Div(
+layout = html.Div()
+
+"""
+html.Div(
     className="text-center",
     children=[
         html.Img(
@@ -14,7 +17,4 @@ main_content = html.Div(
         )
     ]
 )
-
-layout = base_template.render_template(
-    main_content=main_content
-)
+"""
