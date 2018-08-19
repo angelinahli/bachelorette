@@ -1,12 +1,10 @@
 import dash_core_components as dcc
 import dash_html_components as html
 
-from app import app, base_template
+from app import app
+from utils import BSContainer
 
-layout = html.Div()
-
-"""
-html.Div(
+main_content = html.Div(
     className="text-center",
     children=[
         html.Img(
@@ -17,4 +15,5 @@ html.Div(
         )
     ]
 )
-"""
+
+layout = BSContainer(main_content=main_content)
