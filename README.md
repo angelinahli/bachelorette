@@ -31,4 +31,4 @@ Because data is cool! Because the Bachelor franchise has become a cultural symbo
 )'s excellent blogpost
 
 ### Wikipedia
-* Accessed [Bachelor](https://en.wikipedia.org/wiki/The_Bachelor_(U.S._TV_series)) and [Bachelorette](https://en.wikipedia.org/wiki/The_Bachelorette) pages using the `mwclient` module.
+* Accessed [Bachelor](https://en.wikipedia.org/wiki/The_Bachelor_(U.S._TV_series)) and [Bachelorette](https://en.wikipedia.org/wiki/The_Bachelorette) pages.
