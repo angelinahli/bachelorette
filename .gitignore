@@ -1,3 +1,7 @@
 *__pycache__/*
 *.pyc
 *.swp
+data/scripts/.ipynb_checkpoints/*
+
+# intermediate working files for convenience
+data/intermediate/*
