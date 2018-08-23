@@ -29,6 +29,7 @@ Because data is cool! Because the Bachelor franchise has become a cultural symbo
 ### Race Data
 * [karenx](http://www.karenx.com/blog/minorities-on-the-bachelor-when-do-they-get-eliminated/
 )'s excellent blogpost
+* [IPUMS USA](https://usa.ipums.org/usa-action/variables/RACE#description_section)'s 'Race' variable for yearly U.S. wide racial demographic data.
 
 ### Wikipedia
 * Accessed [Bachelor](https://en.wikipedia.org/wiki/The_Bachelor_(U.S._TV_series)) and [Bachelorette](https://en.wikipedia.org/wiki/The_Bachelorette) pages.
