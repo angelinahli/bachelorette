@@ -1,7 +1,8 @@
+# cached / temporary files
 *__pycache__/*
 *.pyc
 *.swp
 data/scripts/.ipynb_checkpoints/*
 
-# intermediate working files for convenience
+# intermediate working files 
 data/intermediate/*
