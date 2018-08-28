@@ -1,0 +1,981 @@
+cid,d1,d10,d2,d3,d4,d5,d6,d7,d8,d9,datetime,e1,e10,e2,e3,e4,e5,e6,e7,e8,e9,lead,lead_flag,name,num_contestants,poc_flag,season,show,year,white,afam,amin,hisp,asn_paci,oth,mult,race_data_flag
+BA_1_ALEX_M_L,,,,,,,,,,,2002-04-09 12:00:00,,,,,,,,,,,Alex Michel,True,Alex Michel,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_AMANDA_M,,,D5,D1,D1,D1,D1,,,,2002-04-09 12:00:00,,,,,,,W,,,,Alex Michel,False,Amanda M,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_TRISTA_R,,,D5,D1,D1,D1,D1,,,,2002-04-09 12:00:00,,,,,,,E,,,,Alex Michel,False,Trista R,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_SHANNON_O,,,D5,D1,D1,D1,,,,,2002-04-09 12:00:00,,,,,,E,,,,,Alex Michel,False,Shannon O,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_KIM_X,,,D5,D4,D1,,,,,,2002-04-09 12:00:00,,,,,E,,,,,,Alex Michel,False,Kim X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_CATHY_G,,,D5,D4,,,,,,,2002-04-09 12:00:00,,,,E,,,,,,,Alex Michel,False,Cathy G,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_CHRISTINA_X,,,D5,D4,,,,,,,2002-04-09 12:00:00,,,,E,,,,,,,Alex Michel,False,Christina X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_LANEASE_A,,,D5,D4,,,,,,,2002-04-09 12:00:00,,,,E,,,,,,,Alex Michel,False,Lanease A,25,True,1,Bachelor,2002,,1.0,,,,,,True
+BA_01_RHONDA_X,,,D5,D4,,,,,,,2002-04-09 12:00:00,,,,E,,,,,,,Alex Michel,False,Rhonda X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_ALEXA_X,,,D5,,,,,,,,2002-04-09 12:00:00,,,E,,,,,,,,Alex Michel,False,Alexa X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_AMY_X,,,D5,,,,,,,,2002-04-09 12:00:00,,,E,,,,,,,,Alex Michel,False,Amy X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_ANGELA_X,,,D5,,,,,,,,2002-04-09 12:00:00,,,E,,,,,,,,Alex Michel,False,Angela X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_ANGELIQUE_X,,,D5,,,,,,,,2002-04-09 12:00:00,,,E,,,,,,,,Alex Michel,False,Angelique X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_KATIE_X,,,D5,,,,,,,,2002-04-09 12:00:00,,,E,,,,,,,,Alex Michel,False,Katie X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_MELISSA_X,,,D5,,,,,,,,2002-04-09 12:00:00,,,E,,,,,,,,Alex Michel,False,Melissa X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_TINA_X,,,D5,,,,,,,,2002-04-09 12:00:00,,,E,,,,,,,,Alex Michel,False,Tina X,25,True,1,Bachelor,2002,,,,,1.0,,,True
+BA_01_AMBER_X,,,,,,,,,,,2002-04-09 12:00:00,E,,,,,,,,,,Alex Michel,False,Amber X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_DANIELA_X,,,,,,,,,,,2002-04-09 12:00:00,E,,,,,,,,,,Alex Michel,False,Daniela X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_DENISE_X,,,,,,,,,,,2002-04-09 12:00:00,E,,,,,,,,,,Alex Michel,False,Denise X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_JACKIE_X,,,,,,,,,,,2002-04-09 12:00:00,E,,,,,,,,,,Alex Michel,False,Jackie X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_JILL_X,,,,,,,,,,,2002-04-09 12:00:00,E,,,,,,,,,,Alex Michel,False,Jill X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_KRISTINA_X,,,,,,,,,,,2002-04-09 12:00:00,E,,,,,,,,,,Alex Michel,False,Kristina X,25,True,1,Bachelor,2002,,1.0,,,,,,True
+BA_01_LISA_X,,,,,,,,,,,2002-04-09 12:00:00,E,,,,,,,,,,Alex Michel,False,Lisa X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_PAULA_X,,,,,,,,,,,2002-04-09 12:00:00,E,,,,,,,,,,Alex Michel,False,Paula X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_RACHEL_X,,,,,,,,,,,2002-04-09 12:00:00,E,,,,,,,,,,Alex Michel,False,Rachel X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_01_WENDI_X,,,,,,,,,,,2002-04-09 12:00:00,E,,,,,,,,,,Alex Michel,False,Wendi X,25,False,1,Bachelor,2002,1.0,,,,,,,True
+BA_2_AARON_B_L,,,,,,,,,,,2002-10-23 00:00:00,,,,,,,,,,,Aaron Buerge,True,Aaron Buerge,25,False,2,Bachelor,2002,1.0,,,,,,,True
+BA_02_HELENE_E,,,D5,D1,D1,D1,D1,D1,,,2002-10-23 00:00:00,,,,,,,,W,,,Aaron Buerge,False,Helene E,25,False,2,Bachelor,2002,1.0,,,,,,,True
+BA_02_BROOKE_S,,,D5,D1,D3,D1,D1,,,,2002-10-23 00:00:00,,,,,,,,E,,,Aaron Buerge,False,Brooke S,25,False,2,Bachelor,2002,1.0,,,,,,,True
+BA_02_GWEN_G,,,D5,D3,D1,D1,D1,,,,2002-10-23 00:00:00,,,,,,,E,,,,Aaron Buerge,False,Gwen G,25,False,2,Bachelor,2002,1.0,,,,,,,True
+BA_02_ANGELA_X,,,D5,D5,D3,D1,,,,,2002-10-23 00:00:00,,,,,,E,,,,,Aaron Buerge,False,Angela X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_HAYLEY_X,,,D5,D3,D3,,,,,,2002-10-23 00:00:00,,,,,E,,,,,,Aaron Buerge,False,Hayley X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_HEATHER_C,,,D5,D5,D1,,,,,,2002-10-23 00:00:00,,,,,E,,,,,,Aaron Buerge,False,Heather C,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_HEATHER_X,,,D5,D5,,,,,,,2002-10-23 00:00:00,,,,E,,,,,,,Aaron Buerge,False,Heather X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_CHRISTI_X,,,D5,D5,,,,,,,2002-10-23 00:00:00,,,,E,,,,,,,Aaron Buerge,False,Christi X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_KYLA_X,,,D5,D3,,,,,,,2002-10-23 00:00:00,,,,E,,,,,,,Aaron Buerge,False,Kyla X,25,False,2,Bachelor,2002,1.0,,,,,,,True
+BA_02_SHANNON_X,,,D5,D5,,,,,,,2002-10-23 00:00:00,,,,E,,,,,,,Aaron Buerge,False,Shannon X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_DANA_X,,,D5,,,,,,,,2002-10-23 00:00:00,,,E,,,,,,,,Aaron Buerge,False,Dana X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_ERIN_X,,,D5,,,,,,,,2002-10-23 00:00:00,,,E,,,,,,,,Aaron Buerge,False,Erin X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_ERIN_X2,,,,,,,,,,,2002-10-23 00:00:00,E,,,,,,,,,,Aaron Buerge,False,Erin X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_SUZANNE_X,,,D5,,,,,,,,2002-10-23 00:00:00,,,E,,,,,,,,Aaron Buerge,False,Suzanne X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_FRANCES_X,,,D5,,,,,,,,2002-10-23 00:00:00,,,EQ,,,,,,,,Aaron Buerge,False,Frances X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_ANINDITA_X,,,D5,,,,,,,,2002-10-23 00:00:00,,,EQ,,,,,,,,Aaron Buerge,False,Anindita X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_AMBER_X,,,,,,,,,,,2002-10-23 00:00:00,E,,,,,,,,,,Aaron Buerge,False,Amber X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_CAMILLE_X,,,,,,,,,,,2002-10-23 00:00:00,E,,,,,,,,,,Aaron Buerge,False,Camille X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_CARI_X,,,,,,,,,,,2002-10-23 00:00:00,E,,,,,,,,,,Aaron Buerge,False,Cari X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_CHRISTY_X,,,,,,,,,,,2002-10-23 00:00:00,E,,,,,,,,,,Aaron Buerge,False,Christy X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_FATIMA_X,,,,,,,,,,,2002-10-23 00:00:00,E,,,,,,,,,,Aaron Buerge,False,Fatima X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_02_LIANGY_X,,,,,,,,,,,2002-10-23 00:00:00,E,,,,,,,,,,Aaron Buerge,False,Liangy X,25,True,2,Bachelor,2002,,,,1.0,,,,True
+BA_02_LORI_X,,,,,,,,,,,2002-10-23 00:00:00,E,,,,,,,,,,Aaron Buerge,False,Lori X,25,True,2,Bachelor,2002,,1.0,,,,,,True
+BA_02_MERILEE_X,,,,,,,,,,,2002-10-23 00:00:00,E,,,,,,,,,,Aaron Buerge,False,Merilee X,25,False,2,Bachelor,2002,,,,,,,,False
+BA_3_ANDREW_F_L,,,,,,,,,,,2003-04-22 00:00:00,,,,,,,,,,,Andrew Firestone,True,Andrew Firestone,25,False,3,Bachelor,2003,1.0,,,,,,,True
+BA_03_JEN_X,,,D5,D5,D1,D1,D1,D1,,,2003-04-22 00:00:00,,,,,,,,W,,,Andrew Firestone,False,Jen X,25,False,3,Bachelor,2003,1.0,,,,,,,True
+BA_03_KIRSTEN_X,,,D5,D1,D1,D1,D1,D1,,,2003-04-22 00:00:00,,,,,,,,E,,,Andrew Firestone,False,Kirsten X,25,False,3,Bachelor,2003,1.0,,,,,,,True
+BA_03_TINA_X,,,D5,D5,D3,D1,D1,,,,2003-04-22 00:00:00,,,,,,,E,,,,Andrew Firestone,False,Tina X,25,False,3,Bachelor,2003,1.0,,,,,,,True
+BA_03_TINA_X2,,,D5,D5,,,,,,,2003-04-22 00:00:00,,,,E,,,,,,,Andrew Firestone,False,Tina X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_CRISTINA_X,,,D5,D3,D3,D1,,,,,2003-04-22 00:00:00,,,,,E,E,,,,,Andrew Firestone,False,Cristina X,25,False,3,Bachelor,2003,1.0,,,,,,,True
+BA_03_LIZ_X,,,D5,D3,D3,,,,,,2003-04-22 00:00:00,,,,,E,,,,,,Andrew Firestone,False,Liz X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_ANN_MICHELLE_X,,,D5,D3,D1,,,,,,2003-04-22 00:00:00,,,,,E,,,,,,Andrew Firestone,False,Ann Michelle X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_AUDREE_X,,,D5,D5,,,,,,,2003-04-22 00:00:00,,,,E,,,,,,,Andrew Firestone,False,Audree X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_AMBER_X,,,D5,D1,,,,,,,2003-04-22 00:00:00,,,,E,,,,,,,Andrew Firestone,False,Amber X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_HEATHER_X,,,D5,D5,,,,,,,2003-04-22 00:00:00,,,,E,,,,,,,Andrew Firestone,False,Heather X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_RACHEL_X,,,D5,,,,,,,,2003-04-22 00:00:00,,,E,,,,,,,,Andrew Firestone,False,Rachel X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_AMY_X,,,D5,,,,,,,,2003-04-22 00:00:00,,,E,,,,,,,,Andrew Firestone,False,Amy X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_AMY_X2,,,D5,,,,,,,,2003-04-22 00:00:00,E,,,,,,,,,,Andrew Firestone,False,Amy X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_SHANNON_X,,,D5,,,,,,,,2003-04-22 00:00:00,,,E,,,,,,,,Andrew Firestone,False,Shannon X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_ELIZABETH_X,,,D5,,,,,,,,2003-04-22 00:00:00,,,E,,,,,,,,Andrew Firestone,False,Elizabeth X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_CHRISTINA_X,,,D5,,,,,,,,2003-04-22 00:00:00,,,EQ,,,,,,,,Andrew Firestone,False,Christina X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_KERRI_X,,,,,,,,,,,2003-04-22 00:00:00,E,,,,,,,,,,Andrew Firestone,False,Kerri X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_JENNIFER_X,,,,,,,,,,,2003-04-22 00:00:00,E,,,,,,,,,,Andrew Firestone,False,Jennifer X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_COURTNEY_X,,,,,,,,,,,2003-04-22 00:00:00,E,,,,,,,,,,Andrew Firestone,False,Courtney X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_ANGELA_X,,,,,,,,,,,2003-04-22 00:00:00,E,,,,,,,,,,Andrew Firestone,False,Angela X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_GINNY_X,,,,,,,,,,,2003-04-22 00:00:00,E,,,,,,,,,,Andrew Firestone,False,Ginny X,25,True,3,Bachelor,2003,,1.0,,,,,,True
+BA_03_BROOKE_X,,,,,,,,,,,2003-04-22 00:00:00,E,,,,,,,,,,Andrew Firestone,False,Brooke X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_STEPHANIE_X,,,,,,,,,,,2003-04-22 00:00:00,E,,,,,,,,,,Andrew Firestone,False,Stephanie X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_TIFFANY_X,,,,,,,,,,,2003-04-22 00:00:00,E,,,,,,,,,,Andrew Firestone,False,Tiffany X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_03_KRISTEN_X,,,,,,,,,,,2003-04-22 00:00:00,E,,,,,,,,,,Andrew Firestone,False,Kristen X,25,False,3,Bachelor,2003,,,,,,,,False
+BA_4_BOB_G_L,,,,,,,,,,,2003-10-22 12:00:00,,,,,,,,,,,Bob Guiney,True,Bob Guiney,25,False,4,Bachelor,2003,1.0,,,,,,,True
+BA_04_Kelly-Jo,,,D4,D3,D1,D1,D1,D1,,,2003-10-22 12:00:00,,,,,,,,E,,,Bob Guiney,False,Kelly-jo,25,False,4,Bachelor,2003,1.0,,,,,,,True
+BA_04_Estella,,,D5,D5,D1,D1,D1,D1,,,2003-10-22 12:00:00,,,,,,,,W,,,Bob Guiney,False,Estella,25,False,4,Bachelor,2003,1.0,,,,,,,True
+BA_04_Mary,,,D6,D3,D1,D1,D1,,,,2003-10-22 12:00:00,,,,,,,E,,,,Bob Guiney,False,Mary,25,False,4,Bachelor,2003,1.0,,,,,,,True
+BA_04_Meredith,,,D4,D1,D3,D1,,,,,2003-10-22 12:00:00,,,,,,E,,,,,Bob Guiney,False,Meredith,25,False,4,Bachelor,2003,,,,,,,,False
+BA_04_Brooke,,,D4,D5,D3,,,,,,2003-10-22 12:00:00,,,,,E,,,,,,Bob Guiney,False,Brooke,25,False,4,Bachelor,2003,,,,,,,,False
+BA_04_Lee-Ann,,,D6,D1,D3,,,,,,2003-10-22 12:00:00,,,,,E,,,,,,Bob Guiney,False,Lee-ann,25,False,4,Bachelor,2003,1.0,,,,,,,True
+BA_04_Misty,,,D5,D3,,,,,,,2003-10-22 12:00:00,,,,E,,,,,,,Bob Guiney,False,Misty,25,False,4,Bachelor,2003,1.0,,,,,,,True
+BA_04_Karin,,,D4,D5,,,,,,,2003-10-22 12:00:00,,,,E,,,,,,,Bob Guiney,False,Karin,25,True,4,Bachelor,2003,,1.0,,,,,,True
+BA_04_Jenny,,,D6,D5,,,,,,,2003-10-22 12:00:00,,,,E,,,,,,,Bob Guiney,False,Jenny,25,False,4,Bachelor,2003,1.0,,,,,,,True
+BA_04_Antoinette,,,D6,D5,,,,,,,2003-10-22 12:00:00,,,,E,,,,,,,Bob Guiney,False,Antoinette,25,False,4,Bachelor,2003,1.0,,,,,,,True
+BA_04_Lindsay,,,D6,,,,,,,,2003-10-22 12:00:00,,,E,,,,,,,,Bob Guiney,False,Lindsay,25,False,4,Bachelor,2003,1.0,,,,,,,True
+BA_04_Lanah,,,D6,,,,,,,,2003-10-22 12:00:00,,,E,,,,,,,,Bob Guiney,False,Lanah,25,False,4,Bachelor,2003,1.0,,,,,,,True
+BA_04_Jenn,,,D5,,,,,,,,2003-10-22 12:00:00,,,E,,,,,,,,Bob Guiney,False,Jenn,25,False,4,Bachelor,2003,1.0,,,,,,,True
+BA_04_Christine,,,D5,,,,,,,,2003-10-22 12:00:00,,,E,,,,,,,,Bob Guiney,False,Christine,25,False,4,Bachelor,2003,,,,,,,,False
+BA_04_Darla,,,,,,,,,,,2003-10-22 12:00:00,E,,,,,,,,,,Bob Guiney,False,Darla,25,False,4,Bachelor,2003,,,,,,,,False
+BA_04_Stacey,,,,,,,,,,,2003-10-22 12:00:00,E,,,,,,,,,,Bob Guiney,False,Stacey,25,False,4,Bachelor,2003,,,,,,,,False
+BA_04_Shea,,,,,,,,,,,2003-10-22 12:00:00,E,,,,,,,,,,Bob Guiney,False,Shea,25,False,4,Bachelor,2003,,,,,,,,False
+BA_04_Heather,,,,,,,,,,,2003-10-22 12:00:00,E,,,,,,,,,,Bob Guiney,False,Heather,25,False,4,Bachelor,2003,1.0,,,,,,,True
+BA_04_Lauren,,,,,,,,,,,2003-10-22 12:00:00,E,,,,,,,,,,Bob Guiney,False,Lauren,25,False,4,Bachelor,2003,,,,,,,,False
+BA_04_Kristi,,,,,,,,,,,2003-10-22 12:00:00,E,,,,,,,,,,Bob Guiney,False,Kristi,25,False,4,Bachelor,2003,1.0,,,,,,,True
+BA_04_Samentha,,,,,,,,,,,2003-10-22 12:00:00,E,,,,,,,,,,Bob Guiney,False,Samentha,25,False,4,Bachelor,2003,,,,,,,,False
+BA_04_Leona,,,,,,,,,,,2003-10-22 12:00:00,E,,,,,,,,,,Bob Guiney,False,Leona,25,False,4,Bachelor,2003,,,,,,,,False
+BA_04_Julie,,,,,,,,,,,2003-10-22 12:00:00,E,,,,,,,,,,Bob Guiney,False,Julie,25,True,4,Bachelor,2003,,1.0,,,,,,True
+BA_04_Shelly,,,,,,,,,,,2003-10-22 12:00:00,E,,,,,,,,,,Bob Guiney,False,Shelly,25,False,4,Bachelor,2003,,,,,,,,False
+BA_04_Lindsay_clippers,,,D5,,,,,,,,2003-10-22 12:00:00,,,ED,,,,,,,,Bob Guiney,False,Lindsay Clippers,25,False,4,Bachelor,2003,1.0,,,,,,,True
+BA_5_JESSE_P_L,,,,,,,,,,,2004-05-01 12:00:00,,,,,,,,,,,Jesse Palmer,True,Jesse Palmer,25,False,5,Bachelor,2004,1.0,,,,,,,True
+BA_05_JESSICA_B,,,D7,D6,D1,D1,D1,D1,,,2004-05-01 12:00:00,,,,,,,,W,,,Jesse Palmer,False,Jessica B,25,False,5,Bachelor,2004,1.0,,,,,,,True
+BA_05_JESSICA_H,,,D8,D6,,,,,,,2004-05-01 12:00:00,,,,E,,,,,,,Jesse Palmer,False,Jessica H,25,False,5,Bachelor,2004,1.0,,,,,,,True
+BA_05_JESSICA_K,,,,,,,,,,,2004-05-01 12:00:00,E,,,,,,,,,,Jesse Palmer,False,Jessica K,25,False,5,Bachelor,2004,,,,,,,,False
+BA_05_TARA_H,,,D7,D1,D1,D1,D1,D1,,,2004-05-01 12:00:00,,,,,,,,E,,,Jesse Palmer,False,Tara H,25,False,5,Bachelor,2004,1.0,,,,,,,True
+BA_05_MANDY_J,,,D7,D2,D1,D1,D1,,,,2004-05-01 12:00:00,,,,,,,E,,,,Jesse Palmer,False,Mandy J,25,False,5,Bachelor,2004,1.0,,,,,,,True
+BA_05_MANDY_C,,,D8,,,,,,,,2004-05-01 12:00:00,,,E,,,,,,,,Jesse Palmer,False,Mandy C,25,False,5,Bachelor,2004,1.0,,,,,,,True
+BA_05_TRISH_S,,,D1,D2,D3,D1,,,,,2004-05-01 12:00:00,R1,,,,,E,,,,,Jesse Palmer,False,Trish S,25,False,5,Bachelor,2004,1.0,,,,,,,True
+BA_05_SUZIE_W,,,D8,D1,D3,,,,,,2004-05-01 12:00:00,,,,,E,,,,,,Jesse Palmer,False,Suzie W,25,False,5,Bachelor,2004,,,,,,,,False
+BA_05_KAREN_L,,,D7,D6,D3,,,,,,2004-05-01 12:00:00,,,,,E,,,,,,Jesse Palmer,False,Karen L,25,False,5,Bachelor,2004,1.0,,,,,,,True
+BA_05_JULIE_D,,,D7,D6,,,,,,,2004-05-01 12:00:00,,,,E,,,,,,,Jesse Palmer,False,Julie D,25,False,5,Bachelor,2004,1.0,,,,,,,True
+BA_05_JENNY_S,,,D8,D6,,,,,,,2004-05-01 12:00:00,,,,E,,,,,,,Jesse Palmer,False,Jenny S,25,False,5,Bachelor,2004,1.0,,,,,,,True
+BA_05_JENNY_M,,,,,,,,,,,2004-05-01 12:00:00,E,,,,,,,,,,Jesse Palmer,False,Jenny M,25,False,5,Bachelor,2004,,,,,,,,False
+BA_05_KATIE_G,,,D7,D6,,,,,,,2004-05-01 12:00:00,,,,E,,,,,,,Jesse Palmer,False,Katie G,25,False,5,Bachelor,2004,1.0,,,,,,,True
+BA_05_JEANMARIE_C,,,D8,,,,,,,,2004-05-01 12:00:00,,,E,,,,,,,,Jesse Palmer,False,Jeanmarie C,25,False,5,Bachelor,2004,,,,,,,,False
+BA_05_ANNECATHERINE_L,,,D8,,,,,,,,2004-05-01 12:00:00,,,E,,,,,,,,Jesse Palmer,False,Annecatherine L,25,False,5,Bachelor,2004,,,,,,,,False
+BA_05_AMBER_L,,,D8,,,,,,,,2004-05-01 12:00:00,,,E,,,,,,,,Jesse Palmer,False,Amber L,25,False,5,Bachelor,2004,,,,,,,,False
+BA_05_KRISTY_R,,,D8,,,,,,,,2004-05-01 12:00:00,,,E,,,,,,,,Jesse Palmer,False,Kristy R,25,False,5,Bachelor,2004,,,,,,,,False
+BA_05_CELESTE_C,,,D7,,,,,,,,2004-05-01 12:00:00,,,E,,,,,,,,Jesse Palmer,False,Celeste C,25,True,5,Bachelor,2004,,,,,,,1.0,True
+BA_05_DEBBIE_M,,,,,,,,,,,2004-05-01 12:00:00,E,,,,,,,,,,Jesse Palmer,False,Debbie M,25,False,5,Bachelor,2004,,,,,,,,False
+BA_05_DOLORES_F,,,,,,,,,,,2004-05-01 12:00:00,E,,,,,,,,,,Jesse Palmer,False,Dolores F,25,False,5,Bachelor,2004,,,,,,,,False
+BA_05_FRANCINE_J,,,,,,,,,,,2004-05-01 12:00:00,E,,,,,,,,,,Jesse Palmer,False,Francine J,25,False,5,Bachelor,2004,,,,,,,,False
+BA_05_DESHAUN_W,,,,,,,,,,,2004-05-01 12:00:00,E,,,,,,,,,,Jesse Palmer,False,Deshaun W,25,True,5,Bachelor,2004,,1.0,,,,,,True
+BA_05_HOLLY_R,,,,,,,,,,,2004-05-01 12:00:00,E,,,,,,,,,,Jesse Palmer,False,Holly R,25,False,5,Bachelor,2004,,,,,,,,False
+BA_05_RACHEL_C,,,,,,,,,,,2004-05-01 12:00:00,E,,,,,,,,,,Jesse Palmer,False,Rachel C,25,False,5,Bachelor,2004,,,,,,,,False
+BA_05_KRISTIN_C,,,,,,,,,,,2004-05-01 12:00:00,E,,,,,,,,,,Jesse Palmer,False,Kristin C,25,False,5,Bachelor,2004,,,,,,,,False
+BA_6_BYRON_V_L,,,,,,,,,,,2004-10-23 12:00:00,,,,,,,,,,,Byron Velvick,True,Byron Velvick,27,False,6,Bachelor,2004,1.0,,,,,,,True
+BA_06_Mary,,,,D2,,D1,D1,D1,D1,,2004-10-23 12:00:00,,,,,,,,,W,,Byron Velvick,False,Mary,27,True,6,Bachelor,2004,,,,1.0,,,,True
+BA_06_Tanya,,,,,D1,,D1,D1,D1,,2004-10-23 12:00:00,,,,,,,,,E,,Byron Velvick,False,Tanya,27,False,6,Bachelor,2004,1.0,,,,,,,True
+BA_06_Cynthia,,,,,,D1,D1,D1,,,2004-10-23 12:00:00,,,,,,,,E,,,Byron Velvick,False,Cynthia,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Cheresse,,,D1,,,,,,,,2004-10-23 12:00:00,,,,,,,E,,,,Byron Velvick,False,Cheresse,27,False,6,Bachelor,2004,1.0,,,,,,,True
+BA_06_Andrea,,,,D1,,,,,,,2004-10-23 12:00:00,,,,,,E,,,,,Byron Velvick,False,Andrea,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Jayne,,,D1,,,D1,,,,,2004-10-23 12:00:00,,,,,,E,,,,,Byron Velvick,False,Jayne,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Krysta,,,,,,,,,,,2004-10-23 12:00:00,,,,,E,,,,,,Byron Velvick,False,Krysta,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Elizabeth,,,,,D1,,,,,,2004-10-23 12:00:00,,,,,E,,,,,,Byron Velvick,False,Elizabeth,27,True,6,Bachelor,2004,,1.0,,,,,,True
+BA_06_Amanda,,,,,,,,,,,2004-10-23 12:00:00,,,,E,,,,,,,Byron Velvick,False,Amanda,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Kristie,,,,,,,,,,,2004-10-23 12:00:00,,,,E,,,,,,,Byron Velvick,False,Kristie,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Susie,,,,,,,,,,,2004-10-23 12:00:00,,,,E,,,,,,,Byron Velvick,False,Susie,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Heather,,,,D2,,,,,,,2004-10-23 12:00:00,,,,E,,,,,,,Byron Velvick,False,Heather,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Wende,,,,,,,,,,,2004-10-23 12:00:00,,,E,,,,,,,,Byron Velvick,False,Wende,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Natalie,,,,,,,,,,,2004-10-23 12:00:00,,,E,,,,,,,,Byron Velvick,False,Natalie,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Ashley,,,,,,,,,,,2004-10-23 12:00:00,,,E,,,,,,,,Byron Velvick,False,Ashley,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Kelley,,,,,,,,,,,2004-10-23 12:00:00,,,E,,,,,,,,Byron Velvick,False,Kelley,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Leina,,,,,,,,,,,2004-10-23 12:00:00,,,EQ,,,,,,,,Byron Velvick,False,Leina,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Carolyn,,,,,,,,,,,2004-10-23 12:00:00,E,,,,,,,,,,Byron Velvick,False,Carolyn,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Amy,,,,,,,,,,,2004-10-23 12:00:00,E,,,,,,,,,,Byron Velvick,False,Amy,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Lisa,,,,,,,,,,,2004-10-23 12:00:00,E,,,,,,,,,,Byron Velvick,False,Lisa,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Nicole,,,,,,,,,,,2004-10-23 12:00:00,E,,,,,,,,,,Byron Velvick,False,Nicole,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Kerry,,,,,,,,,,,2004-10-23 12:00:00,E,,,,,,,,,,Byron Velvick,False,Kerry,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Alma,,,,,,,,,,,2004-10-23 12:00:00,E,,,,,,,,,,Byron Velvick,False,Alma,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Kristin,,,,,,,,,,,2004-10-23 12:00:00,E,,,,,,,,,,Byron Velvick,False,Kristin,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Jennifer,,,,,,,,,,,2004-10-23 12:00:00,E,,,,,,,,,,Byron Velvick,False,Jennifer,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Abby,,,,,,,,,,,2004-10-23 12:00:00,E,,,,,,,,,,Byron Velvick,False,Abby,27,False,6,Bachelor,2004,,,,,,,,False
+BA_06_Melinda,,,,,,,,,,,2004-10-23 12:00:00,E,,,,,,,,,,Byron Velvick,False,Melinda,27,False,6,Bachelor,2004,1.0,,,,,,,True
+BA_7_CHARLIE_O_L,,,,,,,,,,,2005-04-21 12:00:00,,,,,,,,,,,Charlie OConnell,True,Charlie OConnell,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Sarah B.,D9,,D10,D6,D1,D1,D1,D1,,,2005-04-21 12:00:00,,,,,R,,,W,,,Charlie OConnell,False,Sarah b.,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Sarah W.,D9,,D1,D6,D5,D1,D1,,,,2005-04-21 12:00:00,R1,,R,,,,E,,,,Charlie OConnell,False,Sarah w.,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Krisily,D9,,D10,D6,D5,D1,D1,D1,,,2005-04-21 12:00:00,R,,,,,,,EU,,,Charlie OConnell,False,Krisily,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Kimberly,D6,,D10,D1,D5,D1,,,,,2005-04-21 12:00:00,R,,R,R,,E,,,,,Charlie OConnell,False,Kimberly,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Anitra,D5,,D10,D6,D5,,,,,,2005-04-21 12:00:00,R,,,,E,,,,,,Charlie OConnell,False,Anitra,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Kindle,D5,,D10,D6,D5,,,,,,2005-04-21 12:00:00,R,,,,E,,,,,,Charlie OConnell,False,Kindle,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Kara,D9,,D10,D1,,,,,,,2005-04-21 12:00:00,,,R,EU,,,,,,,Charlie OConnell,False,Kara,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Jenny,D6,,D10,D6,,,,,,,2005-04-21 12:00:00,R,,,E,,,,,,,Charlie OConnell,False,Jenny,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Kerry,D6,,D10,,,,,,,,2005-04-21 12:00:00,R1,,E,,,,,,,,Charlie OConnell,False,Kerry,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Carrie,D6,,D10,,,,,,,,2005-04-21 12:00:00,,,E,,,,,,,,Charlie OConnell,False,Carrie,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Megan,D5,,D1,,,,,,,,2005-04-21 12:00:00,,,EU,,,,,,,,Charlie OConnell,False,Megan,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Brenda,,,,,,,,,,,2005-04-21 12:00:00,EU,,,,,,,,,,Charlie OConnell,False,Brenda,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Kristina,,,,,,,,,,,2005-04-21 12:00:00,EU,,,,,,,,,,Charlie OConnell,False,Kristina,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Debby,,,,,,,,,,,2005-04-21 12:00:00,EU,,,,,,,,,,Charlie OConnell,False,Debby,25,True,7,Bachelor,2005,,,,,1.0,,,True
+BA_07_Katie,,,,,,,,,,,2005-04-21 12:00:00,EU,,,,,,,,,,Charlie OConnell,False,Katie,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Heather,,,,,,,,,,,2005-04-21 12:00:00,EU,,,,,,,,,,Charlie OConnell,False,Heather,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Kristen,D5,,,,,,,,,,2005-04-21 12:00:00,E,,,,,,,,,,Charlie OConnell,False,Kristen,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Kyshawn,D9,,,,,,,,,,2005-04-21 12:00:00,E,,,,,,,,,,Charlie OConnell,False,Kyshawn,25,True,7,Bachelor,2005,,1.0,,,,,,True
+BA_07_Siomara,D9,,,,,,,,,,2005-04-21 12:00:00,E,,,,,,,,,,Charlie OConnell,False,Siomara,25,True,7,Bachelor,2005,,,,1.0,,,,True
+BA_07_Emilie,D5,,,,,,,,,,2005-04-21 12:00:00,E,,,,,,,,,,Charlie OConnell,False,Emilie,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Kristine,D9,,,,,,,,,,2005-04-21 12:00:00,E,,,,,,,,,,Charlie OConnell,False,Kristine,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Geitan,D9,,,,,,,,,,2005-04-21 12:00:00,E,,,,,,,,,,Charlie OConnell,False,Geitan,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Valerie,D6,,,,,,,,,,2005-04-21 12:00:00,E,,,,,,,,,,Charlie OConnell,False,Valerie,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Danushka,D6,,,,,,,,,,2005-04-21 12:00:00,E,,,,,,,,,,Charlie OConnell,False,Danushka,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_07_Gina Marie,D9,,D10,,,,,,,,2005-04-21 12:00:00,,,E,,,,,,,,Charlie OConnell,False,Gina marie,25,False,7,Bachelor,2005,1.0,,,,,,,True
+BA_8_TRAVIS_LANE_S_L,,,,,,,,,,,2006-02-02 12:00:00,,,,,,,,,,,Travis Lane Stork,True,Travis Lane Stork,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Sarah_S,,,D12,D5,D1,D1,D1,D1,,,2006-02-02 12:00:00,,,,,R,,,W,,,Travis Lane Stork,False,Sarah S,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Sarah_B,,,"D6, D12",D2,D4,D1,,,,,2006-02-02 12:00:00,,,,R,,E,,,,,Travis Lane Stork,False,Sarah B,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Moana,,,"D6, D12",D5,D4,D1,D1,D1,,,2006-02-02 12:00:00,,,,R,,,,E,,,Travis Lane Stork,False,Moana,25,True,8,Bachelor,2006,,,,,,1.0,,True
+BA_08_Susan,,,"D6, D12",D1,D4,D1,D1,,,,2006-02-02 12:00:00,,,,R,,,E,,,,Travis Lane Stork,False,Susan,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Jehan,,,D12,D5,D1,,,,,,2006-02-02 12:00:00,,,R,,E,,,,,,Travis Lane Stork,False,Jehan,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Tara,,,"D6, D12",D5,D4,,,,,,2006-02-02 12:00:00,,,R,,E,,,,,,Travis Lane Stork,False,Tara,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Jennifer,,,"D6, D12",D2,,,,,,,2006-02-02 12:00:00,,,,ED,,,,,,,Travis Lane Stork,False,Jennifer,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Shiloh,,,"D6, D12",D5,,,,,,,2006-02-02 12:00:00,,,,E,,,,,,,Travis Lane Stork,False,Shiloh,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Cole,,,D12,,,,,,,,2006-02-02 12:00:00,,,E,,,,,,,,Travis Lane Stork,False,Cole,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Yvonne,,,D12,,,,,,,,2006-02-02 12:00:00,,,E,,,,,,,,Travis Lane Stork,False,Yvonne,25,True,8,Bachelor,2006,,,,,,1.0,,True
+BA_08_Elizabeth,,,D12,,,,,,,,2006-02-02 12:00:00,,,E,,,,,,,,Travis Lane Stork,False,Elizabeth,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Kristen,,,"D1, D12",,,,,,,,2006-02-02 12:00:00,,,ED,,,,,,,,Travis Lane Stork,False,Kristen,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Stephanie,,,,,,,,,,,2006-02-02 12:00:00,E,,,,,,,,,,Travis Lane Stork,False,Stephanie,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_April,,,,,,,,,,,2006-02-02 12:00:00,E,,,,,,,,,,Travis Lane Stork,False,April,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Cortney,,,,,,,,,,,2006-02-02 12:00:00,E,,,,,,,,,,Travis Lane Stork,False,Cortney,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Jaime,,,,,,,,,,,2006-02-02 12:00:00,E,,,,,,,,,,Travis Lane Stork,False,Jaime,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Kathy,,,,,,,,,,,2006-02-02 12:00:00,E,,,,,,,,,,Travis Lane Stork,False,Kathy,25,True,8,Bachelor,2006,,1.0,,,,,,True
+BA_08_Kyle,,,,,,,,,,,2006-02-02 12:00:00,E,,,,,,,,,,Travis Lane Stork,False,Kyle,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Lisa,,,,,,,,,,,2006-02-02 12:00:00,E,,,,,,,,,,Travis Lane Stork,False,Lisa,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Liza,,,,,,,,,,,2006-02-02 12:00:00,E,,,,,,,,,,Travis Lane Stork,False,Liza,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Princess,,,,,,,,,,,2006-02-02 12:00:00,E,,,,,,,,,,Travis Lane Stork,False,Princess,25,True,8,Bachelor,2006,,1.0,,,,,,True
+BA_08_Venus,,,,,,,,,,,2006-02-02 12:00:00,E,,,,,,,,,,Travis Lane Stork,False,Venus,25,True,8,Bachelor,2006,,,,,1.0,,,True
+BA_08_Ali_D,,,,,,,,,,,2006-02-02 12:00:00,E,,,,,,,,,,Travis Lane Stork,False,Ali D,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_08_Allie_G,,,,,,,,,,,2006-02-02 12:00:00,E,,,,,,,,,,Travis Lane Stork,False,Allie G,25,True,8,Bachelor,2006,,,,1.0,,,,True
+BA_08_Sara_H,,,,,,,,,,,2006-02-02 12:00:00,E,,,,,,,,,,Travis Lane Stork,False,Sara H,25,False,8,Bachelor,2006,1.0,,,,,,,True
+BA_9_LORENZO_B_L,,,,,,,,,,,2006-10-30 00:00:00,,,,,,,,,,,Lorenzo Borghese,True,Lorenzo Borghese,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_JENNIFER_W,,,D6,D6,D1,D1,D1,D1,,,2006-10-30 00:00:00,,,R,,R,,,W,,,Lorenzo Borghese,False,Jennifer W,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_SADIE_M,,,D5,D6,D1,D1,D1,D1,,,2006-10-30 00:00:00,,,R,,R,,,E,,,Lorenzo Borghese,False,Sadie M,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_LISA_B,,,D1,D6,D4,D1,D1,,,,2006-10-30 00:00:00,R1,,R,,,,E,,,,Lorenzo Borghese,False,Lisa B,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_AGNESE_P,,,D5,D2,D4,D1,,,,,2006-10-30 00:00:00,,,,R,,E,,,,,Lorenzo Borghese,False,Agnese P,27,False,9,Bachelor,2006,,,,,,,,False
+BA_09_JEANETTE_P,,,D6,D6,D4,,,,,,2006-10-30 00:00:00,,,,R,E,,,,,,Lorenzo Borghese,False,Jeanette P,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_DESIREE_V,,,D6,D6,D4,,,,,,2006-10-30 00:00:00,,,,,E,,,,,,Lorenzo Borghese,False,Desiree V,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_JAMI_M,,,D5,D1,,,,,,,2006-10-30 00:00:00,,,,ED,,,,,,,Lorenzo Borghese,False,Jami M,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_GINA_C,,,D6,D6,,,,,,,2006-10-30 00:00:00,,,,E,,,,,,,Lorenzo Borghese,False,Gina C,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_ERICA_R,,,D5,D2,,,,,,,2006-10-30 00:00:00,,,,ED,,,,,,,Lorenzo Borghese,False,Erica R,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_SARAH_S,,,D6,,,,,,,,2006-10-30 00:00:00,,,E,,,,,,,,Lorenzo Borghese,False,Sarah S,27,True,9,Bachelor,2006,,1.0,,,,,,True
+BA_09_KIM_J,,,D6,,,,,,,,2006-10-30 00:00:00,,,E,,,,,,,,Lorenzo Borghese,False,Kim J,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_ELLEN_D,,,D5,,,,,,,,2006-10-30 00:00:00,,,E,,,,,,,,Lorenzo Borghese,False,Ellen D,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_TARA_D,,,,,,,,,,,2006-10-30 00:00:00,E,,,,,,,,,,Lorenzo Borghese,False,Tara D,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_ROSELLA_F,,,,,,,,,,,2006-10-30 00:00:00,E,,,,,,,,,,Lorenzo Borghese,False,Rosella F,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_RITA_G,,,,,,,,,,,2006-10-30 00:00:00,E,,,,,,,,,,Lorenzo Borghese,False,Rita G,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_RENEE_S,,,,,,,,,,,2006-10-30 00:00:00,E,,,,,,,,,,Lorenzo Borghese,False,Renee S,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_MERI_B,,,,,,,,,,,2006-10-30 00:00:00,E,,,,,,,,,,Lorenzo Borghese,False,Meri B,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_LAURA_M,,,,,,,,,,,2006-10-30 00:00:00,E,,,,,,,,,,Lorenzo Borghese,False,Laura M,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_JESSICA_H,,,,,,,,,,,2006-10-30 00:00:00,E,,,,,,,,,,Lorenzo Borghese,False,Jessica H,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_HEATHER_S,,,,,,,,,,,2006-10-30 00:00:00,E,,,,,,,,,,Lorenzo Borghese,False,Heather S,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_ELYSE_H,,,,,,,,,,,2006-10-30 00:00:00,E,,,,,,,,,,Lorenzo Borghese,False,Elyse H,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_COSETTA_B,,,,,,,,,,,2006-10-30 00:00:00,E,,,,,,,,,,Lorenzo Borghese,False,Cosetta B,27,False,9,Bachelor,2006,,,,,,,,False
+BA_09_CLAUDIA_G,,,,,,,,,,,2006-10-30 00:00:00,E,,,,,,,,,,Lorenzo Borghese,False,Claudia G,27,True,9,Bachelor,2006,,,,,1.0,,,True
+BA_09_CARISSA_I,,,,,,,,,,,2006-10-30 00:00:00,E,,,,,,,,,,Lorenzo Borghese,False,Carissa I,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_BOWE_N,,,,,,,,,,,2006-10-30 00:00:00,E,,,,,,,,,,Lorenzo Borghese,False,Bowe N,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_ANDREA_S,,,,,,,,,,,2006-10-30 00:00:00,E,,,,,,,,,,Lorenzo Borghese,False,Andrea S,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_09_APRIL_J,,,,,,,,,,,2006-10-30 00:00:00,E,,,,,,,,,,Lorenzo Borghese,False,April J,27,False,9,Bachelor,2006,1.0,,,,,,,True
+BA_10_ANDREW_B_L,,,,,,,,,,,2007-04-27 00:00:00,,,,,,,,,,,Andrew Baldwin,True,Andrew Baldwin,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_TESSA_H,,,D7,D2,D4,D1,D1,D1,D1,,2007-04-27 00:00:00,,,,R,,,,,W,,Andrew Baldwin,False,Tessa H,25,True,10,Bachelor,2007,,,,,,,1.0,True
+BA_10_BEVIN_P,,,D7,,D4,D4,D1,D1,D1,,2007-04-27 00:00:00,,,,R,,,,,E,,Andrew Baldwin,False,Bevin P,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_DANIELLE_I,,,D7,D4,D4,D4,D1,D1,,,2007-04-27 00:00:00,,,,,,,,E,,,Andrew Baldwin,False,Danielle I,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_DANIELLE_V,,,,,,,,,,,2007-04-27 00:00:00,E,,,,,,,,,,Andrew Baldwin,False,Danielle V,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_AMBER_A,,,D7,D5,D1,D4,D1,,,,2007-04-27 00:00:00,,,,,R,,E,,,,Andrew Baldwin,False,Amber A,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_STEPHANIE_W,,,D7,D5,D4,D1,,,,,2007-04-27 00:00:00,,,,,,E,,,,,Andrew Baldwin,False,Stephanie W,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_STEPHANIE_T,,,D1,D5,D4,,,,,,2007-04-27 00:00:00,R1,,R,,E,,,,,,Andrew Baldwin,False,Stephanie T,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_TINA_W,,,D7,D5,D4,D4,,,,,2007-04-27 00:00:00,,,,,,E,,,,,Andrew Baldwin,False,Tina W,25,True,10,Bachelor,2007,,,,,1.0,,,True
+BA_10_KATE_B,,,D7,D4,D4,,,,,,2007-04-27 00:00:00,,,,,E,,,,,,Andrew Baldwin,False,Kate B,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_NICOLE_C,,,D7,D5,D4,,,,,,2007-04-27 00:00:00,,,,,E,,,,,,Andrew Baldwin,False,Nicole C,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_AMANDA_H,,,D7,D4,,,,,,,2007-04-27 00:00:00,,,,E,,,,,,,Andrew Baldwin,False,Amanda H,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_ERIN_P,,,D7,D4,,,,,,,2007-04-27 00:00:00,,,,E,,,,,,,Andrew Baldwin,False,Erin P,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_PEYTON_W,,,D7,D2,,,,,,,2007-04-27 00:00:00,,,,ED,,,,,,,Andrew Baldwin,False,Peyton W,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_ALEXIS_Y,,,D7,,,,,,,,2007-04-27 00:00:00,,,E,,,,,,,,Andrew Baldwin,False,Alexis Y,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_SUSAN_A,,,D7,,,,,,,,2007-04-27 00:00:00,,,E,,,,,,,,Andrew Baldwin,False,Susan A,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_TIFFANY_W,,,D7,,,,,,,,2007-04-27 00:00:00,,,E,,,,,,,,Andrew Baldwin,False,Tiffany W,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_TIFFANY_F,,,,,,,,,,,2007-04-27 00:00:00,E,,,,,,,,,,Andrew Baldwin,False,Tiffany F,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_BLAKENEY_R,,,,,,,,,,,2007-04-27 00:00:00,E,,,,,,,,,,Andrew Baldwin,False,Blakeney R,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_CANDICE_D,,,,,,,,,,,2007-04-27 00:00:00,E,,,,,,,,,,Andrew Baldwin,False,Candice D,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_CATHERINE_W,,,,,,,,,,,2007-04-27 00:00:00,E,,,,,,,,,,Andrew Baldwin,False,Catherine W,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_JACKIE_T,,,,,,,,,,,2007-04-27 00:00:00,E,,,,,,,,,,Andrew Baldwin,False,Jackie T,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_JEANETTE_A,,,,,,,,,,,2007-04-27 00:00:00,E,,,,,,,,,,Andrew Baldwin,False,Jeanette A,25,True,10,Bachelor,2007,,,,1.0,,,,True
+BA_10_JESSICA_D,,,,,,,,,,,2007-04-27 00:00:00,E,,,,,,,,,,Andrew Baldwin,False,Jessica D,25,False,10,Bachelor,2007,1.0,,,,,,,True
+BA_10_LINDA_M,,,,,,,,,,,2007-04-27 00:00:00,E,,,,,,,,,,Andrew Baldwin,False,Linda M,25,True,10,Bachelor,2007,,,,,,1.0,,True
+BA_10_LINDSAY_S,,,,,,,,,,,2007-04-27 00:00:00,E,,,,,,,,,,Andrew Baldwin,False,Lindsay S,25,True,10,Bachelor,2007,,1.0,,,,,,True
+BA_11_BRAD_W_L,,,,,,,,,,,2007-10-22 12:00:00,,,,,,,,,,,Brad Womack,True,Brad Womack,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_DEANNA_P,,,D7,D6,D2,D4,D1,D1,D1,,2007-10-22 12:00:00,,,R,,R,,,,E,,Brad Womack,False,Deanna P,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_JENNI_C,,,D7,D6,D1,D4,D1,D1,D1,,2007-10-22 12:00:00,R1,,,,R,,,,E,,Brad Womack,False,Jenni C,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_BETTINA_B,,,D7,D5,D6,D1,D1,D1,,,2007-10-22 12:00:00,,,,,R,,,E,,,Brad Womack,False,Bettina B,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_SHEENA_S,,,D7,D5,D6,D1,D1,,,,2007-10-22 12:00:00,,,,,,,E,,,,Brad Womack,False,Sheena S,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_HILARY_R,,,D7,D1,D6,D4,,,,,2007-10-22 12:00:00,,,,R,,E,,,,,Brad Womack,False,Hilary R,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_KRISTY_K,,,D7,D5,D6,D4,,,,,2007-10-22 12:00:00,,,,R,,E,,,,,Brad Womack,False,Kristy K,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_STEPHY_K,,,D7,D6,D6,,,,,,2007-10-22 12:00:00,,,,R,E,,,,,,Brad Womack,False,Stephy K,25,True,11,Bachelor,2007,,,,,,1.0,,True
+BA_11_JADE_B,,,D7,D5,D2,,,,,,2007-10-22 12:00:00,,,,,ED,,,,,,Brad Womack,False,Jade B,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_MCCARTEN_D,,,D7,D6,D6,,,,,,2007-10-22 12:00:00,,,,,E,,,,,,Brad Womack,False,Mccarten D,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_LINDSEY_H,,,D7,D6,,,,,,,2007-10-22 12:00:00,,,,E,,,,,,,Brad Womack,False,Lindsey H,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_SARAH_N,,,D7,D6,,,,,,,2007-10-22 12:00:00,,,R,E,,,,,,,Brad Womack,False,Sarah N,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_SOLISA_S,,,D7,D5,,,,,,,2007-10-22 12:00:00,,,,E,,,,,,,Brad Womack,False,Solisa S,25,True,11,Bachelor,2007,,,,,,1.0,,True
+BA_11_MICHELE_L,,,,,,,,,,,2007-10-22 12:00:00,,,EQ,,,,,,,,Brad Womack,False,Michele L,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_MALLORY_S,,,D7,,,,,,,,2007-10-22 12:00:00,,,E,,,,,,,,Brad Womack,False,Mallory S,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_ERIN_G,,,D7,,,,,,,,2007-10-22 12:00:00,,,E,,,,,,,,Brad Womack,False,Erin G,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_JESSICA_K,,,,,,,,,,,2007-10-22 12:00:00,E,,,,,,,,,,Brad Womack,False,Jessica K,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_JULI_G,,,,,,,,,,,2007-10-22 12:00:00,E,,,,,,,,,,Brad Womack,False,Juli G,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_KIM_O,,,,,,,,,,,2007-10-22 12:00:00,E,,,,,,,,,,Brad Womack,False,Kim O,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_LORI_L,,,,,,,,,,,2007-10-22 12:00:00,E,,,,,,,,,,Brad Womack,False,Lori L,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_MELISSA_B,,,,,,,,,,,2007-10-22 12:00:00,E,,,,,,,,,,Brad Womack,False,Melissa B,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_MORGAN_B,,,,,,,,,,,2007-10-22 12:00:00,E,,,,,,,,,,Brad Womack,False,Morgan B,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_NATALIE_V,,,,,,,,,,,2007-10-22 12:00:00,E,,,,,,,,,,Brad Womack,False,Natalie V,25,True,11,Bachelor,2007,,,,,,1.0,,True
+BA_11_REGINA_D,,,,,,,,,,,2007-10-22 12:00:00,E,,,,,,,,,,Brad Womack,False,Regina D,25,True,11,Bachelor,2007,,1.0,,,,,,True
+BA_11_TAUNI_N,,,,,,,,,,,2007-10-22 12:00:00,E,,,,,,,,,,Brad Womack,False,Tauni N,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_11_SUSAN_S,,,,,,,,,,,2007-10-22 12:00:00,E,,,,,,,,,,Brad Womack,False,Susan S,25,False,11,Bachelor,2007,1.0,,,,,,,True
+BA_12_MATT_G_L,,,,,,,,,,,2008-04-14 00:00:00,,,,,,,,,,,Matt Grant,True,Matt Grant,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_SHAYNE_L,,,D7,D1,D6,D4,D1,D1,D1,,2008-04-14 00:00:00,,,,R,,,,,W,,Matt Grant,False,Shayne L,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_CHELSEA_W,,,D7,D10,D6,D1,D1,D1,D1,,2008-04-14 00:00:00,,,R,,R,,,,E,,Matt Grant,False,Chelsea W,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_AMANDA_R,,,D8,D10,D1,D4,D1,D1,,,2008-04-14 00:00:00,R1,,,,R,,,E,,,Matt Grant,False,Amanda R,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_AMANDA_P,,,,,,,,,,,2008-04-14 00:00:00,E,,,,,,,,,,Matt Grant,False,Amanda P,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_NOELLE_D,,,D8,D10,D6,D1,D1,,,,2008-04-14 00:00:00,,,,,,,E,,,,Matt Grant,False,Noelle D,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_MARSHANA_R,,,D8,D10,D2,D4,,,,,2008-04-14 00:00:00,,,,,R,E,,,,,Matt Grant,False,Marshana R,25,True,12,Bachelor,2008,,1.0,,,,,,True
+BA_12_ROBIN_C,,,D7,D10,D6,D4,,,,,2008-04-14 00:00:00,,,,R,,E,,,,,Matt Grant,False,Robin C,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_ASHLEE_W,,,D8,D10,D6,,,,,,2008-04-14 00:00:00,,,R,,E,,,,,,Matt Grant,False,Ashlee W,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_KELLY_D,,,D7,D10,D6,,,,,,2008-04-14 00:00:00,,,,,E,,,,,,Matt Grant,False,Kelly D,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_HOLLY_D,,,D8,D1,D2,,,,,,2008-04-14 00:00:00,,,,R,ED,,,,,,Matt Grant,False,Holly D,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_AMY_R,,,D7,D10,,,,,,,2008-04-14 00:00:00,,,,E,,,,,,,Matt Grant,False,Amy R,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_ERIN_S,,,D7,D10,,,,,,,2008-04-14 00:00:00,,,,E,,,,,,,Matt Grant,False,Erin S,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_ERIN_H,,,D8,,,,,,,,2008-04-14 00:00:00,,,E,,,,,,,,Matt Grant,False,Erin H,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_KRISTINE_H,,,D8,D10,,,,,,,2008-04-14 00:00:00,,,,E,,,,,,,Matt Grant,False,Kristine H,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_CARRI_P,,,D7,,,,,,,,2008-04-14 00:00:00,,,E,,,,,,,,Matt Grant,False,Carri P,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_MICHELLE_P,,,D8,,,,,,,,2008-04-14 00:00:00,,,E,,,,,,,,Matt Grant,False,Michelle P,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_ALYSSA_G,,,,,,,,,,,2008-04-14 00:00:00,E,,,,,,,,,,Matt Grant,False,Alyssa G,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_DENISE_H,,,,,,,,,,,2008-04-14 00:00:00,E,,,,,,,,,,Matt Grant,False,Denise H,25,True,12,Bachelor,2008,,,,,,1.0,,True
+BA_12_DEVON_A,,,,,,,,,,,2008-04-14 00:00:00,E,,,,,,,,,,Matt Grant,False,Devon A,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_LESLEY_G,,,,,,,,,,,2008-04-14 00:00:00,E,,,,,,,,,,Matt Grant,False,Lesley G,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_MICHELE_R,,,,,,,,,,,2008-04-14 00:00:00,E,,,,,,,,,,Matt Grant,False,Michele R,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_REBECCA_L,,,,,,,,,,,2008-04-14 00:00:00,E,,,,,,,,,,Matt Grant,False,Rebecca L,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_STACEY_E,,,,,,,,,,,2008-04-14 00:00:00,E,,,,,,,,,,Matt Grant,False,Stacey E,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_TAMARA_S,,,,,,,,,,,2008-04-14 00:00:00,E,,,,,,,,,,Matt Grant,False,Tamara S,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_12_TIFFANY_T,,,,,,,,,,,2008-04-14 00:00:00,E,,,,,,,,,,Matt Grant,False,Tiffany T,25,False,12,Bachelor,2008,1.0,,,,,,,True
+BA_13_JASON_M_L,,,,,,,,,,,2009-02-02 12:00:00,,,,,,,,,,,Jason Mesnick,True,Jason Mesnick,25,False,13,Bachelor,2009,1.0,,,,,,,True
+BA_13_MELISSA_R,,,D1,D8,D6,D1,D1,D1,D1,,2009-02-02 12:00:00,,,R,,,,,,W,,Jason Mesnick,False,Melissa R,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_MOLLY_M,,,D8,,D1,D3,D1,D1,D1,,2009-02-02 12:00:00,,,R,,R,,,,E,,Jason Mesnick,False,Molly M,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_JILLIAN_H,,,D1,D8,D6,D3,D1,D1,,,2009-02-02 12:00:00,,,R,R,,,,E,,,Jason Mesnick,False,Jillian H,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_NAOMI_C,,,D8,D8,D6,D1,D1,,,,2009-02-02 12:00:00,,,,,R,,E,,,,Jason Mesnick,False,Naomi C,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_STEPHANIE_H,,,,D1,D2,D3,,,,,2009-02-02 12:00:00,,,,R,R,E,,,,,Jason Mesnick,False,Stephanie H,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_LAUREN_W,,,D8,,D6,,,,,,2009-02-02 12:00:00,,,,,E,,,,,,Jason Mesnick,False,Lauren W,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_MEGAN_P,,,,D8,D6,,,,,,2009-02-02 12:00:00,R,,,,E,,,,,,Jason Mesnick,False,Megan P,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_SHANNON_B,,,,D8,D6,,,,,,2009-02-02 12:00:00,,,,,E,,,,,,Jason Mesnick,False,Shannon B,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_NIKKI_K,,,D8,D8,D2,,,,,,2009-02-02 12:00:00,R1,,,,ED,,,,,,Jason Mesnick,False,Nikki K,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_ERICA_D,,,D8,D8,,,,,,,2009-02-02 12:00:00,,,,E,,,,,,,Jason Mesnick,False,Erica D,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_KARI_F,,,D8,,,,,,,,2009-02-02 12:00:00,,,,E,,,,,,,Jason Mesnick,False,Kari F,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_NATALIE_G,,,D8,D1,,,,,,,2009-02-02 12:00:00,,,,ED,,,,,,,Jason Mesnick,False,Natalie G,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_RAQUEL_M,,,,,,,,,,,2009-02-02 12:00:00,,,E,,,,,,,,Jason Mesnick,False,Raquel M,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_SHARON_S,,,D8,,,,,,,,2009-02-02 12:00:00,,,E,,,,,,,,Jason Mesnick,False,Sharon S,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_LISA_G,,,,,,,,,,,2009-02-02 12:00:00,,,EQ,,,,,,,,Jason Mesnick,False,Lisa G,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_ANN_L,,,,,,,,,,,2009-02-02 12:00:00,E,,,,,,,,,,Jason Mesnick,False,Ann L,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_DOMINIQUE_C,,,,,,,,,,,2009-02-02 12:00:00,E,,,,,,,,,,Jason Mesnick,False,Dominique C,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_EMILY_H,,,,,,,,,,,2009-02-02 12:00:00,E,,,,,,,,,,Jason Mesnick,False,Emily H,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_JACKIE_H,,,,,,,,,,,2009-02-02 12:00:00,E,,,,,,,,,,Jason Mesnick,False,Jackie H,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_JULIE_D,,,,,,,,,,,2009-02-02 12:00:00,E,,,,,,,,,,Jason Mesnick,False,Julie D,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_NICOLE_M,,,,,,,,,,,2009-02-02 12:00:00,E,,,,,,,,,,Jason Mesnick,False,Nicole M,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_RENEE_S,,,,,,,,,,,2009-02-02 12:00:00,E,,,,,,,,,,Jason Mesnick,False,Renee S,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_SHELBY_G,,,,,,,,,,,2009-02-02 12:00:00,E,,,,,,,,,,Jason Mesnick,False,Shelby G,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_STACIA_M,,,,,,,,,,,2009-02-02 12:00:00,E,,,,,,,,,,Jason Mesnick,False,Stacia M,25,False,13,Bachelor,2009,,,,,,,,False
+BA_13_TREASURE_M,,,,,,,,,,,2009-02-02 12:00:00,E,,,,,,,,,,Jason Mesnick,False,Treasure M,25,False,13,Bachelor,2009,,,,,,,,False
+BA_14_JAKE_P_L,,,,,,,,,,,2010-02-01 00:00:00,,,,,,,,,,,Jake Pavelka,True,Jake Pavelka,25,False,14,Bachelor,2010,1.0,,,,,,,True
+BA_14_VIENNA_G,,,D5,D1,D6,D2,D1,D1,D1,,2010-02-01 00:00:00,,,,R,,,,,W,,Jake Pavelka,False,Vienna G,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_TENLEY_M,,,,D8,D6,D1,D1,D1,D1,,2010-02-01 00:00:00,R1,,,,R,,,,E,,Jake Pavelka,False,Tenley M,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_GIA_A,,,D6,,D1,D2,D1,D1,,,2010-02-01 00:00:00,,,,,R,,,EQ,,,Jake Pavelka,False,Gia A,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_ALI_F,,,D1,D8,D6,D1,D1,,,,2010-02-01 00:00:00,,,R,,,,E,,,,Jake Pavelka,False,Ali F,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_CORRIE_A,,,D6,D8,D6,D1,,,,,2010-02-01 00:00:00,,,,,,E,,,,,Jake Pavelka,False,Corrie A,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_ASHLEIGH_H,,,D6,D8,D6,,,,,,2010-02-01 00:00:00,,,,,E,,,,,,Jake Pavelka,False,Ashleigh H,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_JESSIE_S,,,D5,D8,D6,,,,,,2010-02-01 00:00:00,,,,,E,,,,,,Jake Pavelka,False,Jessie S,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_KATHRYN_S,,,D5,D8,D2,,,,,,2010-02-01 00:00:00,,,,,ED,,,,,,Jake Pavelka,False,Kathryn S,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_ELLA_N,,,,D1,D2,,,,,,2010-02-01 00:00:00,,,,R,ED,,,,,,Jake Pavelka,False,Ella N,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_ELIZABETH_KI,,,D5,D8,,,,,,,2010-02-01 00:00:00,,,R,E,,,,,,,Jake Pavelka,False,Elizabeth Ki,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_ELIZABETH_KR,,,,,,,,,,,2010-02-01 00:00:00,E,,,,,,,,,,Jake Pavelka,False,Elizabeth Kr,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_VALISHIA_S,,,D6,,,,,,,,2010-02-01 00:00:00,,,,E,,,,,,,Jake Pavelka,False,Valishia S,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_MICHELLE K,,,,D8,,,,,,,2010-02-01 00:00:00,,,,ED,,,,,,,Jake Pavelka,False,Michelle k,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_ASHLEY_E,,,D5,,,,,,,,2010-02-01 00:00:00,,,E,,,,,,,,Jake Pavelka,False,Ashley E,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_CRISTINA_M,,,D6,,,,,,,,2010-02-01 00:00:00,,,E,,,,,,,,Jake Pavelka,False,Cristina M,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_ROZLYN_P,,,D6,,,,,,,,2010-02-01 00:00:00,,,EF,,,,,,,,Jake Pavelka,False,Rozlyn P,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_LEX_M,,,,,,,,,,,2010-02-01 00:00:00,E,,,,,,,,,,Jake Pavelka,False,Lex M,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_CAITLYN_M,,,,,,,,,,,2010-02-01 00:00:00,E,,,,,,,,,,Jake Pavelka,False,Caitlyn M,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_CHANNY_C,,,,,,,,,,,2010-02-01 00:00:00,E,,,,,,,,,,Jake Pavelka,False,Channy C,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_EMILY_H,,,,,,,,,,,2010-02-01 00:00:00,E,,,,,,,,,,Jake Pavelka,False,Emily H,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_KIMBERLY_S,,,,,,,,,,,2010-02-01 00:00:00,E,,,,,,,,,,Jake Pavelka,False,Kimberly S,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_KIRSTEN_P,,,,,,,,,,,2010-02-01 00:00:00,E,,,,,,,,,,Jake Pavelka,False,Kirsten P,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_SHEILA_L,,,,,,,,,,,2010-02-01 00:00:00,E,,,,,,,,,,Jake Pavelka,False,Sheila L,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_STEPHANIE_M,,,,,,,,,,,2010-02-01 00:00:00,E,,,,,,,,,,Jake Pavelka,False,Stephanie M,25,False,14,Bachelor,2010,,,,,,,,False
+BA_14_TIANA_K,,,,,,,,,,,2010-02-01 00:00:00,E,,,,,,,,,,Jake Pavelka,False,Tiana K,25,False,14,Bachelor,2010,,,,,,,,False
+BA_15_BRAD_W_L,,,,,,,,,,,2011-02-07 00:00:00,,,,,,,,,,,Brad Womack,True,Brad Womack,30,False,15,Bachelor,2011,1.0,,,,,,,True
+BA_15_EMILY_M,,D1,D15,D1,,D8,D6,D1,D1,D1,2011-02-07 00:00:00,,W,R,R,,R,,,,,Brad Womack,False,Emily M,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_CHANTAL_O,,D1,D15,D12,D1,D8,D1,D3,D1,D1,2011-02-07 00:00:00,,E,,,R,,R,,,,Brad Womack,False,Chantal O,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_ASHLEU_H,,,D1,D12,D9,D2,D6,D3,D1,D1,2011-02-07 00:00:00,,,R,,,R,,R,,E,Brad Womack,False,Ashleu H,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_SHAWNTEL_N,,,D15,D12,,D1,D6,D1,D1,,2011-02-07 00:00:00,,,,R,,R,,,E,,Brad Womack,False,Shawntel N,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_MICHELLE_M,,,D15,D12,D1,D8,D6,D3,,,2011-02-07 00:00:00,,,R,,R,,,E,,,Brad Womack,False,Michelle M,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_BRITT_B,,,D15,D12,D9,D8,D6,D1,,,2011-02-07 00:00:00,,,,,R,,,ED,,,Brad Womack,False,Britt B,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_JACKIE_G,,,D1,,D9,D8,D6,,,,2011-02-07 00:00:00,,,R,,,,E,,,,Brad Womack,False,Jackie G,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_ALLI_T,,,D15,D12,D9,D8,D1,,,,2011-02-07 00:00:00,,,,,,,ED,,,,Brad Womack,False,Alli T,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_LISA_M,,,D15,D12,D9,D8,,,,,2011-02-07 00:00:00,,,,,,E,,,,,Brad Womack,False,Lisa M,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_LISA_P,,,,,,,,,,,2011-02-07 00:00:00,E,,,,,,,,,,Brad Womack,False,Lisa P,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_MARISSA_M,,,D15,D12,,D8,,,,,2011-02-07 00:00:00,,,,,,E,,,,,Brad Womack,False,Marissa M,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_ASHLEY_S,,,,D1,D9,D2,,,,,2011-02-07 00:00:00,R1,,,R,,ED,,,,,Brad Womack,False,Ashley S,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_LINDSAY_H,,,,D12,D9,,,,,,2011-02-07 00:00:00,,,,,E,,,,,,Brad Womack,False,Lindsay H,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_MEGHAN_M,,,D15,,D9,,,,,,2011-02-07 00:00:00,,,,,E,,,,,,Brad Womack,False,Meghan M,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_STACEY_Q,,,D15,D12,D9,,,,,,2011-02-07 00:00:00,,,,,E,,,,,,Brad Womack,False,Stacey Q,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_KIMBERLY_C,,,D15,D12,,,,,,,2011-02-07 00:00:00,,,,E,,,,,,,Brad Womack,False,Kimberly C,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_SARAH_P,,,,D12,,,,,,,2011-02-07 00:00:00,,,,E,,,,,,,Brad Womack,False,Sarah P,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_SARAH_L,,,,,,,,,,,2011-02-07 00:00:00,E,,,,,,,,,,Brad Womack,False,Sarah L,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_MADISON_G,,,D15,,,,,,,,2011-02-07 00:00:00,,,,EQ,,,,,,,Brad Womack,False,Madison G,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_KELTIE_C,,,D15,,,,,,,,2011-02-07 00:00:00,,,E,,,,,,,,Brad Womack,False,Keltie C,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_MELISSA_S,,,D15,,,,,,,,2011-02-07 00:00:00,,,E,,,,,,,,Brad Womack,False,Melissa S,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_RAICHHEL_G,,,D15,,,,,,,,2011-02-07 00:00:00,,,E,,,,,,,,Brad Womack,False,Raichhel G,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_BRITNEE_X,,,,,,,,,,,2011-02-07 00:00:00,E,,,,,,,,,,Brad Womack,False,Britnee X,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_CRISTY_C,,,,,,,,,,,2011-02-07 00:00:00,E,,,,,,,,,,Brad Womack,False,Cristy C,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_JESSICA_A,,,,,,,,,,,2011-02-07 00:00:00,E,,,,,,,,,,Brad Womack,False,Jessica A,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_KILL_R,,,,,,,,,,,2011-02-07 00:00:00,E,,,,,,,,,,Brad Womack,False,Kill R,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_LACEY_G,,,,,,,,,,,2011-02-07 00:00:00,E,,,,,,,,,,Brad Womack,False,Lacey G,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_LAUREN_M,,,,,,,,,,,2011-02-07 00:00:00,E,,,,,,,,,,Brad Womack,False,Lauren M,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_REBECCA_X,,,,,,,,,,,2011-02-07 00:00:00,E,,,,,,,,,,Brad Womack,False,Rebecca X,30,False,15,Bachelor,2011,,,,,,,,False
+BA_15_RENEE_H,,,,,,,,,,,2011-02-07 00:00:00,E,,,,,,,,,,Brad Womack,False,Renee H,30,False,15,Bachelor,2011,,,,,,,,False
+BA_16_BEN_F_L,,,,,,,,,,,2012-02-06 00:00:00,,,,,,,,,,,Ben Flajnik,True,Ben Flajnik,25,False,16,Bachelor,2012,1.0,,,,,,,True
+BA_16_COURTNEY_R,,D1,D1,,D8,D9,D6,D1,D1,D1,2012-02-06 00:00:00,,W,R,,R,,,,,,Ben Flajnik,False,Courtney R,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_LINDZI_C,,D1,,D1,D8,D9,D6,D1,D1,D1,2012-02-06 00:00:00,R1,E,,R,,,R,,,,Ben Flajnik,False,Lindzi C,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_NICKI_S,,,D12,D11,D8,D1,D6,D3,D1,D1,2012-02-06 00:00:00,,,,,,R,,,,E,Ben Flajnik,False,Nicki S,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_KACIE_B,,,D1,D11,D8,D9,D1,D3,D1,,2012-02-06 00:00:00,,,R,,,R,R,R,E,,Ben Flajnik,False,Kacie B,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_EMILY_O,,,D12,D1,,D9,D6,D1,,,2012-02-06 00:00:00,,,,R,,,,E,,,Ben Flajnik,False,Emily O,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_RACHEL_T,,,D12,D11,D1,D9,D2,D3,,,2012-02-06 00:00:00,,,,R,R,,R,E,,,Ben Flajnik,False,Rachel T,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_JAMIE_O,,,D12,D11,D8,D9,D6,,,,2012-02-06 00:00:00,,,,,,,E,,,,Ben Flajnik,False,Jamie O,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_CASEY_S,,,,D11,D8,D9,D6,,,,2012-02-06 00:00:00,,,,,,,EF,,,,Ben Flajnik,False,Casey S,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_BLAKELEY_J,,,D12,D11,D8,D9,D2,,,,2012-02-06 00:00:00,,,R,,,,ED,,,,Ben Flajnik,False,Blakeley J,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_JENNIFER_F,,,D12,,D1,D9,,,,,2012-02-06 00:00:00,,,,,R,E,,,,,Ben Flajnik,False,Jennifer F,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_ELYSE_M,,,,D11,,D1,,,,,2012-02-06 00:00:00,,,,,,ED,,,,,Ben Flajnik,False,Elyse M,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_MONICA_S,,,D12,D11,,,,,,,2012-02-06 00:00:00,,,,,E,,,,,,Ben Flajnik,False,Monica S,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_SAMANTHA_L,,,D12,D11,D8,,,,,,2012-02-06 00:00:00,,,,,EQ,,,,,,Ben Flajnik,False,Samantha L,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_ERIKA_U,,,,D11,,,,,,,2012-02-06 00:00:00,,,,E,,,,,,,Ben Flajnik,False,Erika U,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_JACLYN_S,,,D12,D11,,,,,,,2012-02-06 00:00:00,,,,E,,,,,,,Ben Flajnik,False,Jaclyn S,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_BRITTNEY_S,,,D12,,,,,,,,2012-02-06 00:00:00,,,,EQ,,,,,,,Ben Flajnik,False,Brittney S,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_JENNA_B,,,D12,,,,,,,,2012-02-06 00:00:00,,,E,,,,,,,,Ben Flajnik,False,Jenna B,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_SHAWN_R,,,D12,,,,,,,,2012-02-06 00:00:00,,,E,,,,,,,,Ben Flajnik,False,Shawn R,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_AMBER_B,,,,,,,,,,,2012-02-06 00:00:00,E,,,,,,,,,,Ben Flajnik,False,Amber B,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_AMBER_T,,,,,,,,,,,2012-02-06 00:00:00,E,,,,,,,,,,Ben Flajnik,False,Amber T,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_ANNA_S,,,,,,,,,,,2012-02-06 00:00:00,E,,,,,,,,,,Ben Flajnik,False,Anna S,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_DIANNA_M,,,,,,,,,,,2012-02-06 00:00:00,E,,,,,,,,,,Ben Flajnik,False,Dianna M,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_HOLLY_J,,,,,,,,,,,2012-02-06 00:00:00,E,,,,,,,,,,Ben Flajnik,False,Holly J,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_LYNDSIE_J,,,,,,,,,,,2012-02-06 00:00:00,E,,,,,,,,,,Ben Flajnik,False,Lyndsie J,25,False,16,Bachelor,2012,,,,,,,,False
+BA_16_SHIRA_A,,,,,,,,,,,2012-02-06 00:00:00,E,,,,,,,,,,Ben Flajnik,False,Shira A,25,False,16,Bachelor,2012,,,,,,,,False
+BA_17_SEAN_L_L,,,,,,,,,,,2013-02-07 12:00:00,,,,,,,,,,,Sean Lowe,True,Sean Lowe,26,False,17,Bachelor,2013,1.0,,,,,,,True
+BA_17_CATHERINE_G,,D1,D13,D12,D8,D8,D1,D3,D1,D1,2013-02-07 12:00:00,R1,W,,,,,R,,,,Sean Lowe,False,Catherine G,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_LINDSAY_Y,,D1,,D12,D8,D1,D7,D3,D1,D1,2013-02-07 12:00:00,,E,,R,,R,,R,,,Sean Lowe,False,Lindsay Y,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_ASHLEE_F,,,,D1,D8,D8,D7,D1,D1,D1,2013-02-07 12:00:00,R1,,,R,,,,,,E,Sean Lowe,False,Ashlee F,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_DESIREE_H,,,D1,D12,,D8,D1,D3,D1,,2013-02-07 12:00:00,R1,,R,,,,R,,E,,Sean Lowe,False,Desiree H,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_LESLEY_M,,,D13,D1,,D8,D7,D1,,,2013-02-07 12:00:00,,,,R,,,R,E,,,Sean Lowe,False,Lesley M,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_TIERRA_L,,,D13,D12,D8,D2,D7,,,,2013-02-07 12:00:00,R1,,,,R,R,,EU,,,Sean Lowe,False,Tierra L,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_DANIELLA_M,,,D13,D12,,D8,D7,,,,2013-02-07 12:00:00,,,,,,R,E,,,,Sean Lowe,False,Daniella M,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_SELMA_A,,,D13,,D1,D8,D7,,,,2013-02-07 12:00:00,R1,,,,R,,E,,,,Sean Lowe,False,Selma A,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_SARAH_H,,,D1,,D8,D8,D7,,,,2013-02-07 12:00:00,R1,,R,,,,EU,,,,Sean Lowe,False,Sarah H,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_ROBYN_H,,,D13,D12,D8,D8,,,,,2013-02-07 12:00:00,R1,,,,,E,,,,,Sean Lowe,False,Robyn H,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_JACKIE_[,,,,D12,D8,D2,,,,,2013-02-07 12:00:00,R1,,,,,ED,,,,,Sean Lowe,False,Jackie [,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_AMANDA_M,,,D13,D12,D8,,,,,,2013-02-07 12:00:00,,,,,E,,,,,,Sean Lowe,False,Amanda M,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_LESLIE_H,,,,D12,D1,,,,,,2013-02-07 12:00:00,R1,,,,ED,,,,,,Sean Lowe,False,Leslie H,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_KRISTY_K,,,D13,D12,,,,,,,2013-02-07 12:00:00,,,,E,,,,,,,Sean Lowe,False,Kristy K,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_TARYN_D,,,D13,D12,,,,,,,2013-02-07 12:00:00,,,,E,,,,,,,Sean Lowe,False,Taryn D,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_KACIE_B,,,D13,D12,,,,,,,2013-02-07 12:00:00,,,R,E,,,,,,,Sean Lowe,False,Kacie B,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_BROOKE_B,,,D13,,,,,,,,2013-02-07 12:00:00,R1,,E,,,,,,,,Sean Lowe,False,Brooke B,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_DIANA_W,,,D13,,,,,,,,2013-02-07 12:00:00,R1,,E,,,,,,,,Sean Lowe,False,Diana W,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_LATIE_L,,,D13,,,,,,,,2013-02-07 12:00:00,R1,,EQ,,,,,,,,Sean Lowe,False,Latie L,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_ASHLEY_H,,,,,,,,,,,2013-02-07 12:00:00,E,,,,,,,,,,Sean Lowe,False,Ashley H,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_ASHLEY_P,,,,,,,,,,,2013-02-07 12:00:00,E,,,,,,,,,,Sean Lowe,False,Ashley P,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_KELLY_D,,,,,,,,,,,2013-02-07 12:00:00,E,,,,,,,,,,Sean Lowe,False,Kelly D,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_KERIANN_M,,,,,,,,,,,2013-02-07 12:00:00,E,,,,,,,,,,Sean Lowe,False,Keriann M,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_LACEY_L,,,,,,,,,,,2013-02-07 12:00:00,E,,,,,,,,,,Sean Lowe,False,Lacey L,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_LAUREN_M,,,,,,,,,,,2013-02-07 12:00:00,E,,,,,,,,,,Sean Lowe,False,Lauren M,26,False,17,Bachelor,2013,,,,,,,,False
+BA_17_PAIGE_V,,,,,,,,,,,2013-02-07 12:00:00,E,,,,,,,,,,Sean Lowe,False,Paige V,26,False,17,Bachelor,2013,,,,,,,,False
+BA_18_JUAN_PABLO_G_L,,,,,,,,,,,2014-02-06 12:00:00,,,,,,,,,,,Juan Pablo Galavis,True,Juan Pablo Galavis,27,True,18,Bachelor,2014,,,,1.0,,,,True
+BA_18_NIKKI_F,,D1,D13,D10,D6,D1,D6,D1,D1,D1,2014-02-06 12:00:00,,W,,R,R,R,,,,,Juan Pablo Galavis,False,Nikki F,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_CLARE_C,,D1,D1,,D6,D9,D1,D4,D1,D1,2014-02-06 12:00:00,,E,R,,,R,R,,,,Juan Pablo Galavis,False,Clare C,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_ANDI_D,,,D13,D10,D6,D9,D1,D4,D1,D1,2014-02-06 12:00:00,,,,,R,,R,R,,EQ,Juan Pablo Galavis,False,Andi D,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_RENEE_O,,,D13,D10,D6,D1,D6,D4,D1,,2014-02-06 12:00:00,,,,,,R,,,E,,Juan Pablo Galavis,False,Renee O,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_CHELSIE_W,,,D13,D1,D6,D9,D6,D4,,,2014-02-06 12:00:00,,,,R,,,,E,,,Juan Pablo Galavis,False,Chelsie W,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_SHARLEEN_J,,,,D10,D1,D9,D6,D1,,,2014-02-06 12:00:00,R1,,,,R,,R,EQ,,,Juan Pablo Galavis,False,Sharleen J,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_KAT_H,,,D1,,D6,D9,D6,,,,2014-02-06 12:00:00,,,R,,,,E,,,,Juan Pablo Galavis,False,Kat H,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_CASSANDRA_F,,,D13,D1,D6,D9,D6,,,,2014-02-06 12:00:00,,,,R,,,ED,,,,Juan Pablo Galavis,False,Cassandra F,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_ALLI_R,,,D13,D10,D6,D9,,,,,2014-02-06 12:00:00,,,,,,E,,,,,Juan Pablo Galavis,False,Alli R,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_DANIELLE_R,,,,D10,D6,D9,,,,,2014-02-06 12:00:00,,,,,,E,,,,,Juan Pablo Galavis,False,Danielle R,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_KELLY_T,,,D13,D10,D6,D9,,,,,2014-02-06 12:00:00,,,R,,,E,,,,,Juan Pablo Galavis,False,Kelly T,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_ELISE_M,,,D13,,D6,,,,,,2014-02-06 12:00:00,,,,,E,,,,,,Juan Pablo Galavis,False,Elise M,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_LAUREN_S,,,D13,D10,D6,,,,,,2014-02-06 12:00:00,,,,,E,,,,,,Juan Pablo Galavis,False,Lauren S,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_LAUREN_H,,,,,,,,,,,2014-02-06 12:00:00,E,,,,,,,,,,Juan Pablo Galavis,False,Lauren H,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_CHRISTY_H,,,D13,D10,,,,,,,2014-02-06 12:00:00,,,,E,,,,,,,Juan Pablo Galavis,False,Christy H,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_LUCY_A,,,D13,D10,,,,,,,2014-02-06 12:00:00,,,,E,,,,,,,Juan Pablo Galavis,False,Lucy A,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_AMY_L,,,,,,,,,,,2014-02-06 12:00:00,,,E,,,,,,,,Juan Pablo Galavis,False,Amy L,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_AMY_J,,,,,,,,,,,2014-02-06 12:00:00,E,,,,,,,,,,Juan Pablo Galavis,False,Amy J,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_CHANTEL_F,,,D13,,,,,,,,2014-02-06 12:00:00,,,E,,,,,,,,Juan Pablo Galavis,False,Chantel F,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_VICTORIA_L,,,D13,,,,,,,,2014-02-06 12:00:00,,,EU,,,,,,,,Juan Pablo Galavis,False,Victoria L,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_ALEXIS_M,,,,,,,,,,,2014-02-06 12:00:00,E,,,,,,,,,,Juan Pablo Galavis,False,Alexis M,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_ASHLEY_P,,,,,,,,,,,2014-02-06 12:00:00,E,,,,,,,,,,Juan Pablo Galavis,False,Ashley P,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_CHRISTINE_L,,,,,,,,,,,2014-02-06 12:00:00,E,,,,,,,,,,Juan Pablo Galavis,False,Christine L,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_KYLIE_L,,,,,,,,,,,2014-02-06 12:00:00,E,,,,,,,,,,Juan Pablo Galavis,False,Kylie L,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_LACY_F,,,,,,,,,,,2014-02-06 12:00:00,E,,,,,,,,,,Juan Pablo Galavis,False,Lacy F,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_MAGGIE_G,,,,,,,,,,,2014-02-06 12:00:00,E,,,,,,,,,,Juan Pablo Galavis,False,Maggie G,27,False,18,Bachelor,2014,,,,,,,,False
+BA_18_VALERIE_E,,,,,,,,,,,2014-02-06 12:00:00,E,,,,,,,,,,Juan Pablo Galavis,False,Valerie E,27,False,18,Bachelor,2014,,,,,,,,False
+BA_19_CHRIS_S_L,,,,,,,,,,,2015-02-05 12:00:00,,,,,,,,,,,Chris Soules,True,Chris Soules,30,False,19,Bachelor,2015,1.0,,,,,,,True
+BA_19_WHITNEY_B,,D1,,D1,D6,D9,D6,D1,D1,D1,2015-02-05 12:00:00,,W,,R,,R,,,,,Chris Soules,False,Whitney B,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_BECCA_T,,D1,D11,D12,D6,D9,D1,D1,D1,D1,2015-02-05 12:00:00,,E,,R,,,R,,,,Chris Soules,False,Becca T,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_KAITLYN_B,,,D11,D1,D8,D9,D6,D3,D1,D1,2015-02-05 12:00:00,,,R,R,R,,,R,,E,Chris Soules,False,Kaitlyn B,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_JADE_R,,,D6,,D1,D9,D6,D1,D1,,2015-02-05 12:00:00,,,,,R,,,,E,,Chris Soules,False,Jade R,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_CARLY_W,,,,D12,D6,D1,D6,D3,,,2015-02-05 12:00:00,,,,,,R,,E,,,Chris Soules,False,Carly W,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_BRITT_N,,,D11,D12,D6,D1,D6,D3,,,2015-02-05 12:00:00,R1,,,,,R,R,E,,,Chris Soules,False,Britt N,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_MEGAN_B,,,D1,,D8,D9,D6,,,,2015-02-05 12:00:00,,,R,,,,EQ,,,,Chris Soules,False,Megan B,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_KELSEY_P,,,D11,D12,D8,D9,D2,,,,2015-02-05 12:00:00,,,,,,,ED,,,,Chris Soules,False,Kelsey P,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_ASHLEY_I,,,D6,,D8,D9,D2,,,,2015-02-05 12:00:00,,,,,,,ED,,,,Chris Soules,False,Ashley I,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_ASHLEY_S,,,D11,D12,D8,,,,,,2015-02-05 12:00:00,,,,,E,,,,,,Chris Soules,False,Ashley S,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_MACKENZIE_D,,,D6,D12,D8,D9,,,,,2015-02-05 12:00:00,,,R,,,E,,,,,Chris Soules,False,Mackenzie D,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_SAMANTHA_S,,,,D12,D8,D9,,,,,2015-02-05 12:00:00,,,,,,E,,,,,Chris Soules,False,Samantha S,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_JUELIA_K,,,D11,D12,D8,,,,,,2015-02-05 12:00:00,,,,,E,,,,,,Chris Soules,False,Juelia K,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_NIKKI_D,,,,D12,D6,,,,,,2015-02-05 12:00:00,,,,,E,,,,,,Chris Soules,False,Nikki D,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_JILIAN_A,,,D11,D12,D6,,,,,,2015-02-05 12:00:00,,,,,ED,,,,,,Chris Soules,False,Jilian A,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_AMBER_J,,,D11,D12,,,,,,,2015-02-05 12:00:00,,,,E,,,,,,,Chris Soules,False,Amber J,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_TRACY_D,,,D11,D12,,,,,,,2015-02-05 12:00:00,,,,E,,,,,,,Chris Soules,False,Tracy D,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_TRINA_S,,,D11,,,,,,,,2015-02-05 12:00:00,,,,E,,,,,,,Chris Soules,False,Trina S,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_ALISSA_G,,,D11,,,,,,,,2015-02-05 12:00:00,,,E,,,,,,,,Chris Soules,False,Alissa G,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_JORDAN_B,,,,,,,,,,,2015-02-05 12:00:00,,,E,,,,,,,,Chris Soules,False,Jordan B,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_KIMBERLY_S,,,D6,,,,,,,,2015-02-05 12:00:00,E,,,,,,,,,,Chris Soules,False,Kimberly S,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_TANDRA_S,,,D6,,,,,,,,2015-02-05 12:00:00,,,E,,,,,,,,Chris Soules,False,Tandra S,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_TARA_E,,,D6,,,,,,,,2015-02-05 12:00:00,,,E,,,,,,,,Chris Soules,False,Tara E,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_AMANDA_G,,,,,,,,,,,2015-02-05 12:00:00,E,,,,,,,,,,Chris Soules,False,Amanda G,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_BO_S,,,,,,,,,,,2015-02-05 12:00:00,E,,,,,,,,,,Chris Soules,False,Bo S,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_BRITTANY_F,,,,,,,,,,,2015-02-05 12:00:00,E,,,,,,,,,,Chris Soules,False,Brittany F,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_KARA_W,,,,,,,,,,,2015-02-05 12:00:00,E,,,,,,,,,,Chris Soules,False,Kara W,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_MICHELLE_D,,,,,,,,,,,2015-02-05 12:00:00,E,,,,,,,,,,Chris Soules,False,Michelle D,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_NICOLE_M,,,,,,,,,,,2015-02-05 12:00:00,E,,,,,,,,,,Chris Soules,False,Nicole M,30,False,19,Bachelor,2015,,,,,,,,False
+BA_19_REEGAN_C,,,,,,,,,,,2015-02-05 12:00:00,E,,,,,,,,,,Chris Soules,False,Reegan C,30,False,19,Bachelor,2015,,,,,,,,False
+BA_20_BEN_H_L,,,,,,,,,,,2016-02-08 00:00:00,,,,,,,,,,,Ben Higgins,True,Ben Higgins,28,False,20,Bachelor,2016,1.0,,,,,,,True
+BA_20_LAUREN_B,,D1,,D1,D12,D9,D7,D1,D1,D1,2016-02-08 00:00:00,,W,,R,R,,,,,,Ben Higgins,False,Lauren B,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_LAUREN_H,,,D10,D12,D12,D1,D7,,,,2016-02-08 00:00:00,,,,,,R,E,,,,Ben Higgins,False,Lauren H,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_LAUREN_R,,,,,,,,,,,2016-02-08 00:00:00,E,,,,,,,,,,Ben Higgins,False,Lauren R,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_JOJO_F,,D1,D10,,D1,D9,D7,D1,D1,D1,2016-02-08 00:00:00,,E,R,,R,,,,,,Ben Higgins,False,Jojo F,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_CAILA_Q,,,D1,,D12,D9,D1,D3,D1,D1,2016-02-08 00:00:00,,,R,,,,R,,,EU,Ben Higgins,False,Caila Q,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_AMANDA_S,,,D6,D12,D12,D1,D7,D3,D1,,2016-02-08 00:00:00,,,,,,R,R,R,E,,Ben Higgins,False,Amanda S,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_BECCA_T,,,D10,,D1,D9,D7,D3,,,2016-02-08 00:00:00,,,,,R,,,E,,,Ben Higgins,False,Becca T,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_EMILY_F,,,D6,D12,D12,D9,D2,D1,,,2016-02-08 00:00:00,,,,,,,R,ED,,,Ben Higgins,False,Emily F,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_OLIVIA_C,,,D6,D12,D12,D9,D2,,,,2016-02-08 00:00:00,R1,,R,,,R,ED,,,,Ben Higgins,False,Olivia C,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_LEAH_B,,,,D12,D12,D9,D7,,,,2016-02-08 00:00:00,,,,,,,EU,,,,Ben Higgins,False,Leah B,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_JENNIFER_S,,,D10,D12,D12,D9,,,,,2016-02-08 00:00:00,,,,,,E,,,,,Ben Higgins,False,Jennifer S,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_JUBILEE_S,,,D10,D1,D12,D9,,,,,2016-02-08 00:00:00,,,,R,,ED,,,,,Ben Higgins,False,Jubilee S,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_AMBER_J,,,D10,D12,D12,,,,,,2016-02-08 00:00:00,,,,R,E,,,,,,Ben Higgins,False,Amber J,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_RACHEL_T,,,,D12,D12,,,,,,2016-02-08 00:00:00,,,,,E,,,,,,Ben Higgins,False,Rachel T,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_HAYLEY_F,,,D6,D12,D12,,,,,,2016-02-08 00:00:00,,,,,ED,,,,,,Ben Higgins,False,Hayley F,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_JAMI_L,,,,D12,,,,,,,2016-02-08 00:00:00,,,,E,,,,,,,Ben Higgins,False,Jami L,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_SHUSHANNA_M,,,D6,D12,,,,,,,2016-02-08 00:00:00,,,,E,,,,,,,Ben Higgins,False,Shushanna M,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_LACE_M,,,D10,D12,,,,,,,2016-02-08 00:00:00,,,,EQ,,,,,,,Ben Higgins,False,Lace M,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_JACKIE_D,,,D10,,,,,,,,2016-02-08 00:00:00,,,E,,,,,,,,Ben Higgins,False,Jackie D,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_MANDI_K,,,D10,,,,,,,,2016-02-08 00:00:00,,,E,,,,,,,,Ben Higgins,False,Mandi K,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_SAMANTHA_P,,,D6,,,,,,,,2016-02-08 00:00:00,,,E,,,,,,,,Ben Higgins,False,Samantha P,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_LB_B,,,D10,,,,,,,,2016-02-08 00:00:00,,,EQ,,,,,,,,Ben Higgins,False,Lb B,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_LAURA_E,,,,,,,,,,,2016-02-08 00:00:00,E,,,,,,,,,,Ben Higgins,False,Laura E,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_IZZY_G,,,,,,,,,,,2016-02-08 00:00:00,E,,,,,,,,,,Ben Higgins,False,Izzy G,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_MAEGAN_M,,,,,,,,,,,2016-02-08 00:00:00,E,,,,,,,,,,Ben Higgins,False,Maegan M,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_JESSICA_M,,,,,,,,,,,2016-02-08 00:00:00,E,,,,,,,,,,Ben Higgins,False,Jessica M,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_BREANNE_R,,,,,,,,,,,2016-02-08 00:00:00,E,,,,,,,,,,Ben Higgins,False,Breanne R,28,False,20,Bachelor,2016,,,,,,,,False
+BA_20_TIARA_S,,,,,,,,,,,2016-02-08 00:00:00,E,,,,,,,,,,Ben Higgins,False,Tiara S,28,False,20,Bachelor,2016,,,,,,,,False
+BA_21_NICK_V_L,,,,,,,,,,,2017-02-06 00:00:00,,,,,,,,,,,Nick Viall,True,Nick Viall,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_VANESSA_G,,D1,D12,D1,D13,D10,D6,D1,D1,D1,2017-02-06 00:00:00,R1,W,,R,,,,,,,Nick Viall,False,Vanessa G,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_RAVEN_G,,D1,D12,,D1,D10,D6,D3,D1,D1,2017-02-06 00:00:00,,E,,,R,,R,R,,,Nick Viall,False,Raven G,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_RACHEL_L,,,,D7,D13,D1,D6,D1,D1,D1,2017-02-06 00:00:00,,,,R,,R,,,,E,Nick Viall,False,Rachel L,30,True,21,Bachelor,2017,,1.0,,,,,,True
+BA_21_CORRINE_O,,,D12,D7,D13,D2,D6,D3,D1,,2017-02-06 00:00:00,,,R,,,R,,,E,,Nick Viall,False,Corrine O,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_KRISTINA_S,,,D6,D7,D13,D10,D1,D3,,,2017-02-06 00:00:00,,,,,R,R,R,EQ,,,Nick Viall,False,Kristina S,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_DANIELLE_M,,,D1,,D13,D10,D6,D1,,,2017-02-06 00:00:00,,,R,,,,,ED,,,Nick Viall,False,Danielle M,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_DANIELLE_L,,,D12,D7,D1,D10,D2,,,,2017-02-06 00:00:00,,,,R,R,,ED,,,,Nick Viall,False,Danielle L,30,True,21,Bachelor,2017,,,,,,,1.0,True
+BA_21_WHITNEY_F,,,,D7,D13,D10,D2,,,,2017-02-06 00:00:00,,,,,,,ED,,,,Nick Viall,False,Whitney F,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_JASMINE_G,,,D12,D7,D13,D10,D6,,,,2017-02-06 00:00:00,,,,,,,ED,,,,Nick Viall,False,Jasmine G,30,True,21,Bachelor,2017,,1.0,,,,,,True
+BA_21_JASMINE_B,,,,,,,,,,,2017-02-06 00:00:00,E,,,,,,,,,,Nick Viall,False,Jasmine B,30,True,21,Bachelor,2017,,1.0,,,,,,True
+BA_21_JAIMI_K,,,D6,D7,D13,D10,,,,,2017-02-06 00:00:00,,,,,,E,,,,,Nick Viall,False,Jaimi K,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_JOSEPHINE_T,,,D6,,D13,D10,,,,,2017-02-06 00:00:00,,,,,,E,,,,,Nick Viall,False,Josephine T,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_ALEXIS_W,,,D12,D7,D13,D10,,,,,2017-02-06 00:00:00,,,,,,E,,,,,Nick Viall,False,Alexis W,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_TAYLOR_N,,,D12,D7,D13,D2,,,,,2017-02-06 00:00:00,,,,,,ED,,,,,Nick Viall,False,Taylor N,30,True,21,Bachelor,2017,,,,,,,1.0,True
+BA_21_ASTRID_L,,,D6,D7,D13,,,,,,2017-02-06 00:00:00,,,,,E,,,,,,Nick Viall,False,Astrid L,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_SARAH_V,,,D12,D7,D13,,,,,,2017-02-06 00:00:00,,,,,E,,,,,,Nick Viall,False,Sarah V,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_BRITTANY_F,,,D12,D7,,,,,,,2017-02-06 00:00:00,,,,E,,,,,,,Nick Viall,False,Brittany F,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_CHRISTEN_W,,,D6,D7,,,,,,,2017-02-06 00:00:00,,,R,E,,,,,,,Nick Viall,False,Christen W,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_DOMINIQUE_A,,,,D7,,,,,,,2017-02-06 00:00:00,,,,ED,,,,,,,Nick Viall,False,Dominique A,30,True,21,Bachelor,2017,,1.0,,,,,,True
+BA_21_LACEY_M,,,D12,,,,,,,,2017-02-06 00:00:00,,,E,,,,,,,,Nick Viall,False,Lacey M,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_HAILEY_M,,,D12,,,,,,,,2017-02-06 00:00:00,,,E,,,,,,,,Nick Viall,False,Hailey M,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_ELIZABETH_W,,,D12,,,,,,,,2017-02-06 00:00:00,,,E,,,,,,,,Nick Viall,False,Elizabeth W,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_LIZ_S,,,D6,,,,,,,,2017-02-06 00:00:00,,,ED,,,,,,,,Nick Viall,False,Liz S,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_ANGELA_A,,,,,,,,,,,2017-02-06 00:00:00,E,,,,,,,,,,Nick Viall,False,Angela A,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_OLIVIA_B,,,,,,,,,,,2017-02-06 00:00:00,E,,,,,,,,,,Nick Viall,False,Olivia B,30,True,21,Bachelor,2017,,,,,1.0,,,True
+BA_21_IDA_D,,,,,,,,,,,2017-02-06 00:00:00,E,,,,,,,,,,Nick Viall,False,Ida D,30,True,21,Bachelor,2017,,,,1.0,,,,True
+BA_21_BRIANA_G,,,,,,,,,,,2017-02-06 00:00:00,E,,,,,,,,,,Nick Viall,False,Briana G,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_LAUREN_H,,,,,,,,,,,2017-02-06 00:00:00,E,,,,,,,,,,Nick Viall,False,Lauren H,30,False,21,Bachelor,2017,1.0,,,,,,,True
+BA_21_SUSANNAH_M,,,,,,,,,,,2017-02-06 00:00:00,E,,,,,,,,,,Nick Viall,False,Susannah M,30,True,21,Bachelor,2017,,,,,,1.0,,True
+BA_21_MICHELLE_R,,,,,,,,,,,2017-02-06 00:00:00,E,,,,,,,,,,Nick Viall,False,Michelle R,30,True,21,Bachelor,2017,,1.0,,,,,,True
+BA_22_ARIE_LUYENDYK_J_L,,,,,,,,,,,2018-02-02 00:00:00,,,,,,,,,,,Arie Luyendyk Jr,True,Arie Luyendyk Jr,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_BECCA_K,,D1,D1,D7,D12,D11,D6,D1,D1,D1,2018-02-02 00:00:00,,W,R,,,,,R,,,Arie Luyendyk Jr,False,Becca K,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_LAUREN_B,,D1,,D8,D12,D11,D1,D1,D1,D1,2018-02-02 00:00:00,,E,,,,R,R,R,,,Arie Luyendyk Jr,False,Lauren B,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_LAUREN_S,,,,D1,,,,,,,2018-02-02 00:00:00,,,,ED,,,,,,,Arie Luyendyk Jr,False,Lauren S,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_LAUREN_G,,,D15,,,,,,,,2018-02-02 00:00:00,,,E,,,,,,,,Arie Luyendyk Jr,False,Lauren G,29,True,22,Bachelor,2018,,1.0,,,,,,True
+BA_22_LAUREN_J,,,,,,,,,,,2018-02-02 00:00:00,E,,,,,,,,,,Arie Luyendyk Jr,False,Lauren J,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_KENDALL_L,,,D15,,D12,D11,D2,D3,D1,D1,2018-02-02 00:00:00,,,,,,,R,R,,EU,Arie Luyendyk Jr,False,Kendall L,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_TIA_B,,,D15,D8,D12,D1,D6,D3,D1,,2018-02-02 00:00:00,,,,,R,R,,R,E,,Arie Luyendyk Jr,False,Tia B,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_BEKAH_M,,,D15,D8,D1,D11,D6,D3,,,2018-02-02 00:00:00,,,,R,R,,R,ED,,,Arie Luyendyk Jr,False,Bekah M,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_SEINNE_F,,,D15,,D1,D11,D6,D1,,,2018-02-02 00:00:00,,,R,,R,,,ED,,,Arie Luyendyk Jr,False,Seinne F,29,True,22,Bachelor,2018,,1.0,,,,,,True
+BA_22_JACQUELINE_T,,,,D8,D12,D11,D1,,,,2018-02-02 00:00:00,,,,,,,R,EQ,,,Arie Luyendyk Jr,False,Jacqueline T,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_CHELSEA_R,,,D15,D7,D12,D1,D6,,,,2018-02-02 00:00:00,R1,,,R,,R,E,,,,Arie Luyendyk Jr,False,Chelsea R,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_JENNA_C,,,D15,D7,D12,D11,D6,,,,2018-02-02 00:00:00,,,,,,,E,,,,Arie Luyendyk Jr,False,Jenna C,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_KRYSTAL_N,,,D1,D8,D12,D11,D2,,,,2018-02-02 00:00:00,,,R,,,,ED,,,,Arie Luyendyk Jr,False,Krystal N,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_ASHLEY_L,,,,D7,D12,D11,,,,,2018-02-02 00:00:00,,,,,,E,,,,,Arie Luyendyk Jr,False,Ashley L,29,True,22,Bachelor,2018,,,,,,,1.0,True
+BA_22_MAQUEL_C,,,D15,D8,,D11,,,,,2018-02-02 00:00:00,,,,,,E,,,,,Arie Luyendyk Jr,False,Maquel C,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_MARIKH_M,,,D15,D8,D12,D11,,,,,2018-02-02 00:00:00,,,,,,E,,,,,Arie Luyendyk Jr,False,Marikh M,29,True,22,Bachelor,2018,,,,,1.0,,,True
+BA_22_BRITTANY_T,,,D15,D7,D12,,,,,,2018-02-02 00:00:00,,,,,E,,,,,,Arie Luyendyk Jr,False,Brittany T,29,True,22,Bachelor,2018,,1.0,,,,,,True
+BA_22_CAROLINE_L,,,D15,D7,D12,,,,,,2018-02-02 00:00:00,,,,,E,,,,,,Arie Luyendyk Jr,False,Caroline L,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_BIBIANA_J,,,D15,D8,,,,,,,2018-02-02 00:00:00,,,,E,,,,,,,Arie Luyendyk Jr,False,Bibiana J,29,True,22,Bachelor,2018,,,,1.0,,,,True
+BA_22_ANNALIESE_P,,,D15,D7,,,,,,,2018-02-02 00:00:00,,,,EU,,,,,,,Arie Luyendyk Jr,False,Annaliese P,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_JENNY_D,,,D15,,,,,,,,2018-02-02 00:00:00,,,E,,,,,,,,Arie Luyendyk Jr,False,Jenny D,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_VALERIE_B,,,D15,,,,,,,,2018-02-02 00:00:00,,,E,,,,,,,,Arie Luyendyk Jr,False,Valerie B,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_ALI_H,,,,,,,,,,,2018-02-02 00:00:00,E,,,,,,,,,,Arie Luyendyk Jr,False,Ali H,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_AMBER_W,,,,,,,,,,,2018-02-02 00:00:00,E,,,,,,,,,,Arie Luyendyk Jr,False,Amber W,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_BRI_A,,,,,,,,,,,2018-02-02 00:00:00,E,,,,,,,,,,Arie Luyendyk Jr,False,Bri A,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_BRITTANE_J,,,,,,,,,,,2018-02-02 00:00:00,E,,,,,,,,,,Arie Luyendyk Jr,False,Brittane J,29,True,22,Bachelor,2018,,,,,,1.0,,True
+BA_22_JESSICA_C,,,,,,,,,,,2018-02-02 00:00:00,E,,,,,,,,,,Arie Luyendyk Jr,False,Jessica C,29,False,22,Bachelor,2018,1.0,,,,,,,True
+BA_22_NYSHA_N,,,,,,,,,,,2018-02-02 00:00:00,E,,,,,,,,,,Arie Luyendyk Jr,False,Nysha N,29,True,22,Bachelor,2018,,1.0,,,,,,True
+BA_22_OLIVIA_G,,,,,,,,,,,2018-02-02 00:00:00,E,,,,,,,,,,Arie Luyendyk Jr,False,Olivia G,29,True,22,Bachelor,2018,,1.0,,,,,,True
+BE_1_TRISTA_R_L,,,,,,,,,,,2003-01-29 00:00:00,,,,,,,,,,,Trista Rehn,True,Trista Rehn,25,False,1,Bachelorette,2003,1.0,,,,,,,True
+BE_01_RYAN_S,,,D14,D1,D1,D1,D1,,,,2003-01-29 00:00:00,,,,,,,W,,,,Trista Rehn,False,Ryan S,25,False,1,Bachelorette,2003,1.0,,,,,,,True
+BE_01_CHARLIE_M,,,D14,D1,D1,D1,D1,,,,2003-01-29 00:00:00,,,,,,,E,,,,Trista Rehn,False,Charlie M,25,False,1,Bachelorette,2003,1.0,,,,,,,True
+BE_01_RUSS_X,,,D14,D1,D1,D1,,,,,2003-01-29 00:00:00,,,,,,E,,,,,Trista Rehn,False,Russ X,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_GREG_T,,,D14,D5,D1,,,,,,2003-01-29 00:00:00,,,,,E,,,,,,Trista Rehn,False,Greg T,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_BOB_G,,,D14,D5,,,,,,,2003-01-29 00:00:00,,,,E,,,,,,,Trista Rehn,False,Bob G,25,False,1,Bachelorette,2003,1.0,,,,,,,True
+BE_01_JAMIE_B,,,D14,D5,,,,,,,2003-01-29 00:00:00,,,,E,,,,,,,Trista Rehn,False,Jamie B,25,False,1,Bachelorette,2003,1.0,,,,,,,True
+BE_01_MIKE_X,,,D14,D5,,,,,,,2003-01-29 00:00:00,,,,E,,,,,,,Trista Rehn,False,Mike X,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_ROB_X,,,D14,D5,,,,,,,2003-01-29 00:00:00,,,,E,,,,,,,Trista Rehn,False,Rob X,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_BRIAN_C,,,D14,,,,,,,,2003-01-29 00:00:00,,,E,,,,,,,,Trista Rehn,False,Brian C,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_BRIAN_S,,,D14,,,,,,,,2003-01-29 00:00:00,,,E,,,,,,,,Trista Rehn,False,Brian S,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_BRIAN_H,,,D14,,,,,,,,2003-01-29 00:00:00,,,EQ,,,,,,,,Trista Rehn,False,Brian H,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_BRIAN_K,,,,,,,,,,,2003-01-29 00:00:00,E,,,,,,,,,,Trista Rehn,False,Brian K,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_BROOK_X,,,D14,,,,,,,,2003-01-29 00:00:00,,,E,,,,,,,,Trista Rehn,False,Brook X,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_JACK_X,,,D14,,,,,,,,2003-01-29 00:00:00,,,E,,,,,,,,Trista Rehn,False,Jack X,25,True,1,Bachelorette,2003,,1.0,,,,,,True
+BE_01_JEFF_X,,,D14,,,,,,,,2003-01-29 00:00:00,,,E,,,,,,,,Trista Rehn,False,Jeff X,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_JOSH_X,,,D14,,,,,,,,2003-01-29 00:00:00,,,E,,,,,,,,Trista Rehn,False,Josh X,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_BILLY_X,,,,,,,,,,,2003-01-29 00:00:00,E,,,,,,,,,,Trista Rehn,False,Billy X,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_CHRIS_X,,,,,,,,,,,2003-01-29 00:00:00,E,,,,,,,,,,Trista Rehn,False,Chris X,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_DUANE_X,,,,,,,,,,,2003-01-29 00:00:00,E,,,,,,,,,,Trista Rehn,False,Duane X,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_ERIC_X,,,,,,,,,,,2003-01-29 00:00:00,E,,,,,,,,,,Trista Rehn,False,Eric X,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_GREGG_H,,,,,,,,,,,2003-01-29 00:00:00,E,,,,,,,,,,Trista Rehn,False,Gregg H,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_MATT_X,,,,,,,,,,,2003-01-29 00:00:00,E,,,,,,,,,,Trista Rehn,False,Matt X,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_PAUL_X,,,,,,,,,,,2003-01-29 00:00:00,E,,,,,,,,,,Trista Rehn,False,Paul X,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_PETER_X,,,,,,,,,,,2003-01-29 00:00:00,E,,,,,,,,,,Trista Rehn,False,Peter X,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_01_WAYNE_X,,,,,,,,,,,2003-01-29 00:00:00,E,,,,,,,,,,Trista Rehn,False,Wayne X,25,False,1,Bachelorette,2003,,,,,,,,False
+BE_2_MEREDITH_P_L,,,,,,,,,,,2004-02-04 12:00:00,,,,,,,,,,,Meredith Phillips,True,Meredith Phillips,25,False,2,Bachelorette,2004,1.0,,,,,,,True
+BE_02_IAN_M,,,D7,D1,D4,D1,D1,D1,,,2004-02-04 12:00:00,,,,,,,,W,,,Meredith Phillips,False,Ian M,25,False,2,Bachelorette,2004,1.0,,,,,,,True
+BE_02_MATTHEW_H,,,D7,D7,D1,D1,D1,D1,,,2004-02-04 12:00:00,,,,,,,,E,,,Meredith Phillips,False,Matthew H,25,False,2,Bachelorette,2004,1.0,,,,,,,True
+BE_02_CHAD_X,,,D7,D7,D1,D1,D1,,,,2004-02-04 12:00:00,,,,,,,E,,,,Meredith Phillips,False,Chad X,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_LANNY_X,,,D7,D7,D1,D1,,,,,2004-02-04 12:00:00,,,,,,E,,,,,Meredith Phillips,False,Lanny X,25,False,2,Bachelorette,2004,1.0,,,,,,,True
+BE_02_BRAD_X,,,D7,D7,D4,,,,,,2004-02-04 12:00:00,,,,,E,,,,,,Meredith Phillips,False,Brad X,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_RYAN_M,,,D7,D2,D4,,,,,,2004-02-04 12:00:00,,,,,E,,,,,,Meredith Phillips,False,Ryan M,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_RYAN_R,,,D7,D7,,,,,,,2004-02-04 12:00:00,,,,E,,,,,,,Meredith Phillips,False,Ryan R,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_SEAN_X,,,D7,D7,D4,,,,,,2004-02-04 12:00:00,,,,,E,,,,,,Meredith Phillips,False,Sean X,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_RICK_X,,,D1,D7,,,,,,,2004-02-04 12:00:00,,,,E,,,,,,,Meredith Phillips,False,Rick X,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_TODD_X,,,D7,D2,,,,,,,2004-02-04 12:00:00,,,,E,,,,,,,Meredith Phillips,False,Todd X,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_DAMON_X,,,D7,,,,,,,,2004-02-04 12:00:00,,,E,,,,,,,,Meredith Phillips,False,Damon X,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_ELIOT_X,,,D7,,,,,,,,2004-02-04 12:00:00,,,E,,,,,,,,Meredith Phillips,False,Eliot X,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_HAROLD_H,,,D7,,,,,,,,2004-02-04 12:00:00,,,E,,,,,,,,Meredith Phillips,False,Harold H,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_MARCUS_X,,,D7,,,,,,,,2004-02-04 12:00:00,,,E,,,,,,,,Meredith Phillips,False,Marcus X,25,True,2,Bachelorette,2004,,1.0,,,,,,True
+BE_02_ROBERT_X,,,D7,,,,,,,,2004-02-04 12:00:00,,,E,,,,,,,,Meredith Phillips,False,Robert X,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_AARON_X,,,,,,,,,,,2004-02-04 12:00:00,E,,,,,,,,,,Meredith Phillips,False,Aaron X,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_ANDY_C,,,,,,,,,,,2004-02-04 12:00:00,E,,,,,,,,,,Meredith Phillips,False,Andy C,25,True,2,Bachelorette,2004,,,,,1.0,,,True
+BE_02_ANSELM_C,,,,,,,,,,,2004-02-04 12:00:00,E,,,,,,,,,,Meredith Phillips,False,Anselm C,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_BRIAN_X,,,,,,,,,,,2004-02-04 12:00:00,E,,,,,,,,,,Meredith Phillips,False,Brian X,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_CHRIS_X,,,,,,,,,,,2004-02-04 12:00:00,E,,,,,,,,,,Meredith Phillips,False,Chris X,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_CORY_H,,,,,,,,,,,2004-02-04 12:00:00,E,,,,,,,,,,Meredith Phillips,False,Cory H,25,False,2,Bachelorette,2004,1.0,,,,,,,True
+BE_02_JEFF_O,,,,,,,,,,,2004-02-04 12:00:00,E,,,,,,,,,,Meredith Phillips,False,Jeff O,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_JUSTIN_X,,,,,,,,,,,2004-02-04 12:00:00,E,,,,,,,,,,Meredith Phillips,False,Justin X,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_KEITH_X,,,,,,,,,,,2004-02-04 12:00:00,E,,,,,,,,,,Meredith Phillips,False,Keith X,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_02_TREVER_X,,,,,,,,,,,2004-02-04 12:00:00,E,,,,,,,,,,Meredith Phillips,False,Trever X,25,False,2,Bachelorette,2004,,,,,,,,False
+BE_3_JEN_S_L,,,,,,,,,,,2005-02-03 12:00:00,,,,,,,,,,,Jen Schefft,True,Jen Schefft,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_JERRY_F,,,D7,D6,D1,D1,D1,D1,,,2005-02-03 12:00:00,,,,,,,,,W,,Jen Schefft,False,Jerry F,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_JOHN PAUL_M,,,D7,D1,D4,D1,D1,D1,,,2005-02-03 12:00:00,,,,,,,,E,,,Jen Schefft,False,John paul M,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_RYAN_SH,,,D7,D6,D1,D1,D1,,,,2005-02-03 12:00:00,,,,,,,E,,,,Jen Schefft,False,Ryan Sh,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_RYAN_SM,,,D7,,,,,,,,2005-02-03 12:00:00,,,E,,,,,,,,Jen Schefft,False,Ryan Sm,25,True,3,Bachelorette,2005,,1.0,,,,,,True
+BE_03_WENDELL_J,,,D7,D6,D4,D1,,,,,2005-02-03 12:00:00,,,,,,E,,,,,Jen Schefft,False,Wendell J,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_FABRICE_L,,,D7,D1,D4,,,,,,2005-02-03 12:00:00,,,,,EQ,,,,,,Jen Schefft,False,Fabrice L,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_BEN_S,,,D7,D6,D4,,,,,,2005-02-03 12:00:00,,,,,E,,,,,,Jen Schefft,False,Ben S,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_JOSH_C,,,D7,D6,,,,,,,2005-02-03 12:00:00,,,,E,,,,,,,Jen Schefft,False,Josh C,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_KEITH,,,D1,D6,,,,,,,2005-02-03 12:00:00,R1,,,E,,,,,,,Jen Schefft,False,Keith,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_A.W.,,,D7,,,,,,,,2005-02-03 12:00:00,,,E,,,,,,,,Jen Schefft,False,A.w.,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_MARK,,,D7,,,,,,,,2005-02-03 12:00:00,,,E,,,,,,,,Jen Schefft,False,Mark,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_ANDREW,,,,,,,,,,,2005-02-03 12:00:00,E,,,,,,,,,,Jen Schefft,False,Andrew,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_KEVIN,,,,,,,,,,,2005-02-03 12:00:00,E,,,,,,,,,,Jen Schefft,False,Kevin,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_JASON_I,,,D7,,,,,,,,2005-02-03 12:00:00,,,E,,,,,,,,Jen Schefft,False,Jason I,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_MATT_M,,,D7,,,,,,,,2005-02-03 12:00:00,,,E,,,,,,,,Jen Schefft,False,Matt M,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_MATT_L,,,,,,,,,,,2005-02-03 12:00:00,E,,,,,,,,,,Jen Schefft,False,Matt L,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_MICHAEL_F,,,D7,,,,,,,,2005-02-03 12:00:00,,,E,,,,,,,,Jen Schefft,False,Michael F,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_STU_L,,,D7,,,,,,,,2005-02-03 12:00:00,,,E,,,,,,,,Jen Schefft,False,Stu L,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_ANDY_L,,,,,,,,,,,2005-02-03 12:00:00,E,,,,,,,,,,Jen Schefft,False,Andy L,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_CHRIS_M,,,,,,,,,,,2005-02-03 12:00:00,E,,,,,,,,,,Jen Schefft,False,Chris M,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_CHRIS_C,,,,,,,,,,,2005-02-03 12:00:00,E,,,,,,,,,,Jen Schefft,False,Chris C,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_COLLIN_E,,,,,,,,,,,2005-02-03 12:00:00,E,,,,,,,,,,Jen Schefft,False,Collin E,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_DAVID_V,,,,,,,,,,,2005-02-03 12:00:00,E,,,,,,,,,,Jen Schefft,False,David V,25,False,3,Bachelorette,2005,,,,,,,,False
+BE_03_ERIC_H,,,,,,,,,,,2005-02-03 12:00:00,E,,,,,,,,,,Jen Schefft,False,Eric H,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_03_ERIC_T,,,,,,,,,,,2005-02-03 12:00:00,E,,,,,,,,,,Jen Schefft,False,Eric T,25,False,3,Bachelorette,2005,1.0,,,,,,,True
+BE_4_DEANNA_P_L,,,,,,,,,,,2008-06-12 12:00:00,,,,,,,,,,,DeAnna Pappas,True,DeAnna Pappas,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_JESSE_C,,,D7,D10,D1,D4,D1,D1,D1,,2008-06-12 12:00:00,R1,,,,R,,,,W,,DeAnna Pappas,False,Jesse C,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_JASON_M,,,D7,D1,D6,D4,D1,D1,D1,,2008-06-12 12:00:00,,,,R,,,,,E,,DeAnna Pappas,False,Jason M,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_JEREMY_A,,,D7,D10,D6,D1,D1,D1,,,2008-06-12 12:00:00,R1,,R,,,,,E,,,DeAnna Pappas,False,Jeremy A,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_GRAHAM_B,,,D1,D10,D6,D4,D1,,,,2008-06-12 12:00:00,,,R,,,,E,,,,DeAnna Pappas,False,Graham B,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_SEAN_R,,,D7,D10,D6,D1,,,,,2008-06-12 12:00:00,,,,,R,E,,,,,DeAnna Pappas,False,Sean R,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_BLAINE_T,,,D7,D10,D6,D4,,,,,2008-06-12 12:00:00,,,,,,E,,,,,DeAnna Pappas,False,Blaine T,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_BRIAN_T,,,D7,D10,D6,,,,,,2008-06-12 12:00:00,,,,,E,,,,,,DeAnna Pappas,False,Brian T,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_BRIAN_W,,,,,,,,,,,2008-06-12 12:00:00,E,,,,,,,,,,DeAnna Pappas,False,Brian W,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_FREDERICK_G,,,D7,D10,D2,,,,,,2008-06-12 12:00:00,,,,R,ED,,,,,,DeAnna Pappas,False,Frederick G,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_ROBERT_F,,,D7,D10,D2,,,,,,2008-06-12 12:00:00,,,,R,ED,,,,,,DeAnna Pappas,False,Robert F,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_PAUL_B,,,D7,D10,,,,,,,2008-06-12 12:00:00,,,R,E,,,,,,,DeAnna Pappas,False,Paul B,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_RONALD_M,,,D7,D10,,,,,,,2008-06-12 12:00:00,,,,E,,,,,,,DeAnna Pappas,False,Ronald M,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_RICHARD_M,,,D7,D1,,,,,,,2008-06-12 12:00:00,R1,,,ED,,,,,,,DeAnna Pappas,False,Richard M,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_CHRISTOPHER_B,,,D7,,,,,,,,2008-06-12 12:00:00,,,E,,,,,,,,DeAnna Pappas,False,Christopher B,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_ERIC_P,,,D7,,,,,,,,2008-06-12 12:00:00,,,E,,,,,,,,DeAnna Pappas,False,Eric P,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_RYAN_H,,,D7,,,,,,,,2008-06-12 12:00:00,,,E,,,,,,,,DeAnna Pappas,False,Ryan H,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_CHANDLER_F,,,,,,,,,,,2008-06-12 12:00:00,E,,,,,,,,,,DeAnna Pappas,False,Chandler F,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_DONATO_C,,,,,,,,,,,2008-06-12 12:00:00,E,,,,,,,,,,DeAnna Pappas,False,Donato C,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_GREGORY_M,,,,,,,,,,,2008-06-12 12:00:00,E,,,,,,,,,,DeAnna Pappas,False,Gregory M,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_JEFFREY_H,,,,,,,,,,,2008-06-12 12:00:00,E,,,,,,,,,,DeAnna Pappas,False,Jeffrey H,25,True,4,Bachelorette,2008,,1.0,,,,,,True
+BE_04_JONATHAN_K,,,,,,,,,,,2008-06-12 12:00:00,E,,,,,,,,,,DeAnna Pappas,False,Jonathan K,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_LUKE_H,,,,,,,,,,,2008-06-12 12:00:00,E,,,,,,,,,,DeAnna Pappas,False,Luke H,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_PATRICK_C,,,,,,,,,,,2008-06-12 12:00:00,E,,,,,,,,,,DeAnna Pappas,False,Patrick C,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_PATRICK_D,,,,,,,,,,,2008-06-12 12:00:00,E,,,,,,,,,,DeAnna Pappas,False,Patrick D,25,False,4,Bachelorette,2008,1.0,,,,,,,True
+BE_04_SPERO_S,,,,,,,,,,,2008-06-12 12:00:00,E,,,,,,,,,,DeAnna Pappas,False,Spero S,25,False,4,Bachelorette,2008,,,,,,,,False
+BE_5_JILLIAN_H_L,,,,,,,,,,,2009-06-22 12:00:00,,,,,,,,,,,Jillian Harris,True,Jillian Harris,30,False,5,Bachelorette,2009,1.0,,,,,,,True
+BE_05_ED_S,,D1,D8,D1,D10,D8,,D1,D1,D1,2009-06-22 12:00:00,,W,,R,,,,,,,Jillian Harris,False,Ed S,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_KIPTYN_L,,D1,D7,D11,D1,D8,D6,D1,D1,D1,2009-06-22 12:00:00,,E,,,R,,R,,,,Jillian Harris,False,Kiptyn L,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_REID_R,,,,D11,D10,D8,D1,D1,D1,D1,2009-06-22 12:00:00,,,,,,,R,,,E,Jillian Harris,False,Reid R,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_WES_H,,,D8,D11,D10,D8,D6,D1,D1,,2009-06-22 12:00:00,,,R,,,,,,E,,Jillian Harris,False,Wes H,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_JESSE_K,,,D7,,D10,D1,D6,D1,,,2009-06-22 12:00:00,,,,,R,R,,E,,,Jillian Harris,False,Jesse K,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_MICHAEL_S,,,D8,D11,D10,D1,D6,D1,,,2009-06-22 12:00:00,,,,,,R,,E,,,Jillian Harris,False,Michael S,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_JAKE_P,,,D1,,D10,D8,D6,,,,2009-06-22 12:00:00,,,R,,,,E,,,,Jillian Harris,False,Jake P,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_TANNER_P,,,D8,D11,D10,D8,D6,,,,2009-06-22 12:00:00,,,,,,,E,,,,Jillian Harris,False,Tanner P,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_TANNER_F,,,,D11,,,,,,,2009-06-22 12:00:00,,,,E,,,,,,,Jillian Harris,False,Tanner F,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_ROBBY_D,,,,D11,D10,D8,D1,,,,2009-06-22 12:00:00,,,,R,,,ED,,,,Jillian Harris,False,Robby D,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_MARK_H,,,D7,D11,D2,D8,,,,,2009-06-22 12:00:00,,,,,R,E,,,,,Jillian Harris,False,Mark H,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_DAVID_G,,,D7,,D10,,,,,,2009-06-22 12:00:00,R1,,,,E,,,,,,Jillian Harris,False,David G,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_JUAN_B,,,D7,D11,D10,,,,,,2009-06-22 12:00:00,,,R,,E,,,,,,Jillian Harris,False,Juan B,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_MIKE_S,,,D7,D11,D2,,,,,,2009-06-22 12:00:00,,,R,,ED,,,,,,Jillian Harris,False,Mike S,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_BRAD_S,,,D8,D11,,,,,,,2009-06-22 12:00:00,,,,E,,,,,,,Jillian Harris,False,Brad S,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_SASHA_P,,,D8,D1,,,,,,,2009-06-22 12:00:00,,,,ED,,,,,,,Jillian Harris,False,Sasha P,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_BRIAN_D,,,D8,,,,,,,,2009-06-22 12:00:00,,,E,,,,,,,,Jillian Harris,False,Brian D,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_BRIAN_V,,,,,,,,,,,2009-06-22 12:00:00,E,,,,,,,,,,Jillian Harris,False,Brian V,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_JULIEN_H,,,,,,,,,,,2009-06-22 12:00:00,,,E,,,,,,,,Jillian Harris,False,Julien H,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_MATHUE_J,,,D8,,,,,,,,2009-06-22 12:00:00,,,E,,,,,,,,Jillian Harris,False,Mathue J,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_SIMON_A,,,D7,,,,,,,,2009-06-22 12:00:00,,,E,,,,,,,,Jillian Harris,False,Simon A,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_ADAM_D,,,,,,,,,,,2009-06-22 12:00:00,E,,,,,,,,,,Jillian Harris,False,Adam D,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_BRYCE_H,,,,,,,,,,,2009-06-22 12:00:00,E,,,,,,,,,,Jillian Harris,False,Bryce H,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_CALEB_K,,,,,,,,,,,2009-06-22 12:00:00,E,,,,,,,,,,Jillian Harris,False,Caleb K,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_GREG_B,,,,,,,,,,,2009-06-22 12:00:00,E,,,,,,,,,,Jillian Harris,False,Greg B,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_JOHN_H,,,,,,,,,,,2009-06-22 12:00:00,E,,,,,,,,,,Jillian Harris,False,John H,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_JOHN_P,,,,,,,,,,,2009-06-22 12:00:00,E,,,,,,,,,,Jillian Harris,False,John P,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_JOSH_Y,,,,,,,,,,,2009-06-22 12:00:00,E,,,,,,,,,,Jillian Harris,False,Josh Y,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_KYLE_Y,,,,,,,,,,,2009-06-22 12:00:00,E,,,,,,,,,,Jillian Harris,False,Kyle Y,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_05_STEPHEN_R,,,,,,,,,,,2009-06-22 12:00:00,E,,,,,,,,,,Jillian Harris,False,Stephen R,30,False,5,Bachelorette,2009,,,,,,,,False
+BE_6_ALI_F_L,,,,,,,,,,,2010-06-28 00:00:00,,,,,,,,,,,Ali Fedotowsky,True,Ali Fedotowsky,25,False,6,Bachelorette,2010,1.0,,,,,,,True
+BE_06_ROBERTO_M,,D1,,D1,D7,D6,D4,D1,D1,D1,2010-06-28 00:00:00,R1,W,,R,,,,,,,Ali Fedotowsky,False,Roberto M,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_CHRIS_L,,D1,,D9,D1,D6,D4,D1,D1,D1,2010-06-28 00:00:00,,ED,,,R,,,,,,Ali Fedotowsky,False,Chris L,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_CHRIS_N,,,D12,D9,,D6,,,,,2010-06-28 00:00:00,,,,,,E,,,,,Ali Fedotowsky,False,Chris N,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_CHRIS_H,,,D12,,,,,,,,2010-06-28 00:00:00,,,E,,,,,,,,Ali Fedotowsky,False,Chris H,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_FRANK_N,,,D1,D9,D7,D6,D1,D2,D1,D1,2010-06-28 00:00:00,,,R,,,,R,,,EF,Ali Fedotowsky,False,Frank N,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_KIRK_D,,,D12,D9,D7,D1,D4,D1,D1,,2010-06-28 00:00:00,,,,R,,R,,,E,,Ali Fedotowsky,False,Kirk D,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_TY_B,,,D12,,D7,D6,D1,D2,,,2010-06-28 00:00:00,,,R,,,R,R,E,,,Ali Fedotowsky,False,Ty B,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_CRAIG_R,,,D12,D9,D7,D6,D4,,,,2010-06-28 00:00:00,,,,,,,E,,,,Ali Fedotowsky,False,Craig R,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_CRAIG_M,,,D12,,,,,,,,2010-06-28 00:00:00,,,E,,,,,,,,Ali Fedotowsky,False,Craig M,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_JUSTIN_R,,,D12,D9,,D2,,,,,2010-06-28 00:00:00,,,,,,R,EF,,,,Ali Fedotowsky,False,Justin R,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_KASEY_K,,,D12,,D1,D2,,,,,2010-06-28 00:00:00,,,,,,ED,,,,,Ali Fedotowsky,False,Kasey K,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_JESSE_B,,,D1,D9,D7,,,,,,2010-06-28 00:00:00,,,R,,E,,,,,,Ali Fedotowsky,False,Jesse B,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_JONATHAN_N,,,D12,D9,D7,,,,,,2010-06-28 00:00:00,,,,,E,,,,,,Ali Fedotowsky,False,Jonathan N,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_JOHN_C,,,,D9,,,,,,,2010-06-28 00:00:00,,,,E,,,,,,,Ali Fedotowsky,False,John C,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_JOHN_N,,,,,,,,,,,2010-06-28 00:00:00,E,,,,,,,,,,Ali Fedotowsky,False,John N,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_STEVE_K,,,D12,,,,,,,,2010-06-28 00:00:00,,,,E,,,,,,,Ali Fedotowsky,False,Steve K,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_HUNTER_W,,,D12,D1,,,,,,,2010-06-28 00:00:00,,,,ED,,,,,,,Ali Fedotowsky,False,Hunter W,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_TYLER_V,,,D12,,,,,,,,2010-06-28 00:00:00,,,E,,,,,,,,Ali Fedotowsky,False,Tyler V,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_TYLER_M,,,,,,,,,,,2010-06-28 00:00:00,E,,,,,,,,,,Ali Fedotowsky,False,Tyler M,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_DEREK_X,,,,,,,,,,,2010-06-28 00:00:00,E,,,,,,,,,,Ali Fedotowsky,False,Derek X,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_DERRICK_S,,,,,,,,,,,2010-06-28 00:00:00,E,,,,,,,,,,Ali Fedotowsky,False,Derrick S,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_JASON_W,,,,,,,,,,,2010-06-28 00:00:00,E,,,,,,,,,,Ali Fedotowsky,False,Jason W,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_JAY_R,,,,,,,,,,,2010-06-28 00:00:00,E,,,,,,,,,,Ali Fedotowsky,False,Jay R,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_KYLE_H,,,,,,,,,,,2010-06-28 00:00:00,E,,,,,,,,,,Ali Fedotowsky,False,Kyle H,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_06_PHIL_K,,,,,,,,,,,2010-06-28 00:00:00,E,,,,,,,,,,Ali Fedotowsky,False,Phil K,25,False,6,Bachelorette,2010,,,,,,,,False
+BE_7_ASHLEY_H_L,,,,,,,,,,,2011-06-27 00:00:00,,,,,,,,,,,Ashley Hebert,True,Ashley Hebert,25,False,7,Bachelorette,2011,1.0,,,,,,,True
+BE_07_JP_R,,D1,,D1,D10,D8,D1,D3,D1,D1,2011-06-27 00:00:00,,W,,R,,,R,R,,,Ashley Hebert,False,Jp R,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_BEN_F,,D1,D6,D10,D10,D1,D6,D1,D1,D1,2011-06-27 00:00:00,,E,,,R,R,,,,,Ashley Hebert,False,Ben F,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_BEN_C,,,,D1,D10,D2,,,,,2011-06-27 00:00:00,,,,R,,ED,,,,,Ashley Hebert,False,Ben C,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_CONSTANTINE_T,,,,,D1,D8,D6,D1,D1,D1,2011-06-27 00:00:00,,,,,R,,,,,EQ,Ashley Hebert,False,Constantine T,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_AMES_B,,,,D10,D1,D8,D6,D3,D1,,2011-06-27 00:00:00,,,,,R,,,,E,,Ashley Hebert,False,Ames B,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_LUCAS_D,,,D6,D10,D10,D8,D1,D3,,,2011-06-27 00:00:00,,,,,,,R,E,,,Ashley Hebert,False,Lucas D,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_RYAN_P,,,,D10,D10,D8,D6,D1,,,2011-06-27 00:00:00,R1,,,R,,,R,ED,,,Ashley Hebert,False,Ryan P,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_RYAN_M,,,D1,,D10,D8,D6,,,,2011-06-27 00:00:00,,,R,,,,EQ,,,,Ashley Hebert,False,Ryan M,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_RYAN_M2,,,,,,,,,,,2011-06-27 00:00:00,,,E,,,,,,,,Ashley Hebert,False,Ryan M,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_BLAKE_J,,,D6,D10,D10,D8,D6,,,,2011-06-27 00:00:00,,,,,,R,E,,,,Ashley Hebert,False,Blake J,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_NICK_P,,,D6,D10,D10,D8,,,,,2011-06-27 00:00:00,,,,,,E,,,,,Ashley Hebert,False,Nick P,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_WILLIAM_H,,,D1,D10,D10,D2,,,,,2011-06-27 00:00:00,,,R,,,ED,,,,,Ashley Hebert,False,William H,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_WEST_L,,,D6,,D10,,,,,,2011-06-27 00:00:00,,,,,E,,,,,,Ashley Hebert,False,West L,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_CHRIS_D,,,,D10,,,,,,,2011-06-27 00:00:00,,,,E,,,,,,,Ashley Hebert,False,Chris D,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_CHRIS_M,,,,,,,,,,,2011-06-27 00:00:00,E,,,,,,,,,,Ashley Hebert,False,Chris M,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_JEFF_M,,,,D10,,,,,,,2011-06-27 00:00:00,,,,E,,,,,,,Ashley Hebert,False,Jeff M,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_BENTLEY_W,,,D6,D10,,,,,,,2011-06-27 00:00:00,,,R,EQ,,,,,,,Ashley Hebert,False,Bentley W,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_MATT_C,,,,,,,,,,,2011-06-27 00:00:00,,,E,,,,,,,,Ashley Hebert,False,Matt C,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_STEPHEN_D,,,,,,,,,,,2011-06-27 00:00:00,,,E,,,,,,,,Ashley Hebert,False,Stephen D,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_ANTHONY_S,,,,,,,,,,,2011-06-27 00:00:00,E,,,,,,,,,,Ashley Hebert,False,Anthony S,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_FRANK_C,,,,,,,,,,,2011-06-27 00:00:00,E,,,,,,,,,,Ashley Hebert,False,Frank C,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_JON_E,,,,,,,,,,,2011-06-27 00:00:00,E,,,,,,,,,,Ashley Hebert,False,Jon E,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_MICHAEL_B,,,,,,,,,,,2011-06-27 00:00:00,E,,,,,,,,,,Ashley Hebert,False,Michael B,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_ROB_D,,,,,,,,,,,2011-06-27 00:00:00,E,,,,,,,,,,Ashley Hebert,False,Rob D,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_07_TIM_M,,,,,,,,,,,2011-06-27 00:00:00,EU,,,,,,,,,,Ashley Hebert,False,Tim M,25,False,7,Bachelorette,2011,,,,,,,,False
+BE_8_EMILY_M_L,,,,,,,,,,,2012-06-18 00:00:00,,,,,,,,,,,Emily Maynard,True,Emily Maynard,25,False,8,Bachelorette,2012,1.0,,,,,,,True
+BE_08_JEF_H,,D1,D13,D12,D8,D1,D6,D1,D1,D1,2012-06-18 00:00:00,,W,R,,R,R,,,,,Emily Maynard,False,Jef H,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_ARIE_L,,,,D1,D8,D8,D6,D1,D1,D1,2012-06-18 00:00:00,,ED,,R,,,,,,,Emily Maynard,False,Arie L,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_SEAN_L,,,,D12,D8,D1,D6,D3,D1,D1,2012-06-18 00:00:00,,,,R,,R,,R,,E,Emily Maynard,False,Sean L,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_CHRIS_B,,,D13,D1,D8,D8,D6,D3,D1,,2012-06-18 00:00:00,,,,R,,,R,,E,,Emily Maynard,False,Chris B,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_JOHN_W,,,D13,D12,D2,D8,D6,D1,,,2012-06-18 00:00:00,,,,,R,,,E,,,Emily Maynard,False,John W,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_DOUG_C,,,,D12,D1,D8,D6,D3,,,2012-06-18 00:00:00,R1,,,,R,,,ED,,,Emily Maynard,False,Doug C,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_RYAN_B,,,D1,D12,D8,D8,D1,,,,2012-06-18 00:00:00,,,R,,,,ED,,,,Emily Maynard,False,Ryan B,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_TRAVIS_P,,,,D12,D8,D8,D1,,,,2012-06-18 00:00:00,,,,,,,ED,,,,Emily Maynard,False,Travis P,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_ALEJANDRO_V,,,D13,D12,,D8,,,,,2012-06-18 00:00:00,,,,,,E,,,,,Emily Maynard,False,Alejandro V,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_KALON_M,,,D13,,D8,D8,,,,,2012-06-18 00:00:00,,,,,,ED,,,,,Emily Maynard,False,Kalon M,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_CHARLIE_G,,,D13,D12,D8,,,,,,2012-06-18 00:00:00,,,,,E,,,,,,Emily Maynard,False,Charlie G,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_MICHAEL_N,,,D13,D12,,,,,,,2012-06-18 00:00:00,,,,,E,,,,,,Emily Maynard,False,Michael N,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_NATHAN_B,,,D13,,D2,,,,,,2012-06-18 00:00:00,,,,,ED,,,,,,Emily Maynard,False,Nathan B,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_STEVIE_A,,,D13,D12,,,,,,,2012-06-18 00:00:00,,,,E,,,,,,,Emily Maynard,False,Stevie A,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_ALESSANDRO_G,,,D13,D12,,,,,,,2012-06-18 00:00:00,,,,EU,,,,,,,Emily Maynard,False,Alessandro G,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_TONY_P,,,D13,D12,,,,,,,2012-06-18 00:00:00,,,,ED,,,,,,,Emily Maynard,False,Tony P,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_AARON_M,,,D13,,,,,,,,2012-06-18 00:00:00,,,E,,,,,,,,Emily Maynard,False,Aaron M,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_KYLE_D,,,D13,,,,,,,,2012-06-18 00:00:00,,,E,,,,,,,,Emily Maynard,False,Kyle D,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_JOE_G,,,D1,,,,,,,,2012-06-18 00:00:00,,,ED,,,,,,,,Emily Maynard,False,Joe G,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_BRENT_R,,,,,,,,,,,2012-06-18 00:00:00,E,,,,,,,,,,Emily Maynard,False,Brent R,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_DAVID_H,,,,,,,,,,,2012-06-18 00:00:00,E,,,,,,,,,,Emily Maynard,False,David H,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_JACKSON_L,,,,,,,,,,,2012-06-18 00:00:00,E,,,,,,,,,,Emily Maynard,False,Jackson L,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_JEANPAUL_L,,,,,,,,,,,2012-06-18 00:00:00,E,,,,,,,,,,Emily Maynard,False,Jeanpaul L,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_LERONE_A,,,,,,,,,,,2012-06-18 00:00:00,E,,,,,,,,,,Emily Maynard,False,Lerone A,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_08_RANDY_W,,,,,,,,,,,2012-06-18 00:00:00,E,,,,,,,,,,Emily Maynard,False,Randy W,25,False,8,Bachelorette,2012,,,,,,,,False
+BE_9_DESIREE_H_L,,,,,,,,,,,2013-07-01 00:00:00,,,,,,,,,,,Desiree Hartsock,True,Desiree Hartsock,25,False,9,Bachelorette,2013,1.0,,,,,,,True
+BE_09_CHRIS_S,,D1,,D10,D10,D1,D6,D1,D1,D1,2013-07-01 00:00:00,,W,,R,,R,,,,,Desiree Hartsock,False,Chris S,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_DREW_K,,D1,D14,D10,D10,D7,D1,D2,D1,D1,2013-07-01 00:00:00,R1,ED,,,,,R,R,,,Desiree Hartsock,False,Drew K,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_BROOKS_F,,,D1,D10,D10,D7,D6,D1,D1,,2013-07-01 00:00:00,,,R,,,R,,,,EQ,Desiree Hartsock,False,Brooks F,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_ZAK_W,,,D14,D5,D10,D7,D1,D2,D1,,2013-07-01 00:00:00,R1,,,,R,,R,,E,,Desiree Hartsock,False,Zak W,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_MICHAEL_G,,,D14,D10,D10,D2,D6,D1,,,2013-07-01 00:00:00,R1,,,,,R,,E,,,Desiree Hartsock,False,Michael G,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_JAMES_C,,,D14,D5,D1,D7,D6,,,,2013-07-01 00:00:00,,,,R,R,,E,,,,Desiree Hartsock,False,James C,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_JUAN_PABLO_G,,,D14,D5,D10,D7,D6,,,,2013-07-01 00:00:00,,,,,,,E,,,,Desiree Hartsock,False,Juan Pablo G,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_KASEY_S,,,D14,D1,D10,D7,D6,,,,2013-07-01 00:00:00,,,,R,,,E,,,,Desiree Hartsock,False,Kasey S,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_MIKEY_T,,,D14,D10,D10,D7,,,,,2013-07-01 00:00:00,,,,,,E,,,,,Desiree Hartsock,False,Mikey T,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_BEN_S,,,D14,D10,D10,D2,,,,,2013-07-01 00:00:00,R1,,R,,,ED,,,,,Desiree Hartsock,False,Ben S,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_BRYDEN_V,,,D1,D5,D10,,,,,,2013-07-01 00:00:00,R1,,R,,,EQ,,,,,Desiree Hartsock,False,Bryden V,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_ZACK_K,,,D14,D10,,,,,,,2013-07-01 00:00:00,,,,,E,,,,,,Desiree Hartsock,False,Zack K,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_BRAD_M,,,,D10,D1,,,,,,2013-07-01 00:00:00,,,,,ED,,,,,,Desiree Hartsock,False,Brad M,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_BRANDON_A,,,D14,D10,,,,,,,2013-07-01 00:00:00,,,,E,,,,,,,Desiree Hartsock,False,Brandon A,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_DAN_C,,,D14,D5,,,,,,,2013-07-01 00:00:00,,,,E,,,,,,,Desiree Hartsock,False,Dan C,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_BRIAN_J,,,D14,D10,,,,,,,2013-07-01 00:00:00,,,,EF,,,,,,,Desiree Hartsock,False,Brian J,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_NICK_M,,,D14,,,,,,,,2013-07-01 00:00:00,R1,,E,,,,,,,,Desiree Hartsock,False,Nick M,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_NICK_R,,,,,,,,,,,2013-07-01 00:00:00,E,,,,,,,,,,Desiree Hartsock,False,Nick R,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_ROBERT_G,,,,,,,,,,,2013-07-01 00:00:00,,,E,,,,,,,,Desiree Hartsock,False,Robert G,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_WILL_R,,,D14,,,,,,,,2013-07-01 00:00:00,,,E,,,,,,,,Desiree Hartsock,False,Will R,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_DIOGO_C,,,,,,,,,,,2013-07-01 00:00:00,E,,,,,,,,,,Desiree Hartsock,False,Diogo C,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_LARRY_B,,,,,,,,,,,2013-07-01 00:00:00,E,,,,,,,,,,Desiree Hartsock,False,Larry B,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_MICAH_X,,,,,,,,,,,2013-07-01 00:00:00,E,,,,,,,,,,Desiree Hartsock,False,Micah X,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_MIKE_X,,,,,,,,,,,2013-07-01 00:00:00,E,,,,,,,,,,Desiree Hartsock,False,Mike X,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_09_JONATHAN_V,,,,,,,,,,,2013-07-01 00:00:00,EU,,,,,,,,,,Desiree Hartsock,False,Jonathan V,25,False,9,Bachelorette,2013,,,,,,,,False
+BE_10_ANDI_D_L,,,,,,,,,,,2014-06-23 00:00:00,,,,,,,,,,,Andi Dorfman,True,Andi Dorfman,25,False,10,Bachelorette,2014,1.0,,,,,,,True
+BE_10_JOSH_M,,D1,D14,D12,,D1,D6,D1,D1,D1,2014-06-23 00:00:00,,W,,R,,R,,,,,Andi Dorfman,False,Josh M,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_JOSH_B,,,,,,,,,,,2014-06-23 00:00:00,E,,,,,,,,,,Andi Dorfman,False,Josh B,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_NICK_V,,D1,,D1,D6,D9,D1,D4,D1,D1,2014-06-23 00:00:00,R1,EU,,R,,,R,R,,,Andi Dorfman,False,Nick V,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_NICK_S,,,D14,,,,,,,,2014-06-23 00:00:00,,,E,,,,,,,,Andi Dorfman,False,Nick S,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_CHRIS_S,,,D1,,,D9,D6,D4,D1,D1,2014-06-23 00:00:00,,,R,,,,R,,,ED,Andi Dorfman,False,Chris S,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_MARCUS_G,,,D14,D12,D1,D9,D6,D1,D1,,2014-06-23 00:00:00,,,R,,R,,,,E,,Andi Dorfman,False,Marcus G,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_BRIAN_O,,,D14,D12,D6,D1,D6,D4,,,2014-06-23 00:00:00,,,,,R,R,,E,,,Andi Dorfman,False,Brian O,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_DYLAN_P,,,D14,,D1,D9,D6,D4,,,2014-06-23 00:00:00,,,,,R,,,E,,,Andi Dorfman,False,Dylan P,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_JJ_O,,,,D1,,D9,D6,,,,2014-06-23 00:00:00,,,,R,,R,E,,,,Andi Dorfman,False,Jj O,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_CODY_S,,,D14,D12,D6,D9,D1,,,,2014-06-23 00:00:00,,,,,,,ED,,,,Andi Dorfman,False,Cody S,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_ANDREW_P,,,,D12,D6,D9,,,,,2014-06-23 00:00:00,,,,,,E,,,,,Andi Dorfman,False,Andrew P,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_MARQUEL_M,,,D14,D12,D6,D9,,,,,2014-06-23 00:00:00,,,,,,E,,,,,Andi Dorfman,False,Marquel M,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_PATRICK_J,,,D14,D12,,D9,,,,,2014-06-23 00:00:00,,,,,,E,,,,,Andi Dorfman,False,Patrick J,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_TASOS_H,,,D14,D12,,,,,,,2014-06-23 00:00:00,,,,,E,,,,,,Andi Dorfman,False,Tasos H,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_ERIC_H,,,D1,D12,D6,,,,,,2014-06-23 00:00:00,,,R,,EU,,,,,,Andi Dorfman,False,Eric H,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_BRADLEY_W,,,D14,D12,,,,,,,2014-06-23 00:00:00,,,,E,,,,,,,Andi Dorfman,False,Bradley W,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_BRETT_M,,,D14,D12,,,,,,,2014-06-23 00:00:00,,,,E,,,,,,,Andi Dorfman,False,Brett M,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_RON_W,,,D14,D12,,,,,,,2014-06-23 00:00:00,,,,EQ,,,,,,,Andi Dorfman,False,Ron W,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_CARL_K,,,D14,,,,,,,,2014-06-23 00:00:00,,,E,,,,,,,,Andi Dorfman,False,Carl K,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_CRAIG_M,,,D14,,,,,,,,2014-06-23 00:00:00,,,E,,,,,,,,Andi Dorfman,False,Craig M,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_EMIL_S,,,,,,,,,,,2014-06-23 00:00:00,E,,,,,,,,,,Andi Dorfman,False,Emil S,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_JASON_L,,,,,,,,,,,2014-06-23 00:00:00,E,,,,,,,,,,Andi Dorfman,False,Jason L,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_MIKE_C,,,,,,,,,,,2014-06-23 00:00:00,E,,,,,,,,,,Andi Dorfman,False,Mike C,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_RUDIE_D,,,,,,,,,,,2014-06-23 00:00:00,E,,,,,,,,,,Andi Dorfman,False,Rudie D,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_10_STEVEN_W,,,,,,,,,,,2014-06-23 00:00:00,E,,,,,,,,,,Andi Dorfman,False,Steven W,25,False,10,Bachelorette,2014,,,,,,,,False
+BE_11_KAITLYN_B_L,,,,,,,,,,,2015-06-22 00:00:00,,,,,,,,,,,Kaitlyn Bristowe,True,Kaitlyn Bristowe,26,False,11,Bachelorette,2015,1.0,,,,,,,True
+BE_11_SHAWN_B,,,,D6,D8,D1,,D3,D1,D1,2015-06-22 00:00:00,R1,,,R,,R,,,,W,Kaitlyn Bristowe,False,Shawn B,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_SHAWN_E,,,,,,,,,,,2015-06-22 00:00:00,E,,,,,,,,,,Kaitlyn Bristowe,False,Shawn E,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_NICK_V,,,,,,D9,D1,D3,D1,D1,2015-06-22 00:00:00,,,,,,R,R,,,E,Kaitlyn Bristowe,False,Nick V,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_BEN_H,,,D8,D6,D5,D1,D5,D1,D1,,2015-06-22 00:00:00,,,,R,,R,,,E,,Kaitlyn Bristowe,False,Ben H,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_BEN_Z,,,D8,D1,D8,D9,D5,,,,2015-06-22 00:00:00,,,R,R,,,E,,,,Kaitlyn Bristowe,False,Ben Z,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_JARED_H,,,D8,D6,D1,D9,D5,D1,D1,,2015-06-22 00:00:00,,,,,R,,R,E,,,Kaitlyn Bristowe,False,Jared H,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_JOE_B,,,D7,D6,D5,,D2,D3,,,2015-06-22 00:00:00,,,,,,,R,ED,,,Kaitlyn Bristowe,False,Joe B,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_CHRIS_S,,,D7,D6,D5,D9,D5,D1,,,2015-06-22 00:00:00,,,,,R,,,ED,,,Kaitlyn Bristowe,False,Chris S,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_TANNER_T,,,D8,D6,D8,D9,D5,,,,2015-06-22 00:00:00,,,,,,,E,,,,Kaitlyn Bristowe,False,Tanner T,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_JJ_L,,,D7,D6,D8,D9,D2,,,,2015-06-22 00:00:00,,,R,,,,ED,,,,Kaitlyn Bristowe,False,Jj L,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_JOSHUA_A,,,D7,D6,D5,D9,,,,,2015-06-22 00:00:00,,,,,,E,,,,,Kaitlyn Bristowe,False,Joshua A,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_JUSTIN_R,,,D8,,D8,D9,,,,,2015-06-22 00:00:00,,,,,R,E,,,,,Kaitlyn Bristowe,False,Justin R,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_IAN_T,,,D7,,D5,D9,,,,,2015-06-22 00:00:00,,,,,,EQ,,,,,Kaitlyn Bristowe,False,Ian T,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_COREY_S,,,D8,,D8,,,,,,2015-06-22 00:00:00,,,,,E,,,,,,Kaitlyn Bristowe,False,Corey S,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_JONATHAN_H,,,D7,D6,D8,,,,,,2015-06-22 00:00:00,,,,,E,,,,,,Kaitlyn Bristowe,False,Jonathan H,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_RYAN_B,,,,D6,D8,,,,,,2015-06-22 00:00:00,,,,,E,,,,,,Kaitlyn Bristowe,False,Ryan B,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_RYAN_M,,,,,,,,,,,2015-06-22 00:00:00,EF,,,,,,,,,,Kaitlyn Bristowe,False,Ryan M,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_CLINT_A,,,D1,D6,,,,,,,2015-06-22 00:00:00,,,R,EU,,,,,,,Kaitlyn Bristowe,False,Clint A,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_TONY_H,,,D7,D6,,,,,,,2015-06-22 00:00:00,,,,EQ,,,,,,,Kaitlyn Bristowe,False,Tony H,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_CORY_S,,,,,,,,,,,2015-06-22 00:00:00,,,E,,,,,,,,Kaitlyn Bristowe,False,Cory S,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_DANIEL_F,,,D8,,,,,,,,2015-06-22 00:00:00,,,E,,,,,,,,Kaitlyn Bristowe,False,Daniel F,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_KUPAH_J,,,D8,,,,,,,,2015-06-22 00:00:00,,,EU,,,,,,,,Kaitlyn Bristowe,False,Kupah J,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_BRADLEY_C,,,,,,,,,,,2015-06-22 00:00:00,E,,,,,,,,,,Kaitlyn Bristowe,False,Bradley C,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_DAVID_X,,,,,,,,,,,2015-06-22 00:00:00,E,,,,,,,,,,Kaitlyn Bristowe,False,David X,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_JOSH_S,,,,,,,,,,,2015-06-22 00:00:00,E,,,,,,,,,,Kaitlyn Bristowe,False,Josh S,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_11_BRADY_T,,,,,,,,,,,2015-06-22 00:00:00,EQ,,,,,,,,,,Kaitlyn Bristowe,False,Brady T,26,False,11,Bachelorette,2015,,,,,,,,False
+BE_12_JOELLE_JOJO_F_L,,,,,,,,,,,2016-06-27 00:00:00,,,,,,,,,,,Joelle JoJo Fletcher,True,Joelle JoJo Fletcher,26,True,12,Bachelorette,2016,,,,,,1.0,,True
+BE_12_JORDAN_R,,D1,D6,D12,D11,D1,D5,D1,D1,D1,2016-06-27 00:00:00,R1,W,,,R,R,,,,,Joelle JoJo Fletcher,False,Jordan R,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_ROBBY_H,,D1,D10,,D11,D9,D5,D3,D1,D1,2016-06-27 00:00:00,,E,,,,R,,R,,,Joelle JoJo Fletcher,False,Robby H,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_CHASE_M,,,,D1,D11,D9,D2,D3,D1,D1,2016-06-27 00:00:00,,,,R,,,R,,,ED,Joelle JoJo Fletcher,False,Chase M,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_LUKE_P,,,D10,,D1,D9,D5,D1,D1,,2016-06-27 00:00:00,,,,,R,,R,,E,,Joelle JoJo Fletcher,False,Luke P,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_JAMES_T,,,D6,D1,D11,D9,D5,D3,,,2016-06-27 00:00:00,,,R,R,,,,E,,,Joelle JoJo Fletcher,False,James T,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_JAMES_F,,,D10,D12,D11,,,,,,2016-06-27 00:00:00,,,,,E,,,,,,Joelle JoJo Fletcher,False,James F,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_JAMES_S,,,,,,,,,,,2016-06-27 00:00:00,,,E,,,,,,,,Joelle JoJo Fletcher,False,James S,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_ALEX_W,,,D6,D12,D2,D9,D5,D1,,,2016-06-27 00:00:00,,,,,R,,,ED,,,Joelle JoJo Fletcher,False,Alex W,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_DEREK_P,,,D1,,D11,D1,D2,,,,2016-06-27 00:00:00,,,R,,,R,ED,,,,Joelle JoJo Fletcher,False,Derek P,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_WELLS_A,,,D10,D12,D11,D9,D1,,,,2016-06-27 00:00:00,,,R,,,,ED,,,,Joelle JoJo Fletcher,False,Wells A,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_VINCENT_V,,,D10,D12,D11,D9,,,,,2016-06-27 00:00:00,,,,,,E,,,,,Joelle JoJo Fletcher,False,Vincent V,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_GRANT_K,,,D10,D12,D11,D9,,,,,2016-06-27 00:00:00,,,,,,E,,,,,Joelle JoJo Fletcher,False,Grant K,26,True,12,Bachelorette,2016,,1.0,,,,,,True
+BE_12_EVAN_B,,,D10,D12,D11,D9,,,,,2016-06-27 00:00:00,,,,R,,E,,,,,Joelle JoJo Fletcher,False,Evan B,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_DANIEL_M,,,D10,D12,D11,,,,,,2016-06-27 00:00:00,,,,,E,,,,,,Joelle JoJo Fletcher,False,Daniel M,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_CHAD_J,,,D6,D12,D2,,,,,,2016-06-27 00:00:00,,,,,ED,,,,,,Joelle JoJo Fletcher,False,Chad J,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_NICK_B,,,D6,D12,,,,,,,2016-06-27 00:00:00,,,,E,,,,,,,Joelle JoJo Fletcher,False,Nick B,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_NICK_S,,,,,,,,,,,2016-06-27 00:00:00,E,,,,,,,,,,Joelle JoJo Fletcher,False,Nick S,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_CHRISTIAN_B,,,D6,D12,,,,,,,2016-06-27 00:00:00,,,,E,,,,,,,Joelle JoJo Fletcher,False,Christian B,26,True,12,Bachelorette,2016,,,,,1.0,,,True
+BE_12_ALI_Z,,,D10,D12,,,,,,,2016-06-27 00:00:00,,,,E,,,,,,,Joelle JoJo Fletcher,False,Ali Z,26,True,12,Bachelorette,2016,,,,,,1.0,,True
+BE_12_WILL_H,,,D10,,,,,,,,2016-06-27 00:00:00,,,E,,,,,,,,Joelle JoJo Fletcher,False,Will H,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_BRANDON_H,,,,,,,,,,,2016-06-27 00:00:00,,,E,,,,,,,,Joelle JoJo Fletcher,False,Brandon H,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_SAL_D,,,,,,,,,,,2016-06-27 00:00:00,E,,,,,,,,,,Joelle JoJo Fletcher,False,Sal D,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_PETER_M,,,,,,,,,,,2016-06-27 00:00:00,E,,,,,,,,,,Joelle JoJo Fletcher,False,Peter M,26,True,12,Bachelorette,2016,,,,1.0,,,,True
+BE_12_JONATHAN_H,,,,,,,,,,,2016-06-27 00:00:00,E,,,,,,,,,,Joelle JoJo Fletcher,False,Jonathan H,26,True,12,Bachelorette,2016,,,,,1.0,,,True
+BE_12_JAKE_P,,,,,,,,,,,2016-06-27 00:00:00,E,,,,,,,,,,Joelle JoJo Fletcher,False,Jake P,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_12_COLEY_K,,,,,,,,,,,2016-06-27 00:00:00,E,,,,,,,,,,Joelle JoJo Fletcher,False,Coley K,26,False,12,Bachelorette,2016,1.0,,,,,,,True
+BE_13_RACHEL_L_L,,,,,,,,,,,2017-06-29 12:00:00,,,,,,,,,,,Rachel Lindsay,True,Rachel Lindsay,31,True,13,Bachelorette,2017,,1.0,,,,,,True
+BE_13_BRYAN_A,,D1,,D6,D13,D1,D7,D1,D1,D1,2017-06-29 12:00:00,R1,W,,,R,R,,R,,,Rachel Lindsay,False,Bryan A,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_PETER_K,,D1,D1,D6,D13,D9,D7,D1,D1,D1,2017-06-29 12:00:00,,E,R,,,,R,R,,,Rachel Lindsay,False,Peter K,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_ERIC_B,,,D10,D8,D13,D9,D1,D3,D1,D1,2017-06-29 12:00:00,,,,R,,,R,R,,E,Rachel Lindsay,False,Eric B,31,True,13,Bachelorette,2017,,1.0,,,,,,True
+BE_13_DEAN_U,,,D8,D8,D1,D9,D7,D1,D1,,2017-06-29 12:00:00,,,R,,R,,,R,E,,Rachel Lindsay,False,Dean U,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_ADAM_G,,,D10,D8,D13,D9,D7,D3,,,2017-06-29 12:00:00,,,,,,,,ED,,,Rachel Lindsay,False,Adam G,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_MATT_M,,,D10,,D13,D9,D7,D3,,,2017-06-29 12:00:00,,,,,,,,ED,,,Rachel Lindsay,False,Matt M,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_ALEX_B,,,D10,D6,D13,D9,D7,,,,2017-06-29 12:00:00,,,,R,,,E,,,,Rachel Lindsay,False,Alex B,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_WILL_G,,,D10,D6,D13,D9,D1,,,,2017-06-29 12:00:00,,,,,,R,ED,,,,Rachel Lindsay,False,Will G,31,True,13,Bachelorette,2017,,1.0,,,,,,True
+BE_13_KENNY_L,,,D8,D8,D13,D2,D7,,,,2017-06-29 12:00:00,,,,,,R,ED,,,,Rachel Lindsay,False,Kenny L,31,True,13,Bachelorette,2017,,1.0,,,,,,True
+BE_13_ANTHONY_B,,,,D1,D13,D9,,,,,2017-06-29 12:00:00,,,,R,,E,,,,,Rachel Lindsay,False,Anthony B,31,True,13,Bachelorette,2017,,1.0,,,,,,True
+BE_13_JOSIAH_G,,,D10,,D13,D9,,,,,2017-06-29 12:00:00,,,R,,,E,,,,,Rachel Lindsay,False,Josiah G,31,True,13,Bachelorette,2017,,1.0,,,,,,True
+BE_13_LEE_G,,,D10,D8,D13,D2,,,,,2017-06-29 12:00:00,,,,,,ED,,,,,Rachel Lindsay,False,Lee G,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_IGGY_R,,,D8,,D13,,,,,,2017-06-29 12:00:00,,,,,E,,,,,,Rachel Lindsay,False,Iggy R,31,True,13,Bachelorette,2017,,,,1.0,,,,True
+BE_13_JONATHAN_T,,,D8,D6,D13,,,,,,2017-06-29 12:00:00,,,,,E,,,,,,Rachel Lindsay,False,Jonathan T,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_JACK_S,,,D8,D8,D1,,,,,,2017-06-29 12:00:00,,,,,ED,,,,,,Rachel Lindsay,False,Jack S,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_BRADY_E,,,,D8,,,,,,,2017-06-29 12:00:00,,,,E,,,,,,,Rachel Lindsay,False,Brady E,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_BRYCE_P,,,,D8,,,,,,,2017-06-29 12:00:00,,,,E,,,,,,,Rachel Lindsay,False,Bryce P,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_DIGGY_M,,,D10,,,,,,,,2017-06-29 12:00:00,,,,E,,,,,,,Rachel Lindsay,False,Diggy M,31,True,13,Bachelorette,2017,,1.0,,,,,,True
+BE_13_FRED_J,,,D8,D6,,,,,,,2017-06-29 12:00:00,,,,ED,,,,,,,Rachel Lindsay,False,Fred J,31,True,13,Bachelorette,2017,,1.0,,,,,,True
+BE_13_BLAKE_E,,,D8,,,,,,,,2017-06-29 12:00:00,,,E,,,,,,,,Rachel Lindsay,False,Blake E,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_BLAKE_K,,,,,,,,,,,2017-06-29 12:00:00,E,,,,,,,,,,Rachel Lindsay,False,Blake K,31,True,13,Bachelorette,2017,,,,,1.0,,,True
+BE_13_JAMEY_K,,,D10,,,,,,,,2017-06-29 12:00:00,,,E,,,,,,,,Rachel Lindsay,False,Jamey K,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_LUCAS_Y,,,D8,,,,,,,,2017-06-29 12:00:00,,,E,,,,,,,,Rachel Lindsay,False,Lucas Y,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_DEMARIO_J,,,D10,,,,,,,,2017-06-29 12:00:00,,,EU,,,,,,,,Rachel Lindsay,False,Demario J,31,True,13,Bachelorette,2017,,1.0,,,,,,True
+BE_13_GRANT_H,,,,,,,,,,,2017-06-29 12:00:00,E,,,,,,,,,,Rachel Lindsay,False,Grant H,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_JEDIDIAH_B,,,,,,,,,,,2017-06-29 12:00:00,E,,,,,,,,,,Rachel Lindsay,False,Jedidiah B,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_13_KYLE_S,,,,,,,,,,,2017-06-29 12:00:00,E,,,,,,,,,,Rachel Lindsay,False,Kyle S,31,True,13,Bachelorette,2017,,1.0,,,,,,True
+BE_13_MICHAEL_B,,,,,,,,,,,2017-06-29 12:00:00,E,,,,,,,,,,Rachel Lindsay,False,Michael B,31,True,13,Bachelorette,2017,,1.0,,,,,,True
+BE_13_MILTON_L,,,,,,,,,,,2017-06-29 12:00:00,E,,,,,,,,,,Rachel Lindsay,False,Milton L,31,True,13,Bachelorette,2017,,1.0,,,,,,True
+BE_13_MOHIT_S,,,,,,,,,,,2017-06-29 12:00:00,E,,,,,,,,,,Rachel Lindsay,False,Mohit S,31,True,13,Bachelorette,2017,,,,,1.0,,,True
+BE_13_ROB_H,,,,,,,,,,,2017-06-29 12:00:00,E,,,,,,,,,,Rachel Lindsay,False,Rob H,31,False,13,Bachelorette,2017,1.0,,,,,,,True
+BE_14_BECCA_K_L,,,,,,,,,,,2018-07-02 00:00:00,,,,,,,,,,,Becca Kufrin,True,Becca Kufrin,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_GARRETT_Y,,D1,D10,D10,D1,D9,D7,D1,D1,D1,2018-07-02 00:00:00,R1,W,,,R,,,R,,,Becca Kufrin,False,Garrett Y,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_BLAKE_H,,D1,D1,D10,D13,D9,D7,D1,D1,D1,2018-07-02 00:00:00,,E,R,,,R,,R,,,Becca Kufrin,False,Blake H,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_JASON_T,,,,D6,D13,D9,D1,D3,D1,D1,2018-07-02 00:00:00,,,,,,,R,R,,ED,Becca Kufrin,False,Jason T,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_COLTON_U,,,D10,D6,D13,D1,D7,D1,D1,,2018-07-02 00:00:00,,,,R,,R,R,R,E,,Becca Kufrin,False,Colton U,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_WILLS_R,,,D10,D6,D1,D9,D7,D3,,,2018-07-02 00:00:00,,,R,,R,,,ED,,,Becca Kufrin,False,Wills R,28,True,14,Bachelorette,2018,,1.0,,,,,,True
+BE_14_LEO_D,,,D10,D10,D13,D9,D1,D3,,,2018-07-02 00:00:00,,,,,,,R,ED,,,Becca Kufrin,False,Leo D,28,True,14,Bachelorette,2018,,,,1.0,,,,True
+BE_14_CONNOR_O,,,D8,D10,D13,D9,D7,,,,2018-07-02 00:00:00,,,,,,,E,,,,Becca Kufrin,False,Connor O,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_LINCOLN_A,,,D8,D10,D13,D9,D7,,,,2018-07-02 00:00:00,,,,,,,E,,,,Becca Kufrin,False,Lincoln A,28,True,14,Bachelorette,2018,,1.0,,,,,,True
+BE_14_CHRIS_R,,,D8,D1,D13,D9,D7,,,,2018-07-02 00:00:00,,,,R,,,EU,,,,Becca Kufrin,False,Chris R,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_JOHN_G,,,D10,D10,D13,D9,,,,,2018-07-02 00:00:00,,,,,,E,,,,,Becca Kufrin,False,John G,28,True,14,Bachelorette,2018,,,,,1.0,,,True
+BE_14_JORDAN_K,,,D8,D6,D13,D2,,,,,2018-07-02 00:00:00,,,,,,ED,,,,,Becca Kufrin,False,Jordan K,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_DAVID_R,,,D8,D6,D13,D2,,,,,2018-07-02 00:00:00,,,,R,,ED,,,,,Becca Kufrin,False,David R,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_CHRISTON_S,,,D10,D10,D13,,,,,,2018-07-02 00:00:00,,,,,E,,,,,,Becca Kufrin,False,Christon S,28,True,14,Bachelorette,2018,,1.0,,,,,,True
+BE_14_NICK_S,,,D8,,D13,,,,,,2018-07-02 00:00:00,,,,,E,,,,,,Becca Kufrin,False,Nick S,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_JEAN_B,,,D8,D6,D13,,,,,,2018-07-02 00:00:00,,,R,,ED,,,,,,Becca Kufrin,False,Jean B,28,True,14,Bachelorette,2018,,1.0,,,,,,True
+BE_14_MIKE_R,,,,D10,,,,,,,2018-07-02 00:00:00,,,,E,,,,,,,Becca Kufrin,False,Mike R,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_RYAN_P,,,D10,D10,,,,,,,2018-07-02 00:00:00,,,,E,,,,,,,Becca Kufrin,False,Ryan P,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_CLAY_H,,,D8,D10,,,,,,,2018-07-02 00:00:00,,,,EQ,,,,,,,Becca Kufrin,False,Clay H,28,True,14,Bachelorette,2018,,1.0,,,,,,True
+BE_14_ALEX_T,,,D10,,,,,,,,2018-07-02 00:00:00,,,E,,,,,,,,Becca Kufrin,False,Alex T,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_RICKEY_J,,,D10,,,,,,,,2018-07-02 00:00:00,,,E,,,,,,,,Becca Kufrin,False,Rickey J,28,True,14,Bachelorette,2018,,1.0,,,,,,True
+BE_14_TRENT_J,,,D10,,,,,,,,2018-07-02 00:00:00,,,E,,,,,,,,Becca Kufrin,False,Trent J,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_CHASE_V,,,,,,,,,,,2018-07-02 00:00:00,E,,,,,,,,,,Becca Kufrin,False,Chase V,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_CHRISTIAN_E,,,,,,,,,,,2018-07-02 00:00:00,E,,,,,,,,,,Becca Kufrin,False,Christian E,28,True,14,Bachelorette,2018,,,,1.0,,,,True
+BE_14_DARIUS_F,,,,,,,,,,,2018-07-02 00:00:00,E,,,,,,,,,,Becca Kufrin,False,Darius F,28,True,14,Bachelorette,2018,,1.0,,,,,,True
+BE_14_GRANT_V,,,,,,,,,,,2018-07-02 00:00:00,E,,,,,,,,,,Becca Kufrin,False,Grant V,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_JOE_A,,,,,,,,,,,2018-07-02 00:00:00,E,,,,,,,,,,Becca Kufrin,False,Joe A,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_KAMIL_N,,,,,,,,,,,2018-07-02 00:00:00,E,,,,,,,,,,Becca Kufrin,False,Kamil N,28,False,14,Bachelorette,2018,1.0,,,,,,,True
+BE_14_JAKE_E,,,,,,,,,,,2018-07-02 00:00:00,EU,,,,,,,,,,Becca Kufrin,False,Jake E,28,False,14,Bachelorette,2018,1.0,,,,,,,True

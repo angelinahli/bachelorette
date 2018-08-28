@@ -22,6 +22,20 @@ footer {
   line-height: 60px; /* Vertically center the text there */
 }
 
+a:link {
+  color: #c95b83;
+}
+a:visited {
+  color: #c95b83;
+}
+a:hover {
+  color: #a04868;
+}
+
 .navbar-nav a{
   font-size: 1.3em !important;
+}
+
+.VirtualizedSelectFocusedOption {
+  color: #c95b83;
 }
