@@ -1,7 +1,8 @@
 import dash_core_components as dcc
 import dash_html_components as html
 
-PRIMARY_COLOR = "#c95b83"
+PRIMARY_COLOR = "#C95B83"
+COLORSCHEME = ["#C95B83", "#FFBD4A", "#399E5A", "#5AB1BB", "#8E47C1"]
 
 class BSContainer(html.Div):
   def __init__(self, main_content=None, title=None, subtitle=None, **kwargs):
@@ -46,4 +47,4 @@ class FormElement(html.Div):
     self.children.append(html.Br())
 
 def get_form_options(options_list):
-  return [ {"label": x, "value": x.lower()} for x in options_list]
+  return [ {"label": x, "value": x} for x in options_list]

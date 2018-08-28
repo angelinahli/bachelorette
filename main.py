@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 import os
 
 from app import app
-from apps import index, representation
+from apps import index, rep
 
 # define base template for application
 with open("templates/base.html", "r") as fl:
@@ -40,7 +40,7 @@ def display_page(pathname):
   pathname = pathname.strip("/") if pathname else None
   paths = {
     "": index.layout,
-    "the-numbers": representation.layout,
+    "the-numbers": rep.layout,
   }
   # TODO change default behavior to return 404 error
   return paths.get(pathname, index.layout)
