@@ -2,7 +2,8 @@ import dash_core_components as dcc
 import dash_html_components as html
 
 PRIMARY_COLOR = "#C95B83"
-COLORSCHEME = ["#C95B83", "#FFBD4A", "#399E5A", "#5AB1BB", "#8E47C1"]
+COLORSCHEME = ["#C95B83", "#FFBD4A", "#F26B3C", "#399E5A", "#5AB1BB", "#1446A0", 
+               "#731963"]
 
 class BSContainer(html.Div):
   def __init__(self, main_content=None, title=None, subtitle=None, **kwargs):

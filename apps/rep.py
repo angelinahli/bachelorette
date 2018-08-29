@@ -43,6 +43,9 @@ class Tab(dcc.Tab):
 dashboard = html.Div(
   className="col-sm-3",
   children=[
+    html.Br(),
+    html.Br(),
+    html.Br(),
     html.H5("Change what this figure shows below:"),
     html.Br(),
     utils.FormElement(
@@ -92,7 +95,7 @@ overall_tab = Tab(
   value="overall", 
   children=[
     html.Div(id="overall-value", style=dict(display="none")),
-    html.H3("People of Color on the Bachelor/ette"),
+    html.H3("POC are under-represented on the Bachelor/ette"),
     dcc.Graph(id="overall-bar"),
     dcc.Markdown(id="overall-caption")
   ]
@@ -204,25 +207,19 @@ def update_overall_tab(cleaned_data):
 
 @app.callback(
   Output("overall-caption", "children"),
-  [Input("leads", "value"), Input("overall-value", "children")]
+  [Input("overall-value", "children"), Input("race", "value")]
 )
-def update_overall_caption(leads, cleaned_data):
-  groupings = json.loads(cleaned_data)
-  leads = map(lambda x: {True: "Leads", False: "Contestants"}[x], leads)
-
-  new_groupings = {}
-  for k, v in groupings.items():
-    key = "num_poc" if k == "true" else "num_npoc"
-    val = dict(zip(v.get("x"), v.get("y")))
-    new_groupings[key] = val
-
+def update_overall_caption(cleaned_data, race):
+  data = json.loads(cleaned_data)
+  if not data or race != "poc_flag":
+    return
   template = "##### There are {mult} times as many white {title} " \
              + "as there are POC {title}"
   caption_elts = []
-  for v in leads:
-    num_poc = new_groupings.get("num_poc").get(v)
-    num_npoc = new_groupings.get("num_npoc").get(v)
-    title = v.lower()
+  for v in data.keys():
+    title = {"true": "leads", "false": "contestants"}[v]
+    num_poc = data.get(v).get("POC")
+    num_npoc = data.get(v).get("White")
     if num_npoc and not num_poc:
       temp = "##### There are no POC {title} for this selection"
       caption_elts.append(temp.format(title=title))
@@ -231,7 +228,7 @@ def update_overall_caption(leads, cleaned_data):
       caption_elts.append(temp.format(title=title))
     elif num_poc and num_npoc:
       mult = round(float(num_npoc)/num_poc, 1)
-      caption_elts.append(template.format(mult=mult, title=v.lower()))
+      caption_elts.append(template.format(mult=mult, title=title))
 
   caption = "  \n".join(caption_elts)
   return caption
