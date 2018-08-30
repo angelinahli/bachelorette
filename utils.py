@@ -21,6 +21,7 @@ class BSContainer(html.Div):
 
     # adding body content
     if main_content:
+      self.children.append(html.Br())
       self.children.append(main_content)
 
 class Tabs(dcc.Tabs):

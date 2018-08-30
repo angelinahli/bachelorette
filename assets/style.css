@@ -40,6 +40,10 @@ a:hover {
   font-size: 1.3em !important;
 }
 
+.caption {
+  color: #c95b83;
+}
+
 .VirtualizedSelectFocusedOption {
   color: #c95b83;
 }
