@@ -50,3 +50,9 @@ class FormElement(html.Div):
 
 def get_form_options(options_list):
   return [ {"label": x, "value": x} for x in options_list]
+
+def get_colors(items_list):
+  colors = COLORSCHEME
+  if len(colors) < len(items_list):
+    colors += [PRIMARY_COLOR for _ in range(len(items_list) - len(colors))]
+  return dict(zip(items_list, colors))

@@ -114,8 +114,11 @@ evolution_tab = Tab(
   label="Evolution", 
   value="evolution",
   children=[
-    html.H3("The representation of POC has been improving over time"),
-    dcc.Graph(id="evolution-graph")
+    html.H3("POC representation has increased over time"),
+    dcc.Graph(id="evolution-graph"),
+    html.H4("In recent years, there have been considerably higher numbers " \
+      + "of people of color on the show - including the shows' first " \
+      + "non-white leads.")
   ]
 )
 
@@ -123,7 +126,9 @@ comparison_tab = Tab(
   label="Comparison", 
   value="comparison",
   children=[
-    html.H3("The Bachelor/ette is still less diverse than the U.S. at large")
+    html.H3("The Bachelor/ette is still less diverse than the U.S. at large"),
+    dcc.Graph(id="comparison-graph"),
+    html.H4("Some text")
   ]
 )
 
@@ -151,6 +156,32 @@ layout = utils.BSContainer(
 
 ########## interactive routes ##########
 
+##### helper functions #####
+
+def get_filtered_df(leads, shows, years):
+  start, end = years
+  return df[
+    (df["race_data_flag"] == True)
+    & (df["show"].isin(shows))
+    & (df["year"] >= start)
+    & (df["year"] <= end)
+  ]
+
+def get_race_titles():
+  race_flags = ["white", "afam", "amin", "hisp", "asn_paci", "oth", "mult"]
+  race_titles = ["White", "African American", "American Indian", "Hispanic",
+                 "Asian & Pacific Islander", "Other", "Multiple"]
+  return dict(zip(race_flags, race_titles))
+
+def get_poc_flag_name(x):
+  return {True: "POC", False: "White"}[x]
+
+def get_lead_flag_name(x):
+  return {True: "Leads", "true": "Leads", 
+          False: "Contestants", "false": "Contestants"}[x]
+
+##### other routes #####
+
 @app.callback(
   Output(component_id="selected-years", component_property="children"),
   [Input(component_id="years", component_property="value")])
@@ -167,31 +198,20 @@ def update_selected_years(years):
     ["leads", "shows", "years", "race"] ]
 )
 def clean_overall_data(leads, shows, years, race):
-  start, end = years
-  filtered_df = df[
-    (df["race_data_flag"] == True)
-    & (df["show"].isin(shows))
-    & (df["year"] >= start)
-    & (df["year"] <= end)
-  ]
+  filtered_df = get_filtered_df(leads, shows, years)
   lead_data = {}
-  print("years:", years)
   for lead in leads:
     lead_df = filtered_df[filtered_df["lead_flag"] == lead]
     if race == "poc_flag":
-      poc_series = lead_df["poc_flag"] \
-                   .map(lambda x: {True: "POC", False: "White"}[x])
+      poc_series = lead_df["poc_flag"].map(get_poc_flag_name)
       counter = Counter(poc_series)
       lead_data[lead] = dict(counter)
     # when we want disaggregated race categories
     elif race == "all":
-      race_flags = ["white", "afam", "amin", "hisp", "asn_paci", "oth", "mult"]
-      race_titles = ["White", "African American", "American Indian", "Hispanic",
-                     "Asian & Pacific Islander", "Other", "Multi"]
-      race_title_dict = dict(zip(race_flags, race_titles))
+      race_title_dict = get_race_titles()
       counts = lead_df.count()
       counter = {race_title_dict.get(race_flag): int(counts[race_flag]) 
-                 for race_flag in race_flags}
+                 for race_flag in race_title_dict.keys()}
       lead_data[lead] = dict(counter)
   return json.dumps(lead_data)
 
@@ -205,19 +225,18 @@ def update_overall_graph(cleaned_data, race):
   if not data:
     return dict(data=[], layout=go.Layout())
   groupings = ["White", "POC"] if race == "poc_flag" else \
-              ["White", "African American", "American Indian", "Hispanic",
-                     "Asian & Pacific Islander", "Other", "Multi"]
-  colors = dict(zip(groupings, utils.COLORSCHEME))
+              list(get_race_titles().values())
+  colors = utils.get_colors(groupings)
   traces = []
   for val in groupings:
     x_init = data.keys()
     y = [data.get(x).get(val) for x in x_init]
-    x = list(map(lambda x: {"true": "Leads", "false": "Contestants"}[x], x_init))
+    x = list(map(get_lead_flag_name, x_init))
     strat_bar = go.Bar(
       x=x,
       y=y,
       hoverinfo="x+y",
-      marker=dict(color=colors.get(val, utils.PRIMARY_COLOR)),
+      marker=dict(color=colors.get(val)),
       name=val
     )
     traces.append(strat_bar)
@@ -254,7 +273,6 @@ def update_overall_caption(cleaned_data, race):
   caption = "  \n".join(caption_elts)
   return caption
 
-
 ##### evolution tab routes #####
 
 @app.callback(
@@ -263,4 +281,51 @@ def update_overall_caption(cleaned_data, race):
     ["leads", "shows", "years", "race"] ]
 )
 def update_evolution_graph(leads, shows, years, race):
-  return
+  filtered_df = get_filtered_df(leads, shows, years)
+  traces = []
+  colors = utils.get_colors(leads)
+  
+  for lead in leads:
+    lead_df = filtered_df[filtered_df["lead_flag"] == lead]
+    if race == "poc_flag":
+      group_vals = lead_df["poc_flag"].groupby(lead_df["year"])
+      x = []
+      y = []
+      for year, poc_flag_vals in group_vals:
+        counter = Counter(poc_flag_vals)
+        total = sum(counter.values())
+        perc_poc = round((float(counter.get(True, 0))/total) * 100, 2)
+        y.append(perc_poc)
+        x.append(year)
+      strat_scatter = go.Scatter(
+        x=x,
+        y=y,
+        hoverinfo="x+y",
+        marker=dict(color=colors.get(lead), size=10),
+        name=get_lead_flag_name(lead),
+        mode="markers")
+      # TODO: add in a linear regression line
+      # TODO: add in a line for where the lawsuit came in
+      traces.append(strat_scatter)
+    elif race == "all":
+      race_title_dict = get_race_titles()
+      # TODO: add in a stacked scatter with regression lines
+
+  layout = go.Layout(
+    xaxis=dict(title="Year"),
+    yaxis=dict(title="Percentage POC (%)")
+  )
+  return dict(data=traces, layout=layout)
+
+##### comparison tab routes #####
+
+@app.callback(
+  Output("comparison-graph", "figure"),
+  [Input(input_id, "value") for input_id in 
+    ["leads", "shows", "years", "race"] ]
+)
+def update_comparison_graph(leads, shows, years, race):
+  filtered_df = get_filtered_df(leads, shows, years)
+  traces = []
+  layout = go.Layout()
+  return dict(data=traces, layout=layout)
