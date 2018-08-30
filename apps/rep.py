@@ -117,8 +117,8 @@ evolution_tab = Tab(
     html.H3("POC representation has increased over time"),
     dcc.Graph(id="evolution-graph"),
     html.H4("In recent years, there have been considerably higher numbers " \
-      + "of people of color on the show - including the shows' first " \
-      + "non-white leads.")
+      + "of people of color on the Bachelor/ette - including the franchise's " \
+      + "first non-white leads.")
   ]
 )
 
