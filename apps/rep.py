@@ -5,6 +5,7 @@ from dash.dependencies import Input, Output
 import json
 import os
 import pandas as pd
+from plotly import tools
 import plotly.graph_objs as go
 from collections import Counter
 
@@ -114,7 +115,7 @@ evolution_tab = Tab(
   label="Evolution", 
   value="evolution",
   children=[
-    html.H3("POC representation has increased over time"),
+    html.H3("POC representation has improved over time"),
     dcc.Graph(id="evolution-graph"),
     html.H4("In recent years, there have been considerably higher numbers " \
       + "of people of color on the Bachelor/ette - including the franchise's " \
@@ -173,12 +174,15 @@ def get_race_titles():
                  "Asian & Pacific Islander", "Other", "Multiple"]
   return dict(zip(race_flags, race_titles))
 
-def get_poc_flag_name(x):
+def get_poc_name(x):
   return {True: "POC", False: "White"}[x]
 
-def get_lead_flag_name(x):
+def get_lead_name(x):
   return {True: "Leads", "true": "Leads", 
           False: "Contestants", "false": "Contestants"}[x]
+
+def get_layout_font():
+  return dict(font=dict(family="Karla"))
 
 ##### other routes #####
 
@@ -203,7 +207,7 @@ def clean_overall_data(leads, shows, years, race):
   for lead in leads:
     lead_df = filtered_df[filtered_df["lead_flag"] == lead]
     if race == "poc_flag":
-      poc_series = lead_df["poc_flag"].map(get_poc_flag_name)
+      poc_series = lead_df["poc_flag"].map(get_poc_name)
       counter = Counter(poc_series)
       lead_data[lead] = dict(counter)
     # when we want disaggregated race categories
@@ -231,7 +235,7 @@ def update_overall_graph(cleaned_data, race):
   for val in groupings:
     x_init = data.keys()
     y = [data.get(x).get(val) for x in x_init]
-    x = list(map(get_lead_flag_name, x_init))
+    x = list(map(get_lead_name, x_init))
     strat_bar = go.Bar(
       x=x,
       y=y,
@@ -243,6 +247,8 @@ def update_overall_graph(cleaned_data, race):
   layout = go.Layout(
     xaxis=dict(tickfont=dict(size=14)),
     yaxis=dict(title="Number of People", titlefont=dict(size=16)),
+    hovermode="closest",
+    **get_layout_font()
   )
   return dict(data=traces, layout=layout)
 
@@ -275,6 +281,33 @@ def update_overall_caption(cleaned_data, race):
 
 ##### evolution tab routes #####
 
+def get_evol_yearly_data(lead_df, flag_name, flag_value):
+  """ 
+  returns the % times a flag is equal to a certain value, for all
+  years in lead_df
+  """
+  group_vals = lead_df[flag_name].groupby(lead_df["year"])
+  x = []
+  y = []
+  for year, vals in group_vals:
+    counter = Counter(vals)
+    total = sum(counter.values())
+    # if flag val isn't in counter, it appeared 0 times
+    num_flag = counter.get(flag_value, 0)
+    perc_flag = round((float(num_flag)/total) * 100, 2)
+    y.append(perc_flag)
+    x.append(year)
+  return x, y
+
+def get_evol_trace(x, y, color, name):
+  return go.Scatter(
+    x=x,
+    y=y,
+    hoverinfo="x+y",
+    marker=dict(color=color, size=8),
+    name=name,
+    mode="markers")
+
 @app.callback(
   Output("evolution-graph", "figure"),
   [Input(input_id, "value") for input_id in 
@@ -282,40 +315,48 @@ def update_overall_caption(cleaned_data, race):
 )
 def update_evolution_graph(leads, shows, years, race):
   filtered_df = get_filtered_df(leads, shows, years)
-  traces = []
-  colors = utils.get_colors(leads)
+  layout_all = dict(
+    xaxis=dict(title="Year", tickfont=dict(size=14)),
+    width=800,
+    hovermode="closest",
+    **get_layout_font())
   
-  for lead in leads:
-    lead_df = filtered_df[filtered_df["lead_flag"] == lead]
-    if race == "poc_flag":
-      group_vals = lead_df["poc_flag"].groupby(lead_df["year"])
-      x = []
-      y = []
-      for year, poc_flag_vals in group_vals:
-        counter = Counter(poc_flag_vals)
-        total = sum(counter.values())
-        perc_poc = round((float(counter.get(True, 0))/total) * 100, 2)
-        y.append(perc_poc)
-        x.append(year)
-      strat_scatter = go.Scatter(
-        x=x,
-        y=y,
-        hoverinfo="x+y",
-        marker=dict(color=colors.get(lead), size=10),
-        name=get_lead_flag_name(lead),
-        mode="markers")
-      # TODO: add in a linear regression line
-      # TODO: add in a line for where the lawsuit came in
-      traces.append(strat_scatter)
-    elif race == "all":
-      race_title_dict = get_race_titles()
-      # TODO: add in a stacked scatter with regression lines
+  if race == "poc_flag":
+    traces = []
+    colors = utils.get_colors(leads)
+    layout = go.Layout(
+      yaxis=dict(title="Percentage POC (%)", titlefont=dict(size=16)), 
+      height=500,
+      **layout_all)
+    for lead in leads:
+      lead_df = filtered_df[filtered_df["lead_flag"] == lead]
+      color = colors.get(lead)
+      x, y = get_evol_yearly_data(lead_df, "poc_flag", True)
+      trace = get_evol_trace(x=x, y=y, color=color, name=get_lead_name(lead))
+      traces.append(trace)
+    return dict(data=traces, layout=layout)
 
-  layout = go.Layout(
-    xaxis=dict(title="Year"),
-    yaxis=dict(title="Percentage POC (%)")
-  )
-  return dict(data=traces, layout=layout)
+  elif race == "all":
+    fig = tools.make_subplots(
+      rows=len(leads), cols=1, 
+      subplot_titles=tuple([get_lead_name(lead) for lead in leads]) )
+
+    race_title_dict = get_race_titles()
+    race_title_dict.pop("white")
+    colors = utils.get_colors(race_title_dict.keys())
+    
+    # new subplot per lead
+    for row, lead in enumerate(leads):
+      lead_df = filtered_df[filtered_df["lead_flag"] == lead]
+      total = lead_df.count()
+      for flag, title in race_title_dict.items():
+        x, y = get_evol_yearly_data(lead_df, flag, 1)
+        trace = get_evol_trace(x=x, y=y, color=colors.get(flag), name=title)
+        fig.append_trace(trace, row + 1, 1)
+
+    fig["layout"].update(height=350*len(leads), **layout_all)
+    return fig
+  return dict(data=[], layout=go.Layout())
 
 ##### comparison tab routes #####
 
@@ -327,5 +368,8 @@ def update_evolution_graph(leads, shows, years, race):
 def update_comparison_graph(leads, shows, years, race):
   filtered_df = get_filtered_df(leads, shows, years)
   traces = []
+  colors = utils.get_colors(leads)
+
+
   layout = go.Layout()
   return dict(data=traces, layout=layout)
