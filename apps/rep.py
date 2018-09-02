@@ -5,9 +5,11 @@ from dash.dependencies import Input, Output
 import json
 import os
 import pandas as pd
-from plotly import tools
 import plotly.graph_objs as go
+
 from collections import Counter
+from numpy import polyfit
+from plotly import tools
 
 import utils
 from app import app
@@ -33,42 +35,63 @@ class MultiDropDown(dcc.Dropdown):
       **kwargs)
 
 class Tab(dcc.Tab):
-  def __init__(self, children, **kwargs):
+  def __init__(self, dashboard=None, panel=None, **kwargs):
     super().__init__(**kwargs)
-    self.children = [html.Br()] + children
+    self.children=html.Div(
+      className="row", 
+      children=[dashboard, panel]
+    )
+
+class Panel(html.Div):
+  def __init__(self, children, **kwargs):
+    super().__init__(
+      className="col-sm-9 text-center", 
+      children=[html.Br()] + children, 
+      **kwargs)
+
+class Dashboard(html.Div):
+  def __init__(self, form_elements, **kwargs):
+    super().__init__(className="col-sm-3", **kwargs)
+    self.children = [
+      html.Br(),
+      html.H5("Change what this figure shows:"),
+      html.Br()
+    ]
+    self.children += form_elements
 
 ########## designing general ui ##########
 
-##### dashboard #####
+##### dashboard elements #####
 
-dashboard = html.Div(
-  className="col-sm-3",
-  children=[
-    html.H5("Change what this figure shows:"),
-    html.Br(),
-    utils.FormElement(
+class LeadsElement(utils.FormElement):
+  def __init__(self, elt_id):
+    super().__init__(
       label="Contestants",
       element=dcc.Dropdown(
-        id="leads",
+        id=elt_id,
         options=[
           {"label": "Leads", "value": True}, 
           {"label": "Contestants", "value": False}
         ],
         value=[True, False],
         multi=True
-      )
-    ),
-    utils.FormElement(
+      ))
+
+class ShowsElement(utils.FormElement):
+  def __init__(self, elt_id):
+    super().__init__(
       label="Show(s)",
       element=MultiDropDown(
-        id="shows",
+        id=elt_id,
         values=["Bachelor", "Bachelorette"]
-      )
-    ),
-    utils.FormElement(
+      ))
+
+class YearsElement(utils.FormElement):
+  def __init__(self, elt_id):
+    super().__init__(
       label="Year(s)",
       element=dcc.RangeSlider(
-        id="years",
+        id=elt_id,
         min=2002,
         max=2018,
         step=1,
@@ -77,29 +100,34 @@ dashboard = html.Div(
       ),
       add_elements=[
         html.Br(), 
-        html.P(id="selected-years", className="text-right small")
-      ]
-    ),
-    utils.FormElement(
+        html.P(id="selected-" + elt_id, className="text-right small")
+      ])
+
+class RaceElement(utils.FormElement):
+  def __init__(self, elt_id):
+    super().__init__(
       label="Comparison Specificity",
       element=dcc.Dropdown(
-        id="race",
+        id=elt_id,
         options=[
           {"label": "POC / Non-POC", "value": "poc_flag"},
           {"label": "All categories", "value": "all"}
         ],
         value="poc_flag"
-      )
-    )
-  ]
-)
+      ))
 
 ##### tabs #####
 
 overall_tab = Tab(
   label="Overall", 
   value="overall", 
-  children=[
+  dashboard=Dashboard([
+    LeadsElement(elt_id="overall-leads"),
+    ShowsElement(elt_id="overall-shows"),
+    YearsElement(elt_id="overall-years"),
+    RaceElement(elt_id="overall-race")
+  ]),
+  panel=Panel([
     html.Div(id="overall-value", style=dict(display="none")),
     html.H3("POC are under-represented on the Bachelor/ette"),
     dcc.Graph(id="overall-graph"),
@@ -108,46 +136,48 @@ overall_tab = Tab(
       + "Bachelor and Bachelorette. Within this data selection:"),
     html.Br(),
     dcc.Markdown(id="overall-caption", className="caption"),
-  ]
+  ])
 )
 
 evolution_tab = Tab(
   label="Evolution", 
   value="evolution",
-  children=[
+  dashboard=Dashboard([
+    ShowsElement(elt_id="evol-shows"),
+    YearsElement(elt_id="evol-years"),
+    RaceElement(elt_id="evol-race")
+  ]),
+  panel=Panel([
     html.H3("POC representation has improved over time"),
-    dcc.Graph(id="evolution-graph"),
+    dcc.Graph(id="evol-graph"),
     html.H4("In recent years, there have been considerably higher numbers " \
       + "of people of color on the Bachelor/ette - including the franchise's " \
-      + "first non-white leads.")
-  ]
+      + "first non-white leads."),
+    html.H5(id="evol-caption", className="caption")
+  ])
 )
 
 comparison_tab = Tab(
   label="Comparison", 
   value="comparison",
-  children=[
+  dashboard=Dashboard([
+    LeadsElement(elt_id="comp-leads"),
+    ShowsElement(elt_id="comp-shows"),
+    YearsElement(elt_id="comp-years"),
+    RaceElement(elt_id="comp-race")
+  ]),
+  panel=Panel([
     html.H3("The Bachelor/ette is still less diverse than the U.S. at large"),
     dcc.Graph(id="comparison-graph"),
     html.H4("Some text")
-  ]
-)
-
-panel = html.Div(
-  className="col-sm-9 text-center",
-  children=utils.Tabs(
-    value="overall",
-    children=[
-      overall_tab,
-      evolution_tab,
-      comparison_tab,
-    ]
-  )
+  ])
 )
 
 main_content = html.Div(
   className="row",
-  children=[dashboard, panel]
+  children=utils.Tabs(
+  value="overall",
+  children=[overall_tab, evolution_tab, comparison_tab])
 )
 
 layout = utils.BSContainer(
@@ -170,7 +200,7 @@ def get_filtered_df(leads, shows, years):
 
 def get_race_titles():
   race_flags = ["white", "afam", "amin", "hisp", "asn_paci", "oth", "mult"]
-  race_titles = ["White", "African American", "American Indian", "Hispanic",
+  race_titles = ["White", "African American", "Native American", "Hispanic",
                  "Asian & Pacific Islander", "Other", "Multiple"]
   return dict(zip(race_flags, race_titles))
 
@@ -186,20 +216,35 @@ def get_layout_font():
 
 ##### other routes #####
 
-@app.callback(
-  Output(component_id="selected-years", component_property="children"),
-  [Input(component_id="years", component_property="value")])
 def update_selected_years(years):
   """ shows user what the selected year range is """
   start, end = years
   return "Selected: ({start}, {end})".format(start=start, end=end)
+
+@app.callback(
+  Output("selected-overall-years", "children"),
+  [Input("overall-years", "value")])
+def update_overall_years(years):
+  return update_selected_years(years)
+
+@app.callback(
+  Output("selected-evol-years", "children"),
+  [Input("evol-years", "value")])
+def update_evol_years(years):
+  return update_selected_years(years)
+
+@app.callback(
+  Output("selected-comp-years", "children"),
+  [Input("comp-years", "value")])
+def update_comp_years(years):
+  return update_selected_years(years)
 
 ##### overall tab routes #####
 
 @app.callback(
   Output("overall-value", "children"),
   [Input(input_id, "value") for input_id in 
-    ["leads", "shows", "years", "race"] ]
+    ["overall-leads", "overall-shows", "overall-years", "overall-race"] ]
 )
 def clean_overall_data(leads, shows, years, race):
   filtered_df = get_filtered_df(leads, shows, years)
@@ -221,7 +266,7 @@ def clean_overall_data(leads, shows, years, race):
 
 @app.callback(
   Output("overall-graph", "figure"),
-  [Input("overall-value", "children"), Input("race", "value")]
+  [Input("overall-value", "children"), Input("overall-race", "value")]
 )
 def update_overall_graph(cleaned_data, race):
   """ generates figure for overall tab """
@@ -254,7 +299,7 @@ def update_overall_graph(cleaned_data, race):
 
 @app.callback(
   Output("overall-caption", "children"),
-  [Input("overall-value", "children"), Input("race", "value")]
+  [Input("overall-value", "children"), Input("overall-race", "value")]
 )
 def update_overall_caption(cleaned_data, race):
   data = json.loads(cleaned_data)
@@ -281,14 +326,10 @@ def update_overall_caption(cleaned_data, race):
 
 ##### evolution tab routes #####
 
-def get_evol_yearly_data(lead_df, flag_name, flag_value):
-  """ 
-  returns the % times a flag is equal to a certain value, for all
-  years in lead_df
-  """
-  group_vals = lead_df[flag_name].groupby(lead_df["year"])
-  x = []
-  y = []
+def get_evol_yearly_data(df, flag_name, flag_value):
+  """returns the % times a flag is equal to a value, for all years in df """
+  group_vals = df[flag_name].groupby(df["year"])
+  x, y = [], []
   for year, vals in group_vals:
     counter = Counter(vals)
     total = sum(counter.values())
@@ -299,77 +340,110 @@ def get_evol_yearly_data(lead_df, flag_name, flag_value):
     x.append(year)
   return x, y
 
-def get_evol_trace(x, y, color, name):
+def get_evol_scatter(x, y, color, name, **kwargs):
   return go.Scatter(
-    x=x,
-    y=y,
+    x=x, y=y,
     hoverinfo="x+y",
     marker=dict(color=color, size=8),
     name=name,
-    mode="markers")
+    mode="markers",
+    **kwargs)
+
+def get_evol_reg(x, y, color, name, **kwargs):
+  beta_1, beta_0 = polyfit(x, y, 1)
+  return go.Scatter(
+    x=x,
+    y=list(map(lambda x_val: beta_0 + (beta_1 * x_val), x)),
+    hoverinfo="x+y",
+    marker=dict(color=color, size=2),
+    name=name,
+    mode="lines",
+    **kwargs)
+
+def get_race_poc_fig(df, layout_all):
+  traces = []
+  layout = go.Layout(
+    xaxis=dict(title="Year", tickfont=dict(size=14)),
+    yaxis=dict(title="Percentage POC (%)", titlefont=dict(size=16)), 
+    height=550,
+    **layout_all)
+  x, y = get_evol_yearly_data(df, "poc_flag", True)
+  traces.append(get_evol_scatter(x, y, utils.PRIMARY_COLOR, "Values"))
+  traces.append(get_evol_reg(x, y, utils.PRIMARY_COLOR, "OLS Estimates"))
+  return dict(data=traces, layout=layout)
+
+def get_race_all_fig(df, layout_all):
+  race_title_dict = get_race_titles()
+  race_title_dict.pop("white")
+  colors = utils.get_colors(race_title_dict.keys())
+
+  rows, cols = 3, 2
+  order = [(r, c) for r in range(1, rows + 1) for c in range(1, cols + 1)]
+  trace_pos = dict(zip(race_title_dict.keys(), order))
+
+  fig = tools.make_subplots(
+    rows=rows, cols=cols, 
+    subplot_titles=tuple(race_title_dict.values()) )
+
+  # new subplot per racial category
+  i = 1
+  for flag, title in race_title_dict.items():
+    color = colors.get(flag)
+    row, col = trace_pos.get(flag)
+    x, y = get_evol_yearly_data(df, flag, 1)
+    xaxis = "xaxis{}".format(i)
+    yaxis = "yaxis{}".format(i)
+    scatter = get_evol_scatter(x, y, color, title, xaxis=xaxis, yaxis=yaxis)
+    reg = get_evol_reg(x, y, color, title)
+    fig.append_trace(scatter, row, col)
+    fig.append_trace(reg, row, col)
+    fig["layout"].update( 
+      {xaxis: dict(title="Year"), yaxis: dict(title="Percentage (%)")} )
+    i += 1
+
+  fig["layout"].update(height=350*rows, showlegend=False, **layout_all)
+  return fig
 
 @app.callback(
-  Output("evolution-graph", "figure"),
+  Output("evol-graph", "figure"),
   [Input(input_id, "value") for input_id in 
-    ["leads", "shows", "years", "race"] ]
+    ["evol-shows", "evol-years", "evol-race"] ]
 )
-def update_evolution_graph(leads, shows, years, race):
-  filtered_df = get_filtered_df(leads, shows, years)
+def update_evol_graph(shows, years, race):
+  df = get_filtered_df(leads=[False], shows=shows, years=years)
+  start, end = years
   layout_all = dict(
-    xaxis=dict(title="Year", tickfont=dict(size=14)),
-    width=800,
+    title="Percentage POC Contestants (%), {}-{}".format(start, end),
     hovermode="closest",
     **get_layout_font())
-  
+
   if race == "poc_flag":
-    traces = []
-    colors = utils.get_colors(leads)
-    layout = go.Layout(
-      yaxis=dict(title="Percentage POC (%)", titlefont=dict(size=16)), 
-      height=500,
-      **layout_all)
-    for lead in leads:
-      lead_df = filtered_df[filtered_df["lead_flag"] == lead]
-      color = colors.get(lead)
-      x, y = get_evol_yearly_data(lead_df, "poc_flag", True)
-      trace = get_evol_trace(x=x, y=y, color=color, name=get_lead_name(lead))
-      traces.append(trace)
-    return dict(data=traces, layout=layout)
-
+    return get_race_poc_fig(df, layout_all)
   elif race == "all":
-    fig = tools.make_subplots(
-      rows=len(leads), cols=1, 
-      subplot_titles=tuple([get_lead_name(lead) for lead in leads]) )
-
-    race_title_dict = get_race_titles()
-    race_title_dict.pop("white")
-    colors = utils.get_colors(race_title_dict.keys())
-    
-    # new subplot per lead
-    for row, lead in enumerate(leads):
-      lead_df = filtered_df[filtered_df["lead_flag"] == lead]
-      total = lead_df.count()
-      for flag, title in race_title_dict.items():
-        x, y = get_evol_yearly_data(lead_df, flag, 1)
-        trace = get_evol_trace(x=x, y=y, color=colors.get(flag), name=title)
-        fig.append_trace(trace, row + 1, 1)
-
-    fig["layout"].update(height=350*len(leads), **layout_all)
-    return fig
+    return get_race_all_fig(df, layout_all)
   return dict(data=[], layout=go.Layout())
 
-##### comparison tab routes #####
+@app.callback(Output("evol-caption", "children"), [Input("evol-race", "value")])
+def update_evol_caption(race):
+  captions = {
+    "poc_flag": "",
+    "all": "Some racial groups have seen much larger increases in " \
+           + "representation than others."
+  }
+  return
 
-@app.callback(
-  Output("comparison-graph", "figure"),
-  [Input(input_id, "value") for input_id in 
-    ["leads", "shows", "years", "race"] ]
-)
-def update_comparison_graph(leads, shows, years, race):
-  filtered_df = get_filtered_df(leads, shows, years)
-  traces = []
-  colors = utils.get_colors(leads)
+# ##### comparison tab routes #####
+
+# @app.callback(
+#   Output("comparison-graph", "figure"),
+#   [Input("comp-" + input_stub, "value") for input_stub in 
+#     ["leads", "shows", "years", "race"] ]
+# )
+# def update_comparison_graph(leads, shows, years, race):
+#   filtered_df = get_filtered_df(leads, shows, years)
+#   traces = []
+#   colors = utils.get_colors(leads)
 
 
-  layout = go.Layout()
-  return dict(data=traces, layout=layout)
+#   layout = go.Layout()
+#   return dict(data=traces, layout=layout)
