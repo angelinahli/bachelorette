@@ -134,7 +134,6 @@ overall_tab = Tab(
     html.H4(
       "However you cut it, very few people of color make it onto the " \
       + "Bachelor and Bachelorette. Within this data selection:"),
-    html.Br(),
     dcc.Markdown(id="overall-caption", className="caption"),
   ])
 )
@@ -150,9 +149,8 @@ evolution_tab = Tab(
   panel=Panel([
     html.H3("POC representation has improved over time"),
     dcc.Graph(id="evol-graph"),
-    html.H4("In recent years, there have been considerably higher numbers " \
-      + "of people of color on the Bachelor/ette - including the franchise's " \
-      + "first non-white leads."),
+    html.H4("In recent years, a higher number of people of color are " \
+      + "participating in the Bachelor/ette."),
     html.H5(id="evol-caption", className="caption")
   ])
 )
@@ -349,8 +347,7 @@ def get_evol_scatter(x, y, color, name, **kwargs):
     mode="markers",
     **kwargs)
 
-def get_evol_reg(x, y, color, name, **kwargs):
-  beta_1, beta_0 = polyfit(x, y, 1)
+def get_evol_reg(x, y, beta_1, beta_0, color, name, **kwargs):
   return go.Scatter(
     x=x,
     y=list(map(lambda x_val: beta_0 + (beta_1 * x_val), x)),
@@ -360,19 +357,42 @@ def get_evol_reg(x, y, color, name, **kwargs):
     mode="lines",
     **kwargs)
 
-def get_race_poc_fig(df, layout_all):
-  traces = []
+def get_evol_poc_fig(df, layout_all, layout_ann):
   layout = go.Layout(
     xaxis=dict(title="Year", tickfont=dict(size=14)),
-    yaxis=dict(title="Percentage POC (%)", titlefont=dict(size=16)), 
+    yaxis=dict(title="% Candidates", titlefont=dict(size=16)), 
     height=550,
-    **layout_all)
+    **layout_all
+  )
+  traces = []
   x, y = get_evol_yearly_data(df, "poc_flag", True)
+  beta_1, beta_0 = polyfit(x, y, 1)
   traces.append(get_evol_scatter(x, y, utils.PRIMARY_COLOR, "Values"))
-  traces.append(get_evol_reg(x, y, utils.PRIMARY_COLOR, "OLS Estimates"))
+  traces.append(get_evol_reg(x, y, beta_1, beta_0, utils.PRIMARY_COLOR, 
+    "OLS Estimates"))
+
+  increment = float(max(y) - min(y))/20 or 0.1
+  layout["annotations"] = [ 
+    dict(
+      x=x[-1], y=min(y) + increment, 
+      text=u"β1 = {}".format(round(beta_1, 2)), 
+      **layout_ann )
+  ]
+  if 2012 in x:
+    layout["shapes"] = [
+      dict(
+        type="line", x0=2012, x1=2012, y0=min(y), y1=max(y), 
+        line=dict(color=utils.SECONDARY_COLOR, width=2, dash="dot")
+      )]
+    layout["annotations"].append(
+      dict(
+        x=2012, y=max(y) + increment, 
+        text="Discrimination<br>lawsuit", 
+        **layout_ann)
+    )
   return dict(data=traces, layout=layout)
 
-def get_race_all_fig(df, layout_all):
+def get_evol_all_fig(df, layout_all, layout_ann):
   race_title_dict = get_race_titles()
   race_title_dict.pop("white")
   colors = utils.get_colors(race_title_dict.keys())
@@ -391,14 +411,24 @@ def get_race_all_fig(df, layout_all):
     color = colors.get(flag)
     row, col = trace_pos.get(flag)
     x, y = get_evol_yearly_data(df, flag, 1)
+    beta_1, beta_0 = polyfit(x, y, 1)
     xaxis = "xaxis{}".format(i)
     yaxis = "yaxis{}".format(i)
     scatter = get_evol_scatter(x, y, color, title, xaxis=xaxis, yaxis=yaxis)
-    reg = get_evol_reg(x, y, color, title)
+    reg = get_evol_reg(x, y, beta_1, beta_0, color, title)
     fig.append_trace(scatter, row, col)
     fig.append_trace(reg, row, col)
     fig["layout"].update( 
-      {xaxis: dict(title="Year"), yaxis: dict(title="Percentage (%)")} )
+      {xaxis: dict(title="Year"), yaxis: dict(title="% Candidates")} )
+    increment = float(max(y) - min(y))/20 or 0.1
+    fig["layout"]["annotations"].append( 
+      dict(
+        x=x[-1], y=min(y) + increment, 
+        xref="x{}".format(i), 
+        yref="y{}".format(i),
+        text=u"β1 = {}".format(round(beta_1, 2)), 
+        **layout_ann)
+    )
     i += 1
 
   fig["layout"].update(height=350*rows, showlegend=False, **layout_all)
@@ -416,21 +446,26 @@ def update_evol_graph(shows, years, race):
     title="Percentage POC Contestants (%), {}-{}".format(start, end),
     hovermode="closest",
     **get_layout_font())
+  layout_ann = dict(
+    showarrow=False, 
+    font=dict(color=utils.SECONDARY_COLOR, size=14))
 
   if race == "poc_flag":
-    return get_race_poc_fig(df, layout_all)
+    return get_evol_poc_fig(df, layout_all, layout_ann)
   elif race == "all":
-    return get_race_all_fig(df, layout_all)
+    return get_evol_all_fig(df, layout_all, layout_ann)
   return dict(data=[], layout=go.Layout())
 
 @app.callback(Output("evol-caption", "children"), [Input("evol-race", "value")])
 def update_evol_caption(race):
   captions = {
-    "poc_flag": "",
+    "poc_flag": "Representation of POC contestants rose sharply after two " \
+      + "rejected applicants filed a racial discrimination lawsuit against " \
+      + "the franchise in 2012.",
     "all": "Some racial groups have seen much larger increases in " \
-           + "representation than others."
+      + "representation than others."
   }
-  return
+  return captions.get(race)
 
 # ##### comparison tab routes #####
 

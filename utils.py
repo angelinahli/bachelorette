@@ -2,6 +2,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 
 PRIMARY_COLOR = "#C95B83"
+SECONDARY_COLOR = "#808080"
 COLORSCHEME = ["#C95B83", "#FFBD4A", "#F26B3C", "#399E5A", "#5AB1BB", "#1446A0", 
                "#731963"]
 
