@@ -3,7 +3,6 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 
 import plotly.graph_objs as go
-from collections import Counter
 from numpy import polyfit
 from plotly import tools
 
@@ -27,20 +26,6 @@ tab = rep.Tab(
     html.H5(id="evol-caption", className="caption")
   ])
 )
-
-def get_yearly_data(df, flag_name, flag_value):
-  """returns the % times a flag is equal to a value, for all years in df """
-  group_vals = df[flag_name].groupby(df["year"])
-  x, y = [], []
-  for year, vals in group_vals:
-    counter = Counter(vals)
-    total = sum(counter.values())
-    # if flag val isn't in counter, it appeared 0 times
-    num_flag = counter.get(flag_value, 0)
-    perc_flag = round((float(num_flag)/total) * 100, 2)
-    y.append(perc_flag)
-    x.append(year)
-  return x, y
 
 def get_scatter(x, y, color, name, **kwargs):
   return go.Scatter(
@@ -72,7 +57,7 @@ def get_poc_fig(df, layout_all, layout_ann):
     **layout_all
   )
   traces = []
-  x, y = get_yearly_data(df, "poc_flag", True)
+  x, y = rep.get_yearly_data(df, "poc_flag", True)
   b1, b0 = polyfit(x, y, 1)
   traces.append(get_scatter(x, y, utils.PRIMARY_COLOR, "Values"))
   traces.append(get_reg(x, y, b1, b0, utils.PRIMARY_COLOR, "OLS Estimates"))
@@ -120,7 +105,7 @@ def get_all_fig(df, layout_all, layout_ann):
     color = colors.get(flag)
     row, col = trace_pos.get(flag)
 
-    x, y = get_yearly_data(df, flag, 1)
+    x, y = rep.get_yearly_data(df, flag, 1)
     b1, b0 = polyfit(x, y, 1)
     scatter = get_scatter(x, y, color, title, xaxis=xaxis, yaxis=yaxis)
     reg = get_reg(x, y, b1, b0, color, title)
@@ -149,7 +134,7 @@ def get_all_fig(df, layout_all, layout_ann):
     ["evol-shows", "evol-years", "evol-race"] ]
 )
 def update_graph(shows, years, race):
-  df = rep.get_filtered_df(leads=[False], shows=shows, years=years)
+  df = rep.get_filtered_df([False], shows, years, include_incomplete=False)
 
   start, end = years
   layout_all = dict(

@@ -32,8 +32,8 @@ tab = rep.Tab(
 
 @app.callback(
   Output("overall-value", "children"),
-  [Input(input_id, "value") for input_id in 
-    ["overall-leads", "overall-shows", "overall-years", "overall-race"] ]
+  [Input("overall-" + input_stub, "value") for input_stub in 
+    ["leads", "shows", "years", "race"] ]
 )
 def clean_data(leads, shows, years, race):
   filtered_df = rep.get_filtered_df(leads, shows, years)
@@ -46,10 +46,9 @@ def clean_data(leads, shows, years, race):
       lead_data[lead] = dict(counter)
     # when we want disaggregated race categories
     elif race == "all":
-      race_title_dict = rep.get_race_titles()
       counts = lead_df.count()
-      counter = {race_title_dict.get(race_flag): int(counts[race_flag]) 
-                 for race_flag in race_title_dict.keys()}
+      counter = {rep.race_titles.get(race_flag): int(counts[race_flag]) 
+                 for race_flag in rep.race_titles.keys()}
       lead_data[lead] = dict(counter)
   return json.dumps(lead_data)
 
@@ -63,7 +62,7 @@ def update_graph(cleaned_data, race):
   if not data:
     return dict(data=[], layout=go.Layout())
   groupings = ["White", "POC"] if race == "poc_flag" else \
-              list(rep.get_race_titles().values())
+              list(rep.race_titles.values())
   colors = utils.get_colors(groupings)
   traces = []
   for val in groupings:

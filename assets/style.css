@@ -47,3 +47,7 @@ a:hover {
 .VirtualizedSelectFocusedOption {
   color: #c95b83;
 }
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }

@@ -6,16 +6,14 @@ This repository holds the data and programs used to generate exploratory data an
 
 Because data is cool! Because the Bachelor franchise has become a cultural symbol worth exploring. Because I'm sad about Bachelorette Season 14 ending (Bring back #JoeTheGrocer).
 
+## To Do
+* Rep - Comparison
+    * Export census df to the right place
+    * For each racial category in each year, find the perc of US population within that racial category, then find the difference.
+* Rep
+    * Create flag for 'season has all data'; allow subsetting based on whether season is complete
+
 ## Questions
-* 1. Does the Bachelor have a race problem?
-    * How many people total are POC in the show? What percentage?
-    * Evolution of percentage of POC over time
-    * Evolution of total number of POC over time
-    * Number of POC over time as compared to overall US level racial categories
-        * IPUMS perhaps?
-    * Number of POC compared to overall US racial categories - who is represented
-        more and who is represented less?
-    * Conclusions
 * 2. Do Bachelor/Bachelorette's have racially skewed dating preferences?
     * Are POCs voted home more early than others relatively?
     * Are POCs voted home disproportionatelly in EARLY ('more random perception') rounds?

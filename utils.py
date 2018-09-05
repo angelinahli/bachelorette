@@ -42,9 +42,12 @@ class FormElement(html.Div):
   Dash doesn't package form elements with labels nicely yet - this just
   'bundles' related form elements together in a div tag and returns the Div obj
   """
-  def __init__(self, label, element, add_elements=None, **kwargs):
+  def __init__(self, element, label=None, add_elements=None, **kwargs):
     super().__init__(**kwargs)
-    self.children = [html.H6(label), element]
+    self.children = []
+    if label:
+      self.children.append(html.H6(label))
+    self.children.append(element)
     if add_elements:
       self.children += add_elements
     self.children.append(html.Br())
