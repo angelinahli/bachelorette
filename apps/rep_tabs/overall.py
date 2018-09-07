@@ -26,7 +26,7 @@ tab = rep.Tab(
     html.H4(
       "However you cut it, very few people of color make it onto the " \
       + "Bachelor and Bachelorette. Within this data selection:"),
-    dcc.Markdown(id="overall-caption", className="caption"),
+    dcc.Markdown(id="overall-caption", className="caption")
   ])
 )
 
@@ -47,39 +47,42 @@ def clean_data(leads, shows, years, race):
     # when we want disaggregated race categories
     elif race == "all":
       counts = lead_df.count()
-      counter = {rep.race_titles.get(race_flag): int(counts[race_flag]) 
-                 for race_flag in rep.race_titles.keys()}
-      lead_data[lead] = dict(counter)
+      counter = {flag: int(counts[flag]) for flag in rep.race_titles.keys()}
+      lead_data[lead] = counter
   return json.dumps(lead_data)
 
 @app.callback(
   Output("overall-graph", "figure"),
-  [Input("overall-value", "children"), Input("overall-race", "value")]
+  [Input("overall-value", "children"), Input("overall-race", "value"), 
+    Input("overall-years", "value")]
 )
-def update_graph(cleaned_data, race):
+def update_graph(cleaned_data, race, years):
   """ generates figure for overall tab """
   data = json.loads(cleaned_data)
   if not data:
     return dict(data=[], layout=go.Layout())
   groupings = ["White", "POC"] if race == "poc_flag" else \
-              list(rep.race_titles.values())
-  colors = utils.get_colors(groupings)
+              rep.get_ordered_race_flags(rep.race_titles.keys())
   traces = []
   for val in groupings:
-    x_init = data.keys()
+    x_init = data.keys() # leads
     y = [data.get(x).get(val) for x in x_init]
     x = list(map(rep.get_lead_name, x_init))
+    color = rep.race_colormaps.get(val)
     strat_bar = go.Bar(
       x=x,
       y=y,
       hoverinfo="x+y",
-      marker=dict(color=colors.get(val)),
-      name=val
+      marker=dict(color=color),
+      name=rep.race_titles.get(val)
     )
     traces.append(strat_bar)
+  start, end = years
   layout = go.Layout(
+    title="POC on the Bachelor/ette, {}-{}".format(start, end),
     xaxis=dict(tickfont=dict(size=14)),
     yaxis=dict(title="Number of People", titlefont=dict(size=16)),
+    legend=dict(orientation="h"),
     hovermode="closest",
     **rep.layout_font
   )

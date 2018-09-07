@@ -23,9 +23,21 @@ tab = rep.Tab(
     dcc.Graph(id="evol-graph"),
     html.H4("In recent years, a higher number of people of color are " \
       + "participating in the Bachelor/ette."),
-    html.H5(id="evol-caption", className="caption")
+    html.H5(id="evol-caption", className="caption"),
+    html.Br(),
+    html.P(
+      "Note: This graph excludes years without complete demographic " \
+      + "data on all contestants.")
   ])
 )
+
+captions = {
+  "poc_flag": "Representation of POC contestants rose sharply after two " \
+    + "rejected applicants filed a racial discrimination lawsuit against " \
+    + "the franchise in 2012.",
+  "all": "Some racial groups have seen much larger increases in " \
+    + "representation than others."
+  }
 
 def get_scatter(x, y, color, name, **kwargs):
   return go.Scatter(
@@ -59,8 +71,9 @@ def get_poc_fig(df, layout_all, layout_ann):
   traces = []
   x, y = rep.get_yearly_data(df, "poc_flag", True)
   b1, b0 = polyfit(x, y, 1)
-  traces.append(get_scatter(x, y, utils.PRIMARY_COLOR, "Values"))
-  traces.append(get_reg(x, y, b1, b0, utils.PRIMARY_COLOR, "OLS Estimates"))
+  color = rep.race_colormaps.get("POC")
+  traces.append(get_scatter(x, y, color, "Values"))
+  traces.append(get_reg(x, y, b1, b0, color, "OLS Estimates"))
 
   increment = get_increment(y)
   layout["annotations"] = [ 
@@ -87,23 +100,24 @@ def get_poc_fig(df, layout_all, layout_ann):
 def get_all_fig(df, layout_all, layout_ann):
   race_titles = dict(rep.race_titles)
   race_titles.pop("white")
-  colors = utils.get_colors(race_titles.keys())
+  race_keys = rep.get_ordered_race_flags(race_titles.keys())
 
   rows, cols = 3, 2
   order = [(r, c) for r in range(1, rows + 1) for c in range(1, cols + 1)]
-  trace_pos = dict(zip(race_titles.keys(), order))
+  trace_pos = dict(zip(race_keys, order))
 
   fig = tools.make_subplots(
     rows=rows, cols=cols, 
-    subplot_titles=tuple(race_titles.values()) )
+    subplot_titles=tuple(race_titles.get(k) for k in race_keys) )
 
   # new subplot per racial category
   i = 1
-  for flag, title in race_titles.items():
+  for flag in race_keys:
     xaxis = "xaxis{}".format(i)
     yaxis = "yaxis{}".format(i)
-    color = colors.get(flag)
+    color = rep.race_colormaps.get(flag)
     row, col = trace_pos.get(flag)
+    title = race_titles.get(flag)
 
     x, y = rep.get_yearly_data(df, flag, 1)
     b1, b0 = polyfit(x, y, 1)
@@ -134,7 +148,7 @@ def get_all_fig(df, layout_all, layout_ann):
     ["evol-shows", "evol-years", "evol-race"] ]
 )
 def update_graph(shows, years, race):
-  df = rep.get_filtered_df([False], shows, years, include_incomplete=False)
+  df = rep.get_filtered_df([False], shows, years)
 
   start, end = years
   layout_all = dict(
@@ -153,13 +167,6 @@ def update_graph(shows, years, race):
 
 @app.callback(Output("evol-caption", "children"), [Input("evol-race", "value")])
 def update_caption(race):
-  captions = {
-    "poc_flag": "Representation of POC contestants rose sharply after two " \
-      + "rejected applicants filed a racial discrimination lawsuit against " \
-      + "the franchise in 2012.",
-    "all": "Some racial groups have seen much larger increases in " \
-      + "representation than others."
-  }
   return captions.get(race)
 
 @app.callback(

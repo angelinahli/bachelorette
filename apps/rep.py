@@ -29,17 +29,31 @@ race_titles = {
 
 layout_font = dict(font=dict(family="Karla"))
 
+race_colormaps = {
+  "white": utils.COLORSCHEME[0],
+  "nwhite": utils.COLORSCHEME[1],
+  True: utils.COLORSCHEME[1],
+  False: utils.COLORSCHEME[0],
+  "White": utils.COLORSCHEME[0],
+  "POC": utils.COLORSCHEME[1],
+  "hisp": utils.COLORSCHEME[1],
+  "afam": utils.COLORSCHEME[2],
+  "asn_paci": utils.COLORSCHEME[3],
+  "amin": utils.COLORSCHEME[4],
+  "mult": utils.COLORSCHEME[5],
+  "oth": utils.COLORSCHEME[6]
+}
+
 ########## helper functions ##########
 
-def get_filtered_df(leads, shows, years, include_incomplete=True):
+def get_filtered_df(leads, shows, years):
   start, end = years
-  comp_vals = [True, False] if include_incomplete else [True]
   return df[
     (df["race_data_flag"] == True)
     & (df["show"].isin(shows))
     & (df["year"] >= start)
     & (df["year"] <= end)
-    & (df["year_comp_flag"].isin(comp_vals))
+    & (df["year_comp_flag"] == True)
   ]
 
 def get_poc_name(x):
@@ -69,6 +83,10 @@ def get_yearly_data(df, flag_name, flag_value, get_dict=False):
   if get_dict:
     return dict(zip(x, y))
   return x, y
+
+def get_ordered_race_flags(lst):
+  order = ["white", "nwhite", "afam", "hisp", "asn_paci", "amin", "mult", "oth"]
+  return sorted(lst, key=lambda x: order.index(x))
 
 ########## helper classes ##########
 
