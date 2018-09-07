@@ -15,46 +15,22 @@ work_dir = os.path.dirname(os.path.abspath(__file__))
 df = pd.read_csv(os.path.join(work_dir, "..", "data", "master_flags_dataset.csv"))
 census = pd.read_csv(os.path.join(work_dir, "..", "data", "census_race.csv"))
 
-########## data elements ##########
-
-race_titles = {
-  "white": "White",
-  "afam": "African American",
-  "amin": "Native American",
-  "hisp": "Hispanic",
-  "asn_paci": "Asian & Pacific Islander",
-  "oth": "Other",
-  "mult": "Multiple"
-}
-
-layout_font = dict(font=dict(family="Karla"))
-
-race_colormaps = {
-  "white": utils.COLORSCHEME[0],
-  "nwhite": utils.COLORSCHEME[1],
-  True: utils.COLORSCHEME[1],
-  False: utils.COLORSCHEME[0],
-  "White": utils.COLORSCHEME[0],
-  "POC": utils.COLORSCHEME[1],
-  "hisp": utils.COLORSCHEME[1],
-  "afam": utils.COLORSCHEME[2],
-  "asn_paci": utils.COLORSCHEME[3],
-  "amin": utils.COLORSCHEME[4],
-  "mult": utils.COLORSCHEME[5],
-  "oth": utils.COLORSCHEME[6]
-}
-
 ########## helper functions ##########
 
 def get_filtered_df(leads, shows, years):
   start, end = years
-  return df[
+  new_df = df[
     (df["race_data_flag"] == True)
     & (df["show"].isin(shows))
     & (df["year"] >= start)
     & (df["year"] <= end)
-    & (df["year_comp_flag"] == True)
   ]
+  complete_years = []
+  for year in df.year.unique():
+    data = df[df.year == year].race_data_flag
+    if all(data):
+      complete_years.append(year)
+  return new_df[new_df.year.isin(complete_years)]
 
 def get_poc_name(x):
   return {True: "POC", False: "White"}[x]
@@ -84,10 +60,6 @@ def get_yearly_data(df, flag_name, flag_value, get_dict=False):
     return dict(zip(x, y))
   return x, y
 
-def get_ordered_race_flags(lst):
-  order = ["white", "nwhite", "afam", "hisp", "asn_paci", "amin", "mult", "oth"]
-  return sorted(lst, key=lambda x: order.index(x))
-
 ########## helper classes ##########
 
 class Tab(dcc.Tab):
@@ -111,7 +83,7 @@ class Dashboard(html.Div):
     self.children = [
       html.Br(),
       html.H5("Change what this figure shows:"),
-      html.Br()
+      html.Br(),
     ]
     self.children += form_elements
 
@@ -180,11 +152,9 @@ from apps.rep_tabs import overall, evolution, comparison
 title = "Part 1: Does the Bachelor/ette have a representation problem?"
 subtitle = "..Yes. And here are the numbers to prove it."
 
-main_content = html.Div(
-  className="row",
-  children=utils.Tabs(
+main_content = utils.Tabs(
   value="overall",
-  children=[overall.tab, evolution.tab, comparison.tab])
+  children=[overall.tab, evolution.tab, comparison.tab]
 )
 
 layout = utils.BSContainer(

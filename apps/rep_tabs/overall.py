@@ -21,9 +21,9 @@ tab = rep.Tab(
   ]),
   panel=rep.Panel([
     html.Div(id="overall-value", style=dict(display="none")),
-    html.H3("POC are under-represented on the Bachelor/ette"),
+    html.H4("POC are under-represented on the Bachelor/ette"),
     dcc.Graph(id="overall-graph"),
-    html.H4(
+    html.H5(
       "However you cut it, very few people of color make it onto the " \
       + "Bachelor and Bachelorette. Within this data selection:"),
     dcc.Markdown(id="overall-caption", className="caption")
@@ -47,7 +47,7 @@ def clean_data(leads, shows, years, race):
     # when we want disaggregated race categories
     elif race == "all":
       counts = lead_df.count()
-      counter = {flag: int(counts[flag]) for flag in rep.race_titles.keys()}
+      counter = {flag: int(counts[flag]) for flag in utils.RACE_TITLES.keys()}
       lead_data[lead] = counter
   return json.dumps(lead_data)
 
@@ -61,31 +61,35 @@ def update_graph(cleaned_data, race, years):
   data = json.loads(cleaned_data)
   if not data:
     return dict(data=[], layout=go.Layout())
+  start, end = years
+  layout = go.Layout(
+    title="Number of People on the Bachelor/ette<br>{}-{}".format(start, end),
+    xaxis=dict(tickfont=dict(size=14)),
+    legend=dict(orientation="h"),
+    hovermode="closest",
+    margin=dict(b=10),
+    **utils.LAYOUT_FONT
+  )
+
   groupings = ["White", "POC"] if race == "poc_flag" else \
-              rep.get_ordered_race_flags(rep.race_titles.keys())
+              utils.get_ordered_race_flags(utils.RACE_TITLES.keys())
   traces = []
   for val in groupings:
     x_init = data.keys() # leads
     y = [data.get(x).get(val) for x in x_init]
     x = list(map(rep.get_lead_name, x_init))
-    color = rep.race_colormaps.get(val)
+    color = utils.get_race_color(val)
+    title = val if race == "poc_flag" else utils.RACE_TITLES.get(val)
     strat_bar = go.Bar(
       x=x,
       y=y,
+      text=y,
+      textposition="outside",
       hoverinfo="x+y",
       marker=dict(color=color),
-      name=rep.race_titles.get(val)
+      name=title
     )
     traces.append(strat_bar)
-  start, end = years
-  layout = go.Layout(
-    title="POC on the Bachelor/ette, {}-{}".format(start, end),
-    xaxis=dict(tickfont=dict(size=14)),
-    yaxis=dict(title="Number of People", titlefont=dict(size=16)),
-    legend=dict(orientation="h"),
-    hovermode="closest",
-    **rep.layout_font
-  )
   return dict(data=traces, layout=layout)
 
 @app.callback(
@@ -103,11 +107,11 @@ def update_caption(cleaned_data, race):
     num_npoc = data.get(v).get("White")
 
     if num_npoc and not num_poc:
-      caps.append("##### There are no POC {} for this selection".format(title))
+      caps.append("###### There are no POC {} for this selection".format(title))
     elif num_poc and not num_npoc:
-      caps.append("##### There are no white {} for this selection".format(title))
+      caps.append("###### There are no white {} for this selection".format(title))
     elif num_poc and num_npoc:
-      cap = "##### There are {x} times as many white {t} as there are POC {t}"
+      cap = "###### There are {x} times as many white {t} as there are POC {t}"
       caps.append(cap.format(t=title, x=round(float(num_npoc)/num_poc, 1) ))
   caption = "  \n".join(caps)
   return caption

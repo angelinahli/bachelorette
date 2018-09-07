@@ -14,7 +14,7 @@ description: basic html template that other html pages inherit from
   <meta name="author" content="Angelina Li">
 
   <title>The Bachelor & Race</title>
-  {%favicon%}
+  <link rel="icon" type="image/png" href="static/favicon.png">
 
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
@@ -27,14 +27,16 @@ description: basic html template that other html pages inherit from
 <!-- navbar -->
   <header class="navbar navbar-expand navbar-light">
 
-    <a href="/">
-      <img class="navbar-brand img-fluid" alt="Bachelor & Race" 
-        src="static/img/med_title.png"></img>
+    <a class="nav-brand" href="/">
+      <img alt="Bachelor & Race" src="static/med_title.png" height="25"></img>
     </a>
 
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="the-numbers">Representation</a>
+        <a class="nav-link" href="representation">Representation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="performance">Performance</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="notes">Notes</a>

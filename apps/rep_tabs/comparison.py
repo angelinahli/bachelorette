@@ -19,17 +19,13 @@ tab = rep.Tab(
   ]),
   panel=rep.Panel([
     html.Div(id="comp-value", style=dict(display="none")),
-    html.H3("The Bachelor/ette is still less diverse than the U.S."),
+    html.H4("The Bachelor/ette is still less diverse than the U.S."),
     dcc.Graph(id="comp-graph"),
-    html.H4([
+    html.H5([
       "While the Bachelor/ette has started to cast a more diverse cast, ",
-      "the show is still much less diverse than Americans as a population. "
+      "the franchise is still much less diverse than Americans as a population."
     ]),
-    html.H5(id="comp-caption", className="caption"),
-    html.Br(),
-    html.P([
-      "Note: This graph excludes years without complete demographic ",
-      "data on all contestants."])
+    html.H6(id="comp-caption", className="caption")
   ])
 )
 
@@ -50,7 +46,7 @@ def clean_data(shows, years, race):
   values = {}
   
   if race == "all":
-    titles = dict(rep.race_titles)
+    titles = dict(utils.RACE_TITLES)
     titles.pop("oth")
     for flag, title in titles.items():
       cands = rep.get_yearly_data(df, flag, 1, get_dict=True)
@@ -65,37 +61,40 @@ def clean_data(shows, years, race):
 
   return json.dumps(values)
 
-@app.callback(
-  Output("comp-graph", "figure"),
-  [Input("comp-value", "children")]
-)
+@app.callback(Output("comp-graph", "figure"), [Input("comp-value", "children")])
 def update_graph(cleaned_data):
   flag_values = json.loads(cleaned_data)
-  flag_keys = rep.get_ordered_race_flags(flag_values.keys())
+  flag_keys = utils.get_ordered_race_flags(flag_values.keys())
   traces = []
-  layout = go.Layout()
+  layout = go.Layout(
+    yaxis=dict(title="Percentage Point<br>Difference"),
+    legend=dict(orientation="h"),
+    hovermode="closest",
+    height=500,
+    **utils.LAYOUT_FONT)
 
+  min_yr = 2018
+  max_yr = 0
   for flag in flag_keys:
     vals = flag_values.get(flag)
+    years = vals.get("years")
+    min_yr = min(years) if min(years) < min_yr else min_yr
+    max_yr = max(years) if max(years) > max_yr else max_yr
     percs = [vals.get("cands").get(str(yr)) - vals.get("cens").get(str(yr)) 
-             for yr in vals.get("years")]
-    color = rep.race_colormaps.get(flag)
+             for yr in years]
+    color = utils.get_race_color(flag)
     trace = go.Bar(
-      x=vals.get("years"), 
+      x=years, 
       y=percs, 
       hoverinfo="x+y", 
       marker=dict(color=color), 
       name=vals.get("title")
     )
     traces.append(trace)
-
   layout.update(
-    title="Percentage POC Contestants Adjusted For Percentage POC Americans",
-    yaxis=dict(title="Percentage Points<br>Additional Representation"),
-    legend=dict(orientation="h"),
-    hovermode="closest",
-    **rep.layout_font)
-    
+    title="Difference in Percentage POC of U.S. Population and<br>" \
+      + "Percentage POC of Bachelor/ette Contestants<br>" \
+      + "{}-{}".format(min_yr, max_yr),)
   return dict(data=traces, layout=layout)
 
 @app.callback(
@@ -109,7 +108,7 @@ def update_caption(race, cleaned_data):
     poc_vals = flag_values.get("nwhite")
     last_yr = str(max(map(int, poc_vals.get("years"))))
     return ("In {yr}, {perc_cands}% of candidates were POC. By contrast, " \
-      + "that year {perc_cens}% of Americans were POC.").format(
+      + "in that year {perc_cens}% of Americans were POC.").format(
         yr=last_yr, 
         perc_cands=get_perc(poc_vals, "cands", str(last_yr)),
         perc_cens=get_perc(poc_vals, "cens", str(last_yr))

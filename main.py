@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 import os
 
 from app import app
-from apps import index, rep, notes
+from apps import index, rep, perf, notes
 
 # define base template for application
 with open("templates/base.html", "r") as fl:
@@ -19,7 +19,7 @@ app.layout = html.Div([
 ])
 
 # creating static content routes
-image_dir = "static/img"
+image_dir = "static"
 image_exts = [".png", ".jpeg", ".jpg"]
 valid_images = [os.path.basename(x) for x in os.listdir(image_dir)
   if os.path.splitext(x)[1] in image_exts]
@@ -40,7 +40,8 @@ def display_page(pathname):
   pathname = pathname.strip("/") if pathname else None
   paths = {
     "": index.layout,
-    "the-numbers": rep.layout,
+    "representation": rep.layout,
+    "performance": perf.layout,
     "notes": notes.layout
   }
   # TODO change default behavior to return 404 error

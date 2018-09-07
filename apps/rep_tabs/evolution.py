@@ -19,15 +19,11 @@ tab = rep.Tab(
     rep.RaceElement(elt_id="evol-race")
   ]),
   panel=rep.Panel([
-    html.H3("POC representation has improved over time"),
+    html.H4("POC representation has improved over time"),
     dcc.Graph(id="evol-graph"),
-    html.H4("In recent years, a higher number of people of color are " \
+    html.H5("In recent years, a higher number of people of color are " \
       + "participating in the Bachelor/ette."),
-    html.H5(id="evol-caption", className="caption"),
-    html.Br(),
-    html.P(
-      "Note: This graph excludes years without complete demographic " \
-      + "data on all contestants.")
+    html.H6(id="evol-caption", className="caption")
   ])
 )
 
@@ -49,40 +45,38 @@ def get_scatter(x, y, color, name, **kwargs):
     **kwargs)
 
 def get_reg(x, y, beta_1, beta_0, color, name, **kwargs):
+  text = ["" for _ in range(len(x) - 1)]
+  text.append( u"β1 = {}".format(round(beta_1, 2)) )
+  text_position = "top left" if beta_1 >= 0 else "bottom left"
   return go.Scatter(
     x=x,
     y=list(map(lambda x_val: beta_0 + (beta_1 * x_val), x)),
+    text=text,
+    textposition=text_position,
+    textfont=dict(color=utils.SECONDARY_COLOR, size=13, family="Karla"),
     hoverinfo="x+y",
     marker=dict(color=color, size=2),
     name=name,
-    mode="lines",
+    mode="lines+text",
     **kwargs)
 
-def get_increment(y):
-  return float(max(y) - min(y))/20 or 0.1
-
-def get_poc_fig(df, layout_all, layout_ann):
+def get_poc_fig(df, layout_all):
   layout = go.Layout(
-    xaxis=dict(title="Year", tickfont=dict(size=14)),
     yaxis=dict(title="% Candidates", titlefont=dict(size=16)), 
+    legend=dict(orientation="h"),
     height=550,
+    annotations=[],
     **layout_all
   )
   traces = []
   x, y = rep.get_yearly_data(df, "poc_flag", True)
   b1, b0 = polyfit(x, y, 1)
-  color = rep.race_colormaps.get("POC")
+  color = utils.get_race_color("POC")
   traces.append(get_scatter(x, y, color, "Values"))
   traces.append(get_reg(x, y, b1, b0, color, "OLS Estimates"))
-
-  increment = get_increment(y)
-  layout["annotations"] = [ 
-    dict(
-      x=x[-1], y=min(y) + increment,
-      text=u"β1 = {}".format(round(b1, 2)), 
-      **layout_ann )
-  ]
+  
   if 2012 in x:
+    increment = float(max(y) - min(y))/20 or 0.1
     layout["shapes"] = [
       dict(
         x0=2012, x1=2012, y0=min(y), y1=max(y), 
@@ -93,14 +87,14 @@ def get_poc_fig(df, layout_all, layout_ann):
       dict(
         x=2012, y=max(y) + increment, 
         text="Discrimination<br>lawsuit", 
-        **layout_ann)
+        **utils.LAYOUT_ANN)
     )
   return dict(data=traces, layout=layout)
 
-def get_all_fig(df, layout_all, layout_ann):
-  race_titles = dict(rep.race_titles)
+def get_all_fig(df, layout_all):
+  race_titles = dict(utils.RACE_TITLES)
   race_titles.pop("white")
-  race_keys = rep.get_ordered_race_flags(race_titles.keys())
+  race_keys = utils.get_ordered_race_flags(race_titles.keys())
 
   rows, cols = 3, 2
   order = [(r, c) for r in range(1, rows + 1) for c in range(1, cols + 1)]
@@ -115,7 +109,7 @@ def get_all_fig(df, layout_all, layout_ann):
   for flag in race_keys:
     xaxis = "xaxis{}".format(i)
     yaxis = "yaxis{}".format(i)
-    color = rep.race_colormaps.get(flag)
+    color = utils.get_race_color(flag)
     row, col = trace_pos.get(flag)
     title = race_titles.get(flag)
 
@@ -129,17 +123,9 @@ def get_all_fig(df, layout_all, layout_ann):
 
     fig["layout"].update( 
       {xaxis: dict(title="Year"), yaxis: dict(title="% Candidates")} )
-    fig["layout"]["annotations"].append( 
-      dict(
-        x=x[-1], y=min(y) + get_increment(y), 
-        xref="x{}".format(i), 
-        yref="y{}".format(i),
-        text=u"β1 = {}".format(round(b1, 2)), 
-        **layout_ann)
-    )
     i += 1
 
-  fig["layout"].update(height=350*rows, showlegend=False, **layout_all)
+  fig["layout"].update(height=400*rows, showlegend=False, **layout_all)
   return fig
 
 @app.callback(
@@ -152,17 +138,14 @@ def update_graph(shows, years, race):
 
   start, end = years
   layout_all = dict(
-    title="Percentage POC Contestants (%), {}-{}".format(start, end),
+    title="Percentage POC Bachelor/ette Contestants<br>{}-{}".format(start, end),
     hovermode="closest",
-    **rep.layout_font)
-  layout_ann = dict(
-    showarrow=False, 
-    font=dict(color=utils.SECONDARY_COLOR, size=14))
+    **utils.LAYOUT_FONT)
 
   if race == "poc_flag":
-    return get_poc_fig(df, layout_all, layout_ann)
+    return get_poc_fig(df, layout_all)
   elif race == "all":
-    return get_all_fig(df, layout_all, layout_ann)
+    return get_all_fig(df, layout_all)
   return dict(data=[], layout=go.Layout())
 
 @app.callback(Output("evol-caption", "children"), [Input("evol-race", "value")])

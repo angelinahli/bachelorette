@@ -5,6 +5,7 @@ import utils
 from app import app
 
 title = "Notes"
+subtitle = "Data, Methodology & More"
 
 urls = dict(
   census_url="https://factfinder.census.gov/faces/affhelp/jsf/pages/" \
@@ -16,27 +17,27 @@ urls = dict(
   be_wiki_url="https://en.wikipedia.org/wiki/The_Bachelorette"
 )
 
-# TODO: Can this look cooler?
 main_content = dcc.Markdown(
   """
-  ## Data Sources
+  #### Data Sources
   
-  #### Contestants
+  ##### Contestants
   * [538]({five38_url}) data
   * Supplemental data for Season 22 of the Bachelor and Season 14 of the 
     Bachelorette from Wikipedia
   
-  #### Race
+  ##### Race
   * [karenx]({karenx_url})'s dataset
   * [US Census]({census_url}) 'Hispanic or Latino Origin by Race' 
     ACS 1-year variable
   * Individual sources listed for person-level race data
 
-  #### Seasons
+  ##### Seasons
   * [Bachelor]({ba_wiki_url}) and [Bachelorette]({be_wiki_url}) Wikipedia pages
   """.format(**urls)
 )
 
 layout = utils.BSContainer(
   title=title,
+  subtitle=subtitle,
   main_content=main_content)
