@@ -32,7 +32,7 @@ main_content = html.Div(
   children=html.Div([
     BSCard(
       title="1. Representation",
-      title_link="/the-numbers",
+      title_link="/representation",
       subtitle="Does the Bachelor/ette have a representation problem?",
       body_contents=[
         html.P([
@@ -51,9 +51,20 @@ main_content = html.Div(
         ])
       ]),
     BSCard(
-      title="2. Success",
+      title="2. Performance",
+      title_link="/performance",
+      subtitle="How well do POC Bachelor/ette contestants fare on the show?",
       body_contents=[
-        
+        html.P([
+          "The second part of this investigation centers around answering ",
+          "the following questions:"]),
+        html.Ul([
+          html.Li([
+            "How long into a season do POC contestants last compared to their ",
+            "white counterparts?"]),
+          html.Li([
+            "xxxxx?"])
+        ])
       ]),
     BSCard(
       title="3. Conclusion & Notes",

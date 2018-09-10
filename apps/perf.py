@@ -57,14 +57,14 @@ class LeadRaceElement(utils.FormElement):
 ########## main content ##########
 
 # place here to avoid circular imports
-from apps.perf_tabs import overall
+from apps.perf_tabs import overall, initial
 
 title = "Part 2: How well do POC Bachelor/ette contestants fare on the show?"
 subtitle = "Not great."
 
 main_content = utils.Tabs(
   value="overall",
-  children=[overall.tab])
+  children=[overall.tab, initial.tab])
 
 layout = utils.BSContainer(
   title=title,
