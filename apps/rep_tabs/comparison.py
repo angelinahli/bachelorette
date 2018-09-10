@@ -9,15 +9,15 @@ import utils
 from app import app
 from apps import rep
 
-tab = rep.Tab(
+tab = utils.Tab(
   label="Comparison", 
   value="comparison",
-  dashboard=rep.Dashboard([
-    rep.ShowsElement(elt_id="comp-shows"),
-    rep.YearsElement(elt_id="comp-years"),
-    rep.RaceElement(elt_id="comp-race")
+  dashboard=utils.Dashboard([
+    utils.ShowsElement(elt_id="comp-shows"),
+    utils.YearsElement(elt_id="comp-years"),
+    utils.RaceElement(elt_id="comp-race")
   ]),
-  panel=rep.Panel([
+  panel=utils.Panel([
     html.Div(id="comp-value", style=dict(display="none")),
     html.H4("The Bachelor/ette is still less diverse than the U.S."),
     dcc.Graph(id="comp-graph"),
@@ -61,25 +61,27 @@ def clean_data(shows, years, race):
 
   return json.dumps(values)
 
-@app.callback(Output("comp-graph", "figure"), [Input("comp-value", "children")])
-def update_graph(cleaned_data):
+@app.callback(
+  Output("comp-graph", "figure"), 
+  [Input("comp-value", "children"), Input("comp-years", "value")])
+def update_graph(cleaned_data, years):
   flag_values = json.loads(cleaned_data)
   flag_keys = utils.get_ordered_race_flags(flag_values.keys())
   traces = []
+  start, end = years
   layout = go.Layout(
+    title="Difference in Percentage POC of U.S. Population and<br>" \
+      + "Percentage POC of Bachelor/ette Contestants<br>" \
+      + "{}-{}".format(start, end),
     yaxis=dict(title="Percentage Point<br>Difference"),
     legend=dict(orientation="h"),
     hovermode="closest",
     height=500,
     **utils.LAYOUT_FONT)
 
-  min_yr = 2018
-  max_yr = 0
   for flag in flag_keys:
     vals = flag_values.get(flag)
     years = vals.get("years")
-    min_yr = min(years) if min(years) < min_yr else min_yr
-    max_yr = max(years) if max(years) > max_yr else max_yr
     percs = [vals.get("cands").get(str(yr)) - vals.get("cens").get(str(yr)) 
              for yr in years]
     color = utils.get_race_color(flag)
@@ -91,10 +93,7 @@ def update_graph(cleaned_data):
       name=vals.get("title")
     )
     traces.append(trace)
-  layout.update(
-    title="Difference in Percentage POC of U.S. Population and<br>" \
-      + "Percentage POC of Bachelor/ette Contestants<br>" \
-      + "{}-{}".format(min_yr, max_yr),)
+
   return dict(data=traces, layout=layout)
 
 @app.callback(
@@ -138,4 +137,4 @@ def update_caption(race, cleaned_data):
   Output("selected-comp-years", "children"),
   [Input("comp-years", "value")])
 def update_years(years):
-  return rep.update_selected_years(years)
+  return utils.update_selected_years(years)

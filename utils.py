@@ -1,6 +1,8 @@
 import dash_core_components as dcc
 import dash_html_components as html
 
+###### app wide variables ######
+
 PRIMARY_COLOR = "#C95B83"
 SECONDARY_COLOR = "#808080"
 COLORSCHEME = ["#C95B83", "#FFBD4A", "#F26B3C", "#399E5A", "#5AB1BB", "#1446A0", 
@@ -20,6 +22,8 @@ LAYOUT_FONT = dict(font=dict(family="Karla"))
 LAYOUT_ANN = dict(
     showarrow=False, 
     font=dict(color=SECONDARY_COLOR, size=14, family="Karla"))
+
+###### app wide classes ######
 
 class BSContainer(html.Div):
   def __init__(self, main_content=None, title=None, subtitle=None, **kwargs):
@@ -48,10 +52,30 @@ class Tabs(dcc.Tabs):
       colors={"border": c_border, "primary": c_primary, "background": c_back},
       **kwargs)
 
-class BSButton(html.Button):
-  def __init__(self, btn_type="btn-outline-dark", **kwargs):
+class Tab(dcc.Tab):
+  def __init__(self, dashboard=None, panel=None, **kwargs):
     super().__init__(**kwargs)
-    self.className = "btn " + btn_type
+    self.children=html.Div(
+      className="row", 
+      children=[dashboard, panel]
+    )
+
+class Panel(html.Div):
+  def __init__(self, children, **kwargs):
+    super().__init__(
+      className="col-sm-9 text-center", 
+      children=[html.Br()] + children, 
+      **kwargs)
+
+class Dashboard(html.Div):
+  def __init__(self, form_elements, **kwargs):
+    super().__init__(className="col-sm-3", **kwargs)
+    self.children = [
+      html.Br(),
+      html.H5("Change what this figure shows:"),
+      html.Br(),
+    ]
+    self.children += form_elements
 
 class FormElement(html.Div):
   """ 
@@ -67,6 +91,56 @@ class FormElement(html.Div):
     if add_elements:
       self.children += add_elements
     self.children.append(html.Br())
+
+### individual elements ###
+
+class ShowsElement(FormElement):
+  def __init__(self, elt_id):
+    super().__init__(
+      label="Show(s)",
+      element=dcc.Dropdown(
+        id=elt_id,
+        options=get_form_options(["Bachelor", "Bachelorette"]),
+        value=["Bachelor", "Bachelorette"],
+        multi=True
+      ))
+
+class YearsElement(FormElement):
+  def __init__(self, elt_id):
+    super().__init__(
+      label="Year(s)",
+      element=dcc.RangeSlider(
+        id=elt_id,
+        min=2002,
+        max=2018,
+        step=1,
+        marks={2002: 2002, 2010: 2010, 2018: 2018},
+        value=[2002, 2018]
+      ),
+      add_elements=[
+        html.Br(), 
+        html.P(id="selected-" + elt_id, className="text-right small")
+      ])
+
+class RaceElement(FormElement):
+  def __init__(self, elt_id):
+    super().__init__(
+      label="Comparison Specificity",
+      element=dcc.Dropdown(
+        id=elt_id,
+        options=[
+          {"label": "POC / Non-POC", "value": "poc_flag"},
+          {"label": "All categories", "value": "all"}
+        ],
+        value="poc_flag"
+      ))
+
+###### app wide helper functions ######
+
+def update_selected_years(years):
+  """ shows user what the selected year range is """
+  start, end = years
+  return "Selected: ({start}, {end})".format(start=start, end=end)
 
 def get_form_options(options_list):
   return [ {"label": x, "value": x} for x in options_list]
@@ -87,6 +161,6 @@ def get_race_color(flag):
     "oth": COLORSCHEME[6]
   }.get(flag)
 
-def get_ordered_race_flags(lst):
+def get_ordered_race_flags(lst=None):
   order = ["white", "nwhite", "afam", "hisp", "asn_paci", "amin", "mult", "oth"]
   return sorted(lst, key=lambda x: order.index(x))

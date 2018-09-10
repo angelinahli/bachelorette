@@ -10,16 +10,16 @@ import utils
 from app import app
 from apps import rep
 
-tab = rep.Tab(
+tab = utils.Tab(
   label="Overall", 
   value="overall", 
-  dashboard=rep.Dashboard([
+  dashboard=utils.Dashboard([
     rep.LeadsElement(elt_id="overall-leads"),
-    rep.ShowsElement(elt_id="overall-shows"),
-    rep.YearsElement(elt_id="overall-years"),
-    rep.RaceElement(elt_id="overall-race")
+    utils.ShowsElement(elt_id="overall-shows"),
+    utils.YearsElement(elt_id="overall-years"),
+    utils.RaceElement(elt_id="overall-race")
   ]),
-  panel=rep.Panel([
+  panel=utils.Panel([
     html.Div(id="overall-value", style=dict(display="none")),
     html.H4("POC are under-represented on the Bachelor/ette"),
     dcc.Graph(id="overall-graph"),
@@ -120,4 +120,4 @@ def update_caption(cleaned_data, race):
   Output("selected-overall-years", "children"),
   [Input("overall-years", "value")])
 def update_years(years):
-  return rep.update_selected_years(years)
+  return utils.update_selected_years(years)

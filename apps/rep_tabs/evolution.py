@@ -10,15 +10,15 @@ import utils
 from app import app
 from apps import rep
 
-tab = rep.Tab(
+tab = utils.Tab(
   label="Evolution", 
   value="evolution",
-  dashboard=rep.Dashboard([
-    rep.ShowsElement(elt_id="evol-shows"),
-    rep.YearsElement(elt_id="evol-years"),
-    rep.RaceElement(elt_id="evol-race")
+  dashboard=utils.Dashboard([
+    utils.ShowsElement(elt_id="evol-shows"),
+    utils.YearsElement(elt_id="evol-years"),
+    utils.RaceElement(elt_id="evol-race")
   ]),
-  panel=rep.Panel([
+  panel=utils.Panel([
     html.H4("POC representation has improved over time"),
     dcc.Graph(id="evol-graph"),
     html.H5("In recent years, a higher number of people of color are " \
@@ -156,4 +156,4 @@ def update_caption(race):
   Output("selected-evol-years", "children"),
   [Input("evol-years", "value")])
 def update_years(years):
-  return rep.update_selected_years(years)
+  return utils.update_selected_years(years)

@@ -19,18 +19,12 @@ census = pd.read_csv(os.path.join(work_dir, "..", "data", "census_race.csv"))
 
 def get_filtered_df(leads, shows, years):
   start, end = years
-  new_df = df[
-    (df["race_data_flag"] == True)
+  return df[
+    (df["lead_flag"].isin(leads))
     & (df["show"].isin(shows))
     & (df["year"] >= start)
     & (df["year"] <= end)
   ]
-  complete_years = []
-  for year in df.year.unique():
-    data = df[df.year == year].race_data_flag
-    if all(data):
-      complete_years.append(year)
-  return new_df[new_df.year.isin(complete_years)]
 
 def get_poc_name(x):
   return {True: "POC", False: "White"}[x]
@@ -38,11 +32,6 @@ def get_poc_name(x):
 def get_lead_name(x):
   return {True: "Leads", "true": "Leads", 
           False: "Contestants", "false": "Contestants"}[x]
-
-def update_selected_years(years):
-  """ shows user what the selected year range is """
-  start, end = years
-  return "Selected: ({start}, {end})".format(start=start, end=end)
 
 def get_yearly_data(df, flag_name, flag_value, get_dict=False):
   """returns the % times a flag is equal to a value, for all years in df """
@@ -60,33 +49,6 @@ def get_yearly_data(df, flag_name, flag_value, get_dict=False):
     return dict(zip(x, y))
   return x, y
 
-########## helper classes ##########
-
-class Tab(dcc.Tab):
-  def __init__(self, dashboard=None, panel=None, **kwargs):
-    super().__init__(**kwargs)
-    self.children=html.Div(
-      className="row", 
-      children=[dashboard, panel]
-    )
-
-class Panel(html.Div):
-  def __init__(self, children, **kwargs):
-    super().__init__(
-      className="col-sm-9 text-center", 
-      children=[html.Br()] + children, 
-      **kwargs)
-
-class Dashboard(html.Div):
-  def __init__(self, form_elements, **kwargs):
-    super().__init__(className="col-sm-3", **kwargs)
-    self.children = [
-      html.Br(),
-      html.H5("Change what this figure shows:"),
-      html.Br(),
-    ]
-    self.children += form_elements
-
 ########## defining dashboard elements ##########
 
 class LeadsElement(utils.FormElement):
@@ -101,47 +63,6 @@ class LeadsElement(utils.FormElement):
         ],
         value=[True, False],
         multi=True
-      ))
-
-class ShowsElement(utils.FormElement):
-  def __init__(self, elt_id):
-    super().__init__(
-      label="Show(s)",
-      element=dcc.Dropdown(
-        id=elt_id,
-        options=utils.get_form_options(["Bachelor", "Bachelorette"]),
-        value=["Bachelor", "Bachelorette"],
-        multi=True
-      ))
-
-class YearsElement(utils.FormElement):
-  def __init__(self, elt_id):
-    super().__init__(
-      label="Year(s)",
-      element=dcc.RangeSlider(
-        id=elt_id,
-        min=2002,
-        max=2018,
-        step=1,
-        marks={2002: 2002, 2010: 2010, 2018: 2018},
-        value=[2002, 2018]
-      ),
-      add_elements=[
-        html.Br(), 
-        html.P(id="selected-" + elt_id, className="text-right small")
-      ])
-
-class RaceElement(utils.FormElement):
-  def __init__(self, elt_id):
-    super().__init__(
-      label="Comparison Specificity",
-      element=dcc.Dropdown(
-        id=elt_id,
-        options=[
-          {"label": "POC / Non-POC", "value": "poc_flag"},
-          {"label": "All categories", "value": "all"}
-        ],
-        value="poc_flag"
       ))
 
 ########## main content ##########
