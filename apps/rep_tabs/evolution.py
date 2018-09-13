@@ -12,9 +12,9 @@ from apps import rep
 
 stub = "evol-rep-"
 
-tab = utils.Tab(
-  label="Evolution", 
-  value="evolution",
+tab = dcc.Tab(label="Evolution", value="evolution")
+
+content = utils.TabContent(
   dashboard=utils.Dashboard([
     utils.ShowsElement(elt_id=stub + "shows"),
     utils.YearsElement(elt_id=stub + "years"),

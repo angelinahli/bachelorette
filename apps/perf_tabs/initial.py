@@ -14,9 +14,9 @@ from apps import perf
 
 stub = "initial-"
 
-tab = utils.Tab(
-  label="Initial", 
-  value="initial", 
+tab = dcc.Tab(label="Initial", value="initial")
+
+content = utils.TabContent(
   dashboard=utils.Dashboard([
     utils.ShowsElement(elt_id=stub + "shows"),
     utils.YearsElement(elt_id=stub + "years"),

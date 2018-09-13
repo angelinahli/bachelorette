@@ -52,17 +52,15 @@ class Tabs(dcc.Tabs):
   def __init__(self, c_border="#d6d6d6", c_primary=PRIMARY_COLOR, 
                c_back="#f9f9f9", **kwargs):
     super().__init__(
-      id="tabs",
       colors={"border": c_border, "primary": c_primary, "background": c_back},
       **kwargs)
 
-class Tab(dcc.Tab):
-  def __init__(self, dashboard=None, panel=None, **kwargs):
-    super().__init__(**kwargs)
-    self.children=html.Div(
-      className="row", 
-      children=[dashboard, panel]
-    )
+class TabContent(html.Div):
+  def __init__(self, dashboard, panel, **kwargs):
+    super().__init__(
+      className="row",
+      children=[dashboard, panel],
+      **kwargs)
 
 class Panel(html.Div):
   def __init__(self, children, **kwargs):

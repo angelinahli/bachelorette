@@ -11,9 +11,9 @@ from apps import rep
 
 stub = "comp-"
 
-tab = utils.Tab(
-  label="Comparison", 
-  value="comparison",
+tab = dcc.Tab(label="Comparison", value="comparison")
+
+content = utils.TabContent(
   dashboard=utils.Dashboard([
     utils.ShowsElement(elt_id=stub + "shows"),
     utils.YearsElement(elt_id=stub + "years"),

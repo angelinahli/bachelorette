@@ -13,9 +13,9 @@ from apps import perf
 
 stub = "over-perf-"
 
-tab = utils.Tab(
-  label="Overall", 
-  value="overall", 
+tab = dcc.Tab(label="Overall", value="overall")
+
+content = utils.TabContent(
   dashboard=utils.Dashboard([
     utils.ShowsElement(elt_id=stub + "shows"),
     utils.YearsElement(elt_id=stub + "years"),

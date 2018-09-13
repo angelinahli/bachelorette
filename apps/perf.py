@@ -39,11 +39,25 @@ from apps.perf_tabs import overall, initial
 title = "Part 2: How well do POC Bachelor/ette contestants fare on the show?"
 subtitle = "Not great."
 
-main_content = utils.Tabs(
-  value="overall",
-  children=[overall.tab, initial.tab])
+main_content = html.Div([
+  utils.Tabs(
+    id="perf-tabs",
+    value="overall",
+    children=[overall.tab, initial.tab]),
+  html.Div(id="perf-content")
+])
 
 layout = utils.BSContainer(
   title=title,
   subtitle=subtitle,
   main_content=main_content)
+
+########## route to display tab content ##########
+
+@app.callback(Output("perf-content", "children"), [Input("perf-tabs", "value")])
+def render_tab_content(tab_val):
+  tab_values = {
+    "overall": overall.content,
+    "initial": initial.content
+  }
+  return tab_values.get(tab_val)

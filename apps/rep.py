@@ -72,12 +72,26 @@ from apps.rep_tabs import overall, evolution, comparison
 title = "Part 1: Does the Bachelor/ette have a representation problem?"
 subtitle = "..Yes. And here are the numbers to prove it."
 
-main_content = utils.Tabs(
-  value="overall",
-  children=[overall.tab, evolution.tab, comparison.tab]
-)
+main_content = html.Div([
+  utils.Tabs(
+    id="rep-tabs",
+    value="overall",
+    children=[overall.tab, evolution.tab, comparison.tab]),
+  html.Div(id="rep-content")
+])
 
 layout = utils.BSContainer(
   title=title,
   subtitle=subtitle,
   main_content=main_content)
+
+########## route to display tab content ##########
+
+@app.callback(Output("rep-content", "children"), [Input("rep-tabs", "value")])
+def render_tab_content(tab_val):
+  tab_values = {
+    "overall": overall.content,
+    "evolution": evolution.content,
+    "comparison": comparison.content
+  }
+  return tab_values.get(tab_val)
