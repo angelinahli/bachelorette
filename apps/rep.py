@@ -17,10 +17,10 @@ census = pd.read_csv(os.path.join(work_dir, "..", "data", "census_race.csv"))
 
 ########## helper functions ##########
 
-def get_filtered_df(leads, shows, years):
+def get_filtered_df(lead, shows, years):
   start, end = years
   return df[
-    (df["lead_flag"].isin(leads))
+    (df["lead_flag"] == lead)
     & (df["show"].isin(shows))
     & (df["year"] >= start)
     & (df["year"] <= end)
@@ -30,7 +30,7 @@ def get_poc_name(x):
   return {True: "POC", False: "White"}[x]
 
 def get_lead_name(x):
-  return {True: "Leads", "true": "Leads", 
+  return {True: "Bachelor/ettes", "true": "Bachelor/ettes", 
           False: "Contestants", "false": "Contestants"}[x]
 
 def get_yearly_data(df, flag_name, flag_value, get_dict=False):
@@ -51,18 +51,17 @@ def get_yearly_data(df, flag_name, flag_value, get_dict=False):
 
 ########## defining dashboard elements ##########
 
-class LeadsElement(utils.FormElement):
+class LeadElement(utils.FormElement):
   def __init__(self, elt_id):
     super().__init__(
-      label="Contestants",
+      label="Cast Type",
       element=dcc.Dropdown(
         id=elt_id,
         options=[
-          {"label": "Leads", "value": True}, 
+          {"label": "Bachelor/ettes", "value": True}, 
           {"label": "Contestants", "value": False}
         ],
-        value=[True, False],
-        multi=True
+        value=False,
       ))
 
 ########## main content ##########

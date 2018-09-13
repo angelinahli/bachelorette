@@ -1,5 +1,6 @@
 import dash_core_components as dcc
 import dash_html_components as html
+import plotly.graph_objs as go
 
 ###### app wide variables ######
 
@@ -18,7 +19,10 @@ RACE_TITLES = {
   "mult": "Multiple"
 }
 
-LAYOUT_FONT = dict(font=dict(family="Karla"))
+LAYOUT_ALL = dict(
+  font=dict(family="Karla"),
+  legend=dict(orientation="h"),
+  hovermode="closest")
 LAYOUT_ANN = dict(
     showarrow=False, 
     font=dict(color=SECONDARY_COLOR, size=14, family="Karla"))
@@ -91,6 +95,28 @@ class FormElement(html.Div):
     if add_elements:
       self.children += add_elements
     self.children.append(html.Br())
+
+class Bar(go.Bar):
+  def __init__(self, x, y, colors, 
+               name=None, text=None, textposition="outside", **kwargs):
+    super().__init__(
+      x=x, y=y,
+      hoverinfo="x+y",
+      marker=dict(color=colors))
+    if text:
+      self.update(text=text, textposition=textposition)
+    if name:
+      self.update(name=name)
+
+class Scatter(go.Scatter):
+  def __init__(self, x, y, color, name, size=8, mode="markers", **kwargs):
+    super().__init__(
+      x=x, y=y,
+      hoverinfo="x+y",
+      marker=dict(color=color, size=size),
+      name=name,
+      mode=mode,
+      **kwargs)
 
 ### individual elements ###
 

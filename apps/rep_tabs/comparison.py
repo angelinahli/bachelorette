@@ -9,23 +9,25 @@ import utils
 from app import app
 from apps import rep
 
+stub = "comp-"
+
 tab = utils.Tab(
   label="Comparison", 
   value="comparison",
   dashboard=utils.Dashboard([
-    utils.ShowsElement(elt_id="comp-shows"),
-    utils.YearsElement(elt_id="comp-years"),
-    utils.RaceElement(elt_id="comp-race")
+    utils.ShowsElement(elt_id=stub + "shows"),
+    utils.YearsElement(elt_id=stub + "years"),
+    utils.RaceElement(elt_id=stub + "race")
   ]),
   panel=utils.Panel([
-    html.Div(id="comp-value", style=dict(display="none")),
+    html.Div(id=stub + "value", style=dict(display="none")),
     html.H4("The Bachelor/ette is still less diverse than the U.S."),
-    dcc.Graph(id="comp-graph"),
+    dcc.Graph(id=stub + "graph"),
     html.H5([
       "While the Bachelor/ette has started to cast a more diverse cast, ",
       "the franchise is still much less diverse than Americans as a population."
     ]),
-    html.H6(id="comp-caption", className="caption")
+    html.H6(id=stub + "caption", className="caption")
   ])
 )
 
@@ -33,12 +35,21 @@ def get_values(census_df, cands, flag, title):
   # helper function for clean_data
   cens = dict(zip(census_df.year, census_df[flag + "_perc"].map(lambda x: x*100)))
   years = list(filter(lambda yr: yr in cands.keys(), cens))
-  return dict(cands=cands, cens=cens, years=years, title=title)
+  color = utils.get_race_color(flag)
+  return dict(cands=cands, cens=cens, years=years, color=color, title=title)
+
+def get_percs(values):
+  return [
+    round(
+        values.get("cands").get(str(yr)) 
+        - values.get("cens").get(str(yr)), 
+      1) 
+    for yr in values.get("years")]
 
 @app.callback(
-  Output("comp-value", "children"),
-  [Input(input_id, "value") for input_id in 
-    ["comp-shows", "comp-years", "comp-race"] ]
+  Output(stub + "value", "children"),
+  [Input(stub + input_stub, "value") for input_stub in 
+    ["shows", "years", "race"] ]
 )
 def clean_data(shows, years, race):
   df = rep.get_filtered_df([False], shows, years)
@@ -53,20 +64,21 @@ def clean_data(shows, years, race):
       values[flag] = get_values(census_df, cands, flag, title)
   
   elif race == "poc_flag":
-    crosswalks = [("nwhite", True), ("white", False)]
-    for flag, mast_val in crosswalks:
-      cands = rep.get_yearly_data(df, "poc_flag", mast_val, get_dict=True)
-      title = rep.get_poc_name(mast_val)
-      values[flag] = get_values(census_df, cands, flag, title)
+    cands = rep.get_yearly_data(df, "poc_flag", True, get_dict=True)
+    title = rep.get_poc_name(True)
+    values["nwhite"] = get_values(census_df, cands, "nwhite", title)
 
   return json.dumps(values)
 
 @app.callback(
-  Output("comp-graph", "figure"), 
-  [Input("comp-value", "children"), Input("comp-years", "value")])
-def update_graph(cleaned_data, years):
-  flag_values = json.loads(cleaned_data)
-  flag_keys = utils.get_ordered_race_flags(flag_values.keys())
+  Output(stub + "graph", "figure"), 
+  [
+    Input(stub + "value", "children"), 
+    Input(stub + "years", "value"),
+    Input(stub + "race", "value")
+  ])
+def update_graph(cleaned_data, years, race):
+  data = json.loads(cleaned_data)
   traces = []
   start, end = years
   layout = go.Layout(
@@ -74,31 +86,36 @@ def update_graph(cleaned_data, years):
       + "Percentage POC of Bachelor/ette Contestants<br>" \
       + "{}-{}".format(start, end),
     yaxis=dict(title="Percentage Point<br>Difference"),
-    legend=dict(orientation="h"),
-    hovermode="closest",
     height=500,
-    **utils.LAYOUT_FONT)
+    **utils.LAYOUT_ALL)
 
-  for flag in flag_keys:
-    vals = flag_values.get(flag)
-    years = vals.get("years")
-    percs = [vals.get("cands").get(str(yr)) - vals.get("cens").get(str(yr)) 
-             for yr in years]
-    color = utils.get_race_color(flag)
-    trace = go.Bar(
-      x=years, 
+  if race == "poc_flag":
+    values = data["nwhite"]
+    percs = get_percs(values)
+    trace = utils.Bar(
+      x=values.get("years"), 
       y=percs, 
-      hoverinfo="x+y", 
-      marker=dict(color=color), 
-      name=vals.get("title")
+      text=percs,
+      colors=values.get("color"), 
+      name=values.get("title")
     )
     traces.append(trace)
+
+  elif race == "all":
+    for flag, values in data.items():
+      trace = go.Scatter(
+        x=values.get("years"),
+        y=get_percs(values),
+        hoverinfo="x+y",
+        marker=dict(color=values.get("color")),
+        name=values.get("title"))
+      traces.append(trace)
 
   return dict(data=traces, layout=layout)
 
 @app.callback(
-  Output("comp-caption", "children"), 
-  [Input("comp-race", "value"), Input("comp-value", "children")])
+  Output(stub + "caption", "children"), 
+  [Input(stub + "race", "value"), Input(stub + "value", "children")])
 def update_caption(race, cleaned_data):
   flag_values = json.loads(cleaned_data)
 
@@ -134,7 +151,7 @@ def update_caption(race, cleaned_data):
         pcens_hisp=get_perc(hisp, "cens", last_yr))
 
 @app.callback(
-  Output("selected-comp-years", "children"),
-  [Input("comp-years", "value")])
+  Output("selected-" + stub + "years", "children"),
+  [Input(stub + "years", "value")])
 def update_years(years):
   return utils.update_selected_years(years)

@@ -14,19 +14,12 @@ from app import app
 work_dir = os.path.dirname(os.path.abspath(__file__))
 df = pd.read_csv(os.path.join(work_dir, "..", "data", "master_flags_dataset.csv"))
 
-"""
-Brainstorm:
-* Average number of weeks on the show by racial category, by POC lead or not
-* Change in average number of weeks by race
-"""
-
 ########## helper functions ##########
 
-def get_filtered_df(lead_race, shows, years):
+def get_filtered_df(shows, years):
   start, end = years
   return df[
     (df["lead_flag"] == 0)
-    & (df["lead_poc_flag"].isin(lead_race))
     & (df["show"].isin(shows))
     & (df["year"] >= start)
     & (df["year"] <= end)
@@ -37,22 +30,6 @@ def get_lead_race_name(x):
 
 def get_poc_name(x):
   return {True: "POC", False: "White"}[x]
-
-########## defining dashboard elements ##########
-
-class LeadRaceElement(utils.FormElement):
-  def __init__(self, elt_id):
-    super().__init__(
-      label="Lead's Race",
-      element=dcc.Dropdown(
-        id=elt_id,
-        options=[
-          {"label": "POC Lead", "value": True}, 
-          {"label": "White Lead", "value": False}
-        ],
-        value=[True, False],
-        multi=True
-      ))
 
 ########## main content ##########
 
