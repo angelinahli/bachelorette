@@ -7,9 +7,7 @@ This repository holds the data and programs used to generate exploratory data an
 Because data is cool! Because the Bachelor franchise has become a cultural symbol worth exploring. Because I'm sad about Bachelorette Season 14 ending (Bring back #JoeTheGrocer).
 
 ## To Do
-* All:
-    * Adjust the margins (?) of charts so that floating text isn't cut off
-    * Figure out to stop the application from being confused when a callback is changed on one tab
+* Go over and check - is the data presentation as good as it could be for each tab??
 * Perf - Over Time:
     * Do POC contestants stay on a longer percentage of the show over time? (Scatter probably)
 * Polish the Notes section

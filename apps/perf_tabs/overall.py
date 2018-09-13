@@ -82,9 +82,12 @@ def clean_data(shows, years, race):
 
 @app.callback(
   Output(stub + "graph", "figure"),
-  [Input(stub + "value", "children"), Input(stub + "years", "value") ]
-)
-def update_graph(cleaned_data, years):
+  [
+    Input(stub + "value", "children"), 
+    Input(stub + "years", "value"),
+    Input(stub + "race", "value")
+  ])
+def update_graph(cleaned_data, years, race):
   data = json.loads(cleaned_data)
   if not data:
     return dict(data=[], layout=go.Layout())
@@ -92,8 +95,8 @@ def update_graph(cleaned_data, years):
   start, end = years
   layout = go.Layout(
     title="Percentage of Season Candidates Last<br>{}-{}".format(start, end),
-    margin=dict(b=110),
     xaxis=dict(tickfont=dict(size=14)),
+    margin=dict(b=120 if race == "all" else 50),
     **utils.LAYOUT_ALL)
   bar = utils.Bar(text=data["y"], **data)
   layout.update(yaxis=dict(range=[0, max(bar.get("y", [0])) + 5]))

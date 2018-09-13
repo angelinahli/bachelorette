@@ -73,8 +73,8 @@ def update_graph(cleaned_data, race, years):
   start, end = years
   layout = go.Layout(
     title="Number of People on the Bachelor/ette<br>{}-{}".format(start, end),
-    margin=dict(b=110),
     xaxis=dict(tickfont=dict(size=14)),
+    margin=dict(b=120 if race == "all" else 50),
     **utils.LAYOUT_ALL
   )
 

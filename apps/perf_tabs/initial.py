@@ -53,8 +53,8 @@ def update_graph(shows, years, race):
   start, end = years
   layout = go.Layout(
     title="Percentage Candidates Eliminated First Week<br>{}-{}".format(start, end),
-    margin=dict(b=120),
     xaxis=dict(tickfont=dict(size=14)),
+    margin=dict(b=120 if race == "all" else 50),
     **utils.LAYOUT_ALL
   )
   y = []
