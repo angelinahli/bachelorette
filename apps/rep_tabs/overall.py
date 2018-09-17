@@ -32,6 +32,10 @@ content = utils.TabContent(
   ])
 )
 
+def get_lead_name(x):
+  return {True: "Bachelor/ettes", "true": "Bachelor/ettes", 
+          False: "Contestants", "false": "Contestants"}[x]
+
 @app.callback(
   Output(stub + "value", "children"),
   [Input(stub + input_stub, "value") for input_stub in 
@@ -40,40 +44,40 @@ content = utils.TabContent(
 def clean_data(lead, shows, years, race):
   filtered_df = rep.get_filtered_df(lead, shows, years)
   data = dict(x=None, y=[], colors=[])
-  
-  if race == "poc_flag":
-    x_vals = [False, True]
-    data["x"] = list(map(rep.get_poc_name, x_vals))
-    for i in range(len(x_vals)):
-      series = filtered_df[filtered_df["poc_flag"] == x_vals[i]]
-      data["y"].append(series.shape[0]) # first val: row count
-      data["colors"].append(utils.get_race_color( data["x"][i] ))
-  
-  elif race == "all":
-    x_vals = utils.get_ordered_race_flags(utils.RACE_TITLES.keys())
-    data["x"] = list(map(lambda flag: utils.RACE_TITLES.get(flag), x_vals))
-    for flag in x_vals:
-      series = filtered_df[filtered_df[flag] == 1]
-      data["colors"].append(utils.get_race_color(flag))
-      data["y"].append(series.shape[0]) # first val: row count
-    
+
+  if not race:
+    return json.dumps(data)
+
+  title_dict = utils.POC_TITLES if race == "poc_flag" else utils.RACE_TITLES
+  x_vals = utils.get_ordered_race_flags(title_dict.keys())
+  data["x"] = list(map(title_dict.get, x_vals))
+  for flag in x_vals:
+    series = filtered_df[filtered_df[flag] == 1]
+    data["colors"].append(utils.get_race_color(flag))
+    data["y"].append(series.shape[0]) # first val: row count
   return json.dumps(data)
 
 @app.callback(
   Output(stub + "graph", "figure"),
-  [Input(stub + "value", "children"), Input(stub + "race", "value"), 
-    Input(stub + "years", "value")]
+  [
+    Input(stub + "value", "children"),
+    Input(stub + "race", "value"), 
+    Input(stub + "years", "value"),
+    Input(stub + "lead", "value")
+  ]
 )
-def update_graph(cleaned_data, race, years):
+def update_graph(cleaned_data, race, years, lead):
   """ generates figure for overall tab """
   data = json.loads(cleaned_data)
   if not data:
     return dict(data=[], layout=go.Layout())
 
   start, end = years
+  title = get_lead_name(lead)
   layout = go.Layout(
-    title="Number of People on the Bachelor/ette<br>{}-{}".format(start, end),
+    title="Number of {} on the Bachelor/ette<br>{}-{}".format(title, start, end),
     xaxis=dict(tickfont=dict(size=14)),
+    yaxis=dict(title="# People"),
     margin=dict(b=120 if race == "all" else 50),
     **utils.LAYOUT_ALL
   )
@@ -94,7 +98,7 @@ def update_caption(cleaned_data, race, lead):
   if not data:
     return "Sorry! There are no stats available about this selection"
   
-  title = rep.get_lead_name(lead).lower()
+  title = get_lead_name(lead).lower()
   vals = dict(zip(data["x"], data["y"]))
 
   if race == "all":

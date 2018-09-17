@@ -21,7 +21,7 @@ content = utils.TabContent(
   ]),
   panel=utils.Panel([
     html.Div(id=stub + "value", style=dict(display="none")),
-    html.H4("The Bachelor/ette is still less diverse than the U.S."),
+    html.H4("The Bachelor/ette is less diverse than the U.S. at large"),
     dcc.Graph(id=stub + "graph"),
     html.H5([
       "While the Bachelor/ette has started to cast a more diverse cast, ",
@@ -31,20 +31,18 @@ content = utils.TabContent(
   ])
 )
 
+def get_percs(values):
+  return [round(values["cands"][yr] - values["cens"][yr], 1) 
+    for yr in values.get("years")]
+
 def get_values(census_df, cands, flag, title):
   # helper function for clean_data
   cens = dict(zip(census_df.year, census_df[flag + "_perc"].map(lambda x: x*100)))
   years = list(filter(lambda yr: yr in cands.keys(), cens))
   color = utils.get_race_color(flag)
-  return dict(cands=cands, cens=cens, years=years, color=color, title=title)
-
-def get_percs(values):
-  return [
-    round(
-        values.get("cands").get(str(yr)) 
-        - values.get("cens").get(str(yr)), 
-      1) 
-    for yr in values.get("years")]
+  values = dict(cands=cands, cens=cens, years=years, color=color, title=title)
+  values["percs"] = get_percs(values)
+  return values
 
 @app.callback(
   Output(stub + "value", "children"),
@@ -55,19 +53,16 @@ def clean_data(shows, years, race):
   df = rep.get_filtered_df([False], shows, years)
   census_df = rep.census
   values = {}
-  
-  if race == "all":
-    titles = dict(utils.RACE_TITLES)
-    titles.pop("oth")
-    for flag, title in titles.items():
-      cands = rep.get_yearly_data(df, flag, 1, get_dict=True)
-      values[flag] = get_values(census_df, cands, flag, title)
-  
-  elif race == "poc_flag":
-    cands = rep.get_yearly_data(df, "poc_flag", True, get_dict=True)
-    title = rep.get_poc_name(True)
-    values["nwhite"] = get_values(census_df, cands, "nwhite", title)
+  if not race:
+    return json.dumps(values)
 
+  titles = utils.RACE_TITLES
+  if race == "poc_flag":
+    titles = dict(utils.POC_TITLES)
+    titles.pop("white")
+  for flag, title in titles.items():
+    cands = utils.get_yearly_data(df, flag, 1, get_dict=True)
+    values[flag] = get_values(census_df, cands, flag, title)
   return json.dumps(values)
 
 @app.callback(
@@ -86,30 +81,28 @@ def update_graph(cleaned_data, years, race):
       + "Percentage POC of Bachelor/ette Contestants<br>" \
       + "{}-{}".format(start, end),
     yaxis=dict(title="Percentage Point<br>Difference"),
-    height=500,
+    height=550,
     **utils.LAYOUT_ALL)
 
-  if race == "poc_flag":
-    values = data["nwhite"]
-    percs = get_percs(values)
-    trace = utils.Bar(
-      x=values.get("years"), 
-      y=percs, 
-      text=percs,
-      colors=values.get("color"), 
-      name=values.get("title")
-    )
-    traces.append(trace)
+  x_vals = []
+  y_vals = []
 
-  elif race == "all":
-    for flag, values in data.items():
-      trace = go.Scatter(
-        x=values.get("years"),
-        y=get_percs(values),
-        hoverinfo="x+y",
-        marker=dict(color=values.get("color")),
-        name=values.get("title"))
-      traces.append(trace)
+  sorted_data = sorted(
+    data.items(), 
+    key=lambda tup: tup[1].get("percs")[-1],
+    reverse=True)
+  for flag, values in sorted_data:
+    trace = utils.Scatter(
+      x=values.get("years"),
+      y=values.get("percs"),
+      mode="lines",
+      color=values.get("color"),
+      name=values.get("title"))
+    
+    if not x_vals:
+      x_vals = values.get("years")
+    y_vals += values.get("percs")
+    traces.append(trace)
 
   return dict(data=traces, layout=layout)
 
@@ -121,7 +114,7 @@ def update_caption(race, cleaned_data):
 
   get_perc = lambda vals, val_type, yr: round(vals.get(val_type).get(yr), 1)
   if race == "poc_flag":
-    poc_vals = flag_values.get("nwhite")
+    poc_vals = flag_values.get("poc")
     last_yr = str(max(map(int, poc_vals.get("years"))))
     return ("In {yr}, {perc_cands}% of candidates were POC. By contrast, " \
       + "in that year {perc_cens}% of Americans were POC.").format(

@@ -1,4 +1,4 @@
-,cid,name,lead,lead_flag,num_contestants,poc_flag,season,show,year,white,afam,amin,hisp,asn_paci,oth,mult,race_data_flag,year_comp_flag,num_weeks,season_num_weeks,perc_weeks,winner_flag,lead_poc_flag,fimp_rose
+,cid,name,lead,lead_flag,num_contestants,poc,season,show,year,white,afam,amin,hisp,asn_paci,oth,mult,race_data_flag,year_comp_flag,num_weeks,season_num_weeks,perc_weeks,winner_flag,lead_poc,fimp_rose
 0,BA_1_ALEX_M_L,Alex Michel,Alex Michel,True,25,False,1,Bachelor,2002,1.0,,,,,,,True,False,,6,,,False,False
 1,BA_01_AMANDA_M,Amanda M,Alex Michel,False,25,False,1,Bachelor,2002,1.0,,,,,,,True,False,6.0,6,1.0,True,False,False
 2,BA_01_TRISTA_R,Trista R,Alex Michel,False,25,False,1,Bachelor,2002,1.0,,,,,,,True,False,6.0,6,1.0,False,False,False

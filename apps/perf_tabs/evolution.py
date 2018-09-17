@@ -8,7 +8,7 @@ from plotly import tools
 
 import utils
 from app import app
-from apps import rep
+from apps import perf
 
 stub = "evol-perf-"
 
@@ -32,46 +32,33 @@ content = utils.TabContent(
   ])
 )
 
-def get_reg(x, y, beta_1, beta_0, color, name, **kwargs):
-  return utils.Scatter(
-    x=x,
-    y=list(map(lambda x_val: beta_0 + (beta_1 * x_val), x)),
-    color=color,
-    name=name,
-    mode="lines+text",
-    **kwargs)
+def get_pweeks_data(df, year_start, year_end):
+  group_vals = df["perc_weeks"].groupby(df["year"])
+  x, y = [], []
+  for year, vals in group_vals:
+    x.append(year)
+    y.append(round(vals.mean() * 100, 1))
+  return x, y
 
-def get_poc_fig(df, layout_all):
+def get_poc_fig(df, year_start, year_end, layout_all):
   layout = go.Layout(
-    yaxis=dict(title="% Candidates", titlefont=dict(size=16)), 
-    height=550,
+    yaxis=dict(title="% Season", titlefont=dict(size=16)), 
     annotations=[],
+    height=500,
     **layout_all
   )
   traces = []
-  x, y = rep.get_yearly_data(df, "poc_flag", True)
-  b1, b0 = polyfit(x, y, 1)
-  color = utils.get_race_color("POC")
-  traces.append(utils.Scatter(x=x, y=y, color=color, name="Values"))
-  traces.append(get_reg(x, y, b1, b0, color, "OLS Estimates"))
-  
-  if 2012 in x:
-    increment = float(max(y) - min(y))/20 or 0.1
-    layout["shapes"] = [
-      dict(
-        x0=2012, x1=2012, y0=min(y), y1=max(y), 
-        type="line",
-        line=dict(color=utils.SECONDARY_COLOR, width=2, dash="dot")
-      )]
-    layout["annotations"].append(
-      dict(
-        x=2012, y=max(y) + increment, 
-        text="Discrimination<br>lawsuit", 
-        **utils.LAYOUT_ANN)
-    )
+  for flag in ["poc", "white"]:
+    flag_df = df[df[flag] == 1]
+    x, y = get_pweeks_data(flag_df, year_start, year_end)
+    title = utils.POC_TITLES.get(flag)
+    color = utils.get_race_color(flag)
+    scatter = utils.Scatter(x=x, y=y, color=color, name=title, 
+                            size=6, mode="lines")
+    traces.append(scatter)
   return dict(data=traces, layout=layout)
 
-def get_all_fig(df, end_year, layout_all):
+def get_all_fig(df, year_start, year_end, layout_all):
   race_titles = dict(utils.RACE_TITLES)
   race_titles.pop("white")
   race_keys = utils.get_ordered_race_flags(race_titles.keys())
@@ -86,43 +73,29 @@ def get_all_fig(df, end_year, layout_all):
     subplot_titles=tuple(race_titles.get(k) for k in race_keys) )
 
   # new subplot per racial category
-  i = 1
+  axis_num = 1
   all_y = []
-  b1_vals = {}
   for flag in race_keys:
-    xaxis = "xaxis{}".format(i)
-    yaxis = "yaxis{}".format(i)
+    flag_df = df[df[flag] == 1]
+    xaxis = "xaxis{}".format(axis_num)
+    yaxis = "yaxis{}".format(axis_num)
     color = utils.get_race_color(flag)
     row, col = trace_pos.get(flag)
     title = race_titles.get(flag)
 
-    x, y = rep.get_yearly_data(df, flag, 1)
-    b1, b0 = polyfit(x, y, 1)
+    x, y = get_pweeks_data(flag_df, year_start, year_end)
     scatter = utils.Scatter(x=x, y=y, color=color, name=title, 
-                            xaxis=xaxis, yaxis=yaxis, size=6)
-    reg = get_reg(x, y, b1, b0, color, title)
-    all_y += y
-    b1_vals[i] = b1
-
+                            xaxis=xaxis, yaxis=yaxis, size=6, mode="lines")
     fig.append_trace(scatter, row, col)
-    fig.append_trace(reg, row, col)
-
-    fig["layout"].update( 
-      {yaxis: dict(title="% Candidates")})
-    i += 1
+    all_y += y
+    fig["layout"].update({yaxis: dict(title="% Season")})
+    axis_num += 1
 
   min_y = min(0, min(all_y))
   max_y = max(all_y)
   inc = (max_y - min_y)/11.0
-  for num in range(1, i):
+  for num in range(1, axis_num):
     fig["layout"]["yaxis{}".format(num)].update(range=[min_y - inc, max_y + inc])
-    fig["layout"]["annotations"].append(
-      dict(
-        x=end_year - round(inc), y=max_y - inc,
-        align="left",
-        xref="x{}".format(num), yref="y{}".format(num),
-        text=u"β1 = {}".format(round(b1_vals.get(num), 2)),
-        **utils.LAYOUT_ANN) )
 
   fig["layout"].update(height=300*rows, showlegend=False, **layout_all)
   return fig
@@ -133,17 +106,18 @@ def get_all_fig(df, end_year, layout_all):
     [stub + "shows", stub + "years", stub + "race"] ]
 )
 def update_graph(shows, years, race):
-  df = rep.get_filtered_df([False], shows, years)
-
+  df = perf.get_filtered_df(shows, years)
   start, end = years
+
   layout_all = dict(
-    title="Percentage of Contestants that are POC<br>{}-{}".format(start, end),
+    title="Average Percentage of a Season Candidates Last" \
+      + "<br>{}-{}".format(start, end),
     **utils.LAYOUT_ALL)
 
   if race == "poc_flag":
-    return get_poc_fig(df, layout_all)
+    return get_poc_fig(df, start, end, layout_all)
   elif race == "all":
-    return get_all_fig(df, end, layout_all)
+    return get_all_fig(df, start, end, layout_all)
   return dict(data=[], layout=go.Layout())
 
 @app.callback(

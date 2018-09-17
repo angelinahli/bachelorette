@@ -1,13 +1,22 @@
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
+from collections import Counter
 
 ###### app wide variables ######
 
-PRIMARY_COLOR = "#C95B83"
-SECONDARY_COLOR = "#808080"
-COLORSCHEME = ["#C95B83", "#FFBD4A", "#F26B3C", "#399E5A", "#5AB1BB", "#1446A0", 
-               "#731963"]
+COLORS = dict(
+  primary="#c95b83",
+  secondary="#757575",
+  color1="#66c2a5",
+  color2="#fc8d62",
+  color3="#8da0cb",
+  color4="#e78ac3",
+  color5="#a6d854",
+  color6="#ffd92f",
+  color7="#e5c494",
+  color8="#b3b3b3",
+)
 
 RACE_TITLES = {
   "white": "White",
@@ -18,14 +27,18 @@ RACE_TITLES = {
   "oth": "Other",
   "mult": "Multiple"
 }
+POC_TITLES = {
+  "poc": "POC", 
+  "white": "White"
+}
+ORDERED_FLAGS = ["white", "poc", "afam", "hisp", "asn_paci", "amin", "mult", "oth"]
 
 LAYOUT_ALL = dict(
   font=dict(family="Karla"),
-  legend=dict(orientation="h"),
   hovermode="closest")
 LAYOUT_ANN = dict(
     showarrow=False, 
-    font=dict(color=SECONDARY_COLOR, size=14, family="Karla"))
+    font=dict(color=COLORS.get("secondary"), size=14, family="Karla"))
 
 ###### app wide classes ######
 
@@ -49,7 +62,7 @@ class BSContainer(html.Div):
       self.children.append(main_content)
 
 class Tabs(dcc.Tabs):
-  def __init__(self, c_border="#d6d6d6", c_primary=PRIMARY_COLOR, 
+  def __init__(self, c_border="#d6d6d6", c_primary=COLORS.get("primary"), 
                c_back="#f9f9f9", **kwargs):
     super().__init__(
       colors={"border": c_border, "primary": c_primary, "background": c_back},
@@ -107,14 +120,15 @@ class Bar(go.Bar):
       self.update(name=name)
 
 class Scatter(go.Scatter):
-  def __init__(self, x, y, color, name, size=8, mode="markers", **kwargs):
+  def __init__(self, x, y, color, name=None, size=8, mode="markers", **kwargs):
     super().__init__(
       x=x, y=y,
       hoverinfo="x+y",
       marker=dict(color=color, size=size),
-      name=name,
       mode=mode,
       **kwargs)
+    if name:
+      self.update(name=name)
 
 ### individual elements ###
 
@@ -161,6 +175,22 @@ class RaceElement(FormElement):
 
 ###### app wide helper functions ######
 
+def get_yearly_data(df, flag_name, flag_value, get_dict=False):
+  """returns the % times a flag is equal to a value, for all years in df """
+  group_vals = df[flag_name].groupby(df["year"])
+  x, y = [], []
+  for year, vals in group_vals:
+    counter = Counter(vals)
+    total = sum(counter.values())
+    # if flag val isn't in counter, it appeared 0 times
+    num_flag = counter.get(flag_value, 0)
+    perc_flag = round((float(num_flag)/total) * 100, 2)
+    y.append(perc_flag)
+    x.append(year)
+  if get_dict:
+    return dict(zip(x, y))
+  return x, y
+
 def update_selected_years(years):
   """ shows user what the selected year range is """
   start, end = years
@@ -170,21 +200,7 @@ def get_form_options(options_list):
   return [ {"label": x, "value": x} for x in options_list]
 
 def get_race_color(flag):
-  return {
-    "white": COLORSCHEME[0],
-    "nwhite": COLORSCHEME[1],
-    True: COLORSCHEME[1],
-    False: COLORSCHEME[0],
-    "White": COLORSCHEME[0],
-    "POC": COLORSCHEME[1],
-    "hisp": COLORSCHEME[1],
-    "afam": COLORSCHEME[2],
-    "asn_paci": COLORSCHEME[3],
-    "amin": COLORSCHEME[4],
-    "mult": COLORSCHEME[5],
-    "oth": COLORSCHEME[6]
-  }.get(flag)
+  return COLORS.get("color{}".format(ORDERED_FLAGS.index(flag) + 1))
 
 def get_ordered_race_flags(lst=None):
-  order = ["white", "nwhite", "afam", "hisp", "asn_paci", "amin", "mult", "oth"]
-  return sorted(lst, key=lambda x: order.index(x))
+  return sorted(lst, key=lambda x: ORDERED_FLAGS.index(x))

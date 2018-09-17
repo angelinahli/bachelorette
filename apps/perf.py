@@ -28,13 +28,10 @@ def get_filtered_df(shows, years):
 def get_lead_race_name(x):
   return {True: "POC Lead", False: "White Lead"}[x]
 
-def get_poc_name(x):
-  return {True: "POC", False: "White"}[x]
-
 ########## main content ##########
 
 # place here to avoid circular imports
-from apps.perf_tabs import overall, initial
+from apps.perf_tabs import overall, evolution
 
 title = "Part 2: How well do POC Bachelor/ette contestants fare on the show?"
 subtitle = "Not great."
@@ -43,7 +40,7 @@ main_content = html.Div([
   utils.Tabs(
     id="perf-tabs",
     value="overall",
-    children=[overall.tab, initial.tab]),
+    children=[overall.tab, evolution.tab]),
   html.Div(id="perf-content")
 ])
 
@@ -58,6 +55,6 @@ layout = utils.BSContainer(
 def render_tab_content(tab_val):
   tab_values = {
     "overall": overall.content,
-    "initial": initial.content
+    "evolution": evolution.content
   }
   return tab_values.get(tab_val)

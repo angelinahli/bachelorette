@@ -59,25 +59,16 @@ def get_perm_p_val(y_white, y_poc):
 def clean_data(shows, years, race):
   filtered_df = perf.get_filtered_df(shows, years)
   data = dict(x=None, y=[], colors=[])
-  
-  if race == "poc_flag":
-    x_vals = [False, True]
-    data["x"] = list(map(perf.get_poc_name, x_vals))
-    y_series = []
-    for i in range(len(x_vals)):
-      series = filtered_df[filtered_df["poc_flag"] == x_vals[i]].perc_weeks
-      data["colors"].append(utils.get_race_color( data["x"][i]) )
-      data["y"].append(round(series.mean() * 100, 1))
-      y_series.append(series.tolist())
-    data["p_val"] = get_perm_p_val(*y_series)
-  
-  elif race == "all":
-    x_vals = utils.get_ordered_race_flags(utils.RACE_TITLES.keys())
-    data["x"] = list(map(lambda flag: utils.RACE_TITLES.get(flag), x_vals))
-    for flag in x_vals:
+  if not race:
+    return json.dumps(data)
+
+  title_dict = utils.POC_TITLES if race == "poc_flag" else utils.RACE_TITLES
+  x_vals = utils.get_ordered_race_flags(title_dict.keys())
+  for flag in x_vals:
       series = filtered_df[filtered_df[flag] == 1].perc_weeks
       data["colors"].append(utils.get_race_color(flag))
       data["y"].append(round(series.mean() * 100, 1))
+  data["x"] = list(map(title_dict.get, x_vals))
   return json.dumps(data)
 
 @app.callback(
@@ -94,7 +85,8 @@ def update_graph(cleaned_data, years, race):
   
   start, end = years
   layout = go.Layout(
-    title="Percentage of Season Candidates Last<br>{}-{}".format(start, end),
+    title="Average Percentage of Season Candidates Last<br>{}-{}".format(
+      start, end),
     xaxis=dict(tickfont=dict(size=14)),
     margin=dict(b=120 if race == "all" else 50),
     **utils.LAYOUT_ALL)

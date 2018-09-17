@@ -26,28 +26,21 @@ def get_filtered_df(lead, shows, years):
     & (df["year"] <= end)
   ]
 
-def get_poc_name(x):
-  return {True: "POC", False: "White"}[x]
-
-def get_lead_name(x):
-  return {True: "Bachelor/ettes", "true": "Bachelor/ettes", 
-          False: "Contestants", "false": "Contestants"}[x]
-
-def get_yearly_data(df, flag_name, flag_value, get_dict=False):
-  """returns the % times a flag is equal to a value, for all years in df """
-  group_vals = df[flag_name].groupby(df["year"])
-  x, y = [], []
-  for year, vals in group_vals:
-    counter = Counter(vals)
-    total = sum(counter.values())
-    # if flag val isn't in counter, it appeared 0 times
-    num_flag = counter.get(flag_value, 0)
-    perc_flag = round((float(num_flag)/total) * 100, 2)
-    y.append(perc_flag)
-    x.append(year)
-  if get_dict:
-    return dict(zip(x, y))
-  return x, y
+def add_2012_lawsuit_annot(x, y, layout):
+  if 2012 in x:
+    increment = float(max(y) - min(y))/20 or 0.1
+    layout["shapes"] = [
+      dict(
+        x0=2012, x1=2012, y0=min(y), y1=max(y), 
+        type="line",
+        line=dict(color=utils.COLORS.get("secondary"), width=2, dash="dot")
+      )]
+    layout["annotations"].append(
+      dict(
+        x=2012, y=max(y) + increment, 
+        text="Discrimination<br>lawsuit", 
+        **utils.LAYOUT_ANN)
+    )
 
 ########## defining dashboard elements ##########
 
