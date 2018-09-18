@@ -4,7 +4,7 @@ from dash.dependencies import Input, Output
 
 import os
 
-from app import app
+from app import app, server
 from apps import index, rep, perf, notes, four_oh_four
 
 # define base template for application
