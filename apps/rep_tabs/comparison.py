@@ -98,6 +98,10 @@ def update_graph(cleaned_data, years, race):
       mode="lines",
       color=values.get("color"),
       name=values.get("title"))
+    if race == "poc_flag":
+      trace.update(
+        text=values.get("percs"),
+        mode="lines+text")
     
     if not x_vals:
       x_vals = values.get("years")

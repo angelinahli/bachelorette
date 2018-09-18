@@ -5,17 +5,18 @@ from collections import Counter
 
 ###### app wide variables ######
 
+# borrowed seaborn's husl color palette & modified it a little for pleasantness
 COLORS = dict(
   primary="#c95b83",
   secondary="#757575",
-  color1="#66c2a5",
-  color2="#fc8d62",
-  color3="#8da0cb",
-  color4="#e78ac3",
-  color5="#a6d854",
-  color6="#ffd92f",
-  color7="#e5c494",
-  color8="#b3b3b3",
+  color1="#f77189",
+  color2="#F2AC35",
+  color3="#DBBD00",
+  color4="#87BB42",
+  color5="#34A87F",
+  color6="#5EA2D6",
+  color7="#a48cf4",
+  color8="#DB76DB",
 )
 
 RACE_TITLES = {
