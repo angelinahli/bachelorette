@@ -50,7 +50,6 @@ def get_reg(x, y, beta_1, beta_0, color, name, **kwargs):
 def get_poc_fig(df, layout_all):
   layout = Layout(
     yaxis=dict(title="% Candidates"), 
-    annotations=[],
     height=500,
     **layout_all
   )
@@ -69,12 +68,12 @@ def get_poc_fig(df, layout_all):
         type="line",
         line=dict(color=utils.COLORS.get("secondary"), width=2, dash="dot")
       )]
-    layout["annotations"].append(
+    layout["annotations"] = [
       dict(
         x=2012, y=max(y) + increment, 
         text="Discrimination<br>lawsuit", 
         **utils.LAYOUT_ANN)
-    )
+    ]
   return dict(data=traces, layout=layout)
 
 def get_all_fig(df, end_year, layout_all):
