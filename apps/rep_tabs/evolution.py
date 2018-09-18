@@ -82,8 +82,8 @@ def get_all_fig(df, end_year, layout_all):
   all_y = []
   b1_vals = {}
   for flag in race_keys:
-    xaxis = "xaxis{}".format(axis_num)
-    yaxis = "yaxis{}".format(axis_num)
+    xaxis = "x{}".format(axis_num)
+    yaxis = "y{}".format(axis_num)
     color = utils.get_race_color(flag)
     row, col = trace_pos.get(flag)
     title = race_titles.get(flag)
