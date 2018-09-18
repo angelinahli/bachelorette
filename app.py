@@ -1,6 +1,7 @@
 # Main module to run dash app
 import dash
 import flask
+import os
 
 server = flask.Flask("app")
 server.secret_key = os.environ.get("SECRET_KEY", "secret")
