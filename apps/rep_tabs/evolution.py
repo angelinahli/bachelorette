@@ -128,6 +128,7 @@ def get_all_fig(df, end_year, layout_all):
         xref=xaxis, yref=yaxis,
         text=u"β1 = {}".format(round(b1_vals.get(num), 2)),
         **utils.LAYOUT_ANN) )
+  print(fig["layout"])
   fig["layout"]["annotations"] += annotations
 
   fig["layout"].update(height=300*rows, showlegend=False, **layout_all)
