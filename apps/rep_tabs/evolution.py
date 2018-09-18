@@ -60,7 +60,21 @@ def get_poc_fig(df, layout_all):
   color = utils.get_race_color("poc")
   traces.append(utils.Scatter(x=x, y=y, color=color, name="Values"))
   traces.append(get_reg(x, y, b1, b0, color, "OLS Estimates"))
-  rep.add_2012_lawsuit_annot(x, y, layout)
+  
+  if 2012 in x:
+    increment = float(max(y) - min(y))/20 or 0.1
+    layout["shapes"] = [
+      dict(
+        x0=2012, x1=2012, y0=min(y), y1=max(y), 
+        type="line",
+        line=dict(color=utils.COLORS.get("secondary"), width=2, dash="dot")
+      )]
+    layout["annotations"].append(
+      dict(
+        x=2012, y=max(y) + increment, 
+        text="Discrimination<br>lawsuit", 
+        **utils.LAYOUT_ANN)
+    )
   return dict(data=traces, layout=layout)
 
 def get_all_fig(df, end_year, layout_all):
@@ -112,7 +126,7 @@ def get_all_fig(df, end_year, layout_all):
       dict(
         x=end_year - round(inc), y=max_y - inc,
         align="left",
-        xref="x{}".format(num), yref="y{}".format(num),
+        xref=xaxis, yref=yaxis,
         text=u"β1 = {}".format(round(b1_vals.get(num), 2)),
         **utils.LAYOUT_ANN) )
 

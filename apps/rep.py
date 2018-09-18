@@ -26,22 +26,6 @@ def get_filtered_df(lead, shows, years):
     & (df["year"] <= end)
   ]
 
-def add_2012_lawsuit_annot(x, y, layout):
-  if 2012 in x:
-    increment = float(max(y) - min(y))/20 or 0.1
-    layout["shapes"] = [
-      dict(
-        x0=2012, x1=2012, y0=min(y), y1=max(y), 
-        type="line",
-        line=dict(color=utils.COLORS.get("secondary"), width=2, dash="dot")
-      )]
-    layout["annotations"].append(
-      dict(
-        x=2012, y=max(y) + increment, 
-        text="Discrimination<br>lawsuit", 
-        **utils.LAYOUT_ANN)
-    )
-
 ########## defining dashboard elements ##########
 
 class LeadElement(utils.FormElement):
