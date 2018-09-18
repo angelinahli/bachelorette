@@ -23,8 +23,8 @@ main_content = html.Div(
     html.Br(),
     html.H5(
       """
-      The first part of this interactive application examines the presence 
-      (or lack thereof) of POC on the frachise.
+      The first part of this app examines the presence (or lack thereof) of 
+      POC on the frachise.
       The second part tracks how POC candidates fare after being selected.
       """),
     html.Br(),
