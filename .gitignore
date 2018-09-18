@@ -6,3 +6,7 @@ data/scripts/.ipynb_checkpoints/*
 
 # intermediate working files 
 data/intermediate/*
+
+# other irrelevant
+.DS_Store
+venv
