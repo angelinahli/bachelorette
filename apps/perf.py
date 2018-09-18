@@ -31,16 +31,16 @@ def get_lead_race_name(x):
 ########## main content ##########
 
 # place here to avoid circular imports
-from apps.perf_tabs import overall, evolution
+from apps.perf_tabs import overall, winners
 
 title = "Part 2: How well do POC Bachelor/ette contestants fare on the show?"
-subtitle = "Not great."
+subtitle = "POC contestants stick around but almost never win."
 
 main_content = html.Div([
   utils.Tabs(
     id="perf-tabs",
     value="overall",
-    children=[overall.tab, evolution.tab]),
+    children=[overall.tab, winners.tab]),
   html.Div(id="perf-content")
 ])
 
@@ -55,6 +55,6 @@ layout = utils.BSContainer(
 def render_tab_content(tab_val):
   tab_values = {
     "overall": overall.content,
-    "evolution": evolution.content
+    "winners": winners.content
   }
   return tab_values.get(tab_val)
