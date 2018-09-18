@@ -118,17 +118,18 @@ def get_all_fig(df, end_year, layout_all):
   min_y = min(0, min(all_y))
   max_y = max(all_y)
   inc = (max_y - min_y)/11.0
-  annotations = ()
+  annots = []
   for num in range(1, axis_num):
     fig["layout"]["yaxis{}".format(num)].update(range=[min_y - inc, max_y + inc])
-    annotations.append(
+    annots.append(
       dict(
         x=end_year - round(inc), y=max_y - inc,
         align="left",
         xref=xaxis, yref=yaxis,
         text=u"β1 = {}".format(round(b1_vals.get(num), 2)),
         **utils.LAYOUT_ANN) )
-  fig["layout"]["annotations"] += annotations
+  print(type(fig["layout"]["annotations"]))
+  fig["layout"]["annotations"] = list(fig["layout"]["annotations"]) + annots
 
   fig["layout"].update(height=300*rows, showlegend=False, **layout_all)
   return fig
