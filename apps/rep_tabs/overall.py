@@ -26,8 +26,10 @@ content = utils.TabContent(
     html.H4("POC are under-represented on the Bachelor/ette"),
     dcc.Graph(id=stub + "graph"),
     html.H5(
-      "However you cut it, very few people of color make it onto the " \
-      + "Bachelor and Bachelorette. Within this data selection:"),
+      """
+      However you cut it, very few people of color make it onto the
+      Bachelor and Bachelorette. Within this data selection:
+      """),
     html.H6(id=stub + "caption", className="caption")
   ])
 )

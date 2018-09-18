@@ -23,12 +23,17 @@ content = utils.TabContent(
   panel=utils.Panel([
     html.H4("POC representation has improved over time"),
     dcc.Graph(id=stub + "graph"),
-    html.H5(["In recent years, a higher number of people of color have " \
-      + "participated in the Bachelor/ette.",
+    html.H5([
+      """
+      In recent years, a higher number of people of color have
+      participated in the Bachelor/ette.
+      """,
       html.Br(), html.Br(),
-      "Representation of POC contestants rose sharply after two rejected " \
-      + "applicants filed a racial discrimination lawsuit against the " \
-      + "franchise in 2012."])
+      """
+      Representation of POC contestants rose sharply after two rejected
+      applicants filed a racial discrimination lawsuit against the
+      franchise in 2012.
+      """])
   ])
 )
 

@@ -24,8 +24,10 @@ content = utils.TabContent(
     html.H4("The Bachelor/ette is less diverse than the U.S. at large"),
     dcc.Graph(id=stub + "graph"),
     html.H5([
-      "While the Bachelor/ette has started to cast a more diverse cast, ",
-      "the franchise is still much less diverse than Americans as a population."
+      """
+      While the Bachelor/ette has started to cast a more diverse cast,
+      the franchise is still much less diverse than Americans as a population.
+      """
     ]),
     html.H6(id=stub + "caption", className="caption")
   ])
@@ -77,9 +79,9 @@ def update_graph(cleaned_data, years, race):
   traces = []
   start, end = years
   layout = go.Layout(
-    title="Difference in Percentage POC of U.S. Population and<br>" \
-      + "Percentage POC of Bachelor/ette Contestants<br>" \
-      + "{}-{}".format(start, end),
+    title="""Difference in Percentage POC of U.S. Population and<br>
+      Percentage POC of Bachelor/ette Contestants<br>
+      {}-{}""".format(start, end),
     yaxis=dict(title="Percentage Point<br>Difference"),
     height=550,
     **utils.LAYOUT_ALL)
@@ -120,8 +122,10 @@ def update_caption(race, cleaned_data):
   if race == "poc_flag":
     poc_vals = flag_values.get("poc")
     last_yr = str(max(map(int, poc_vals.get("years"))))
-    return ("In {yr}, {perc_cands}% of candidates were POC. By contrast, " \
-      + "in that year {perc_cens}% of Americans were POC.").format(
+    return """
+      In {yr}, {perc_cands}% of candidates were POC. By contrast,
+      in that year {perc_cens}% of Americans were POC.
+      """.format(
         yr=last_yr, 
         perc_cands=get_perc(poc_vals, "cands", str(last_yr)),
         perc_cens=get_perc(poc_vals, "cens", str(last_yr))
@@ -135,12 +139,14 @@ def update_caption(race, cleaned_data):
       max(map(int, afam.get("years"))), 
       max(map(int, hisp.get("years")))
     ))
-    return ("African Americans and Hispanics are particularly " \
-      + "underrepresented on the franchise. In {yr}, {pcand_afam}% " \
-      + "of candidates were African American and {pcand_hisp}% were " \
-      + "Hispanic. By contrast, in that year {pcens_afam}% of the " \
-      + "American population was African American, and {pcens_hisp}% " \
-      + "was Hispanic.").format(
+    return """
+      African Americans and Hispanics are particularly
+      underrepresented on the franchise. In {yr}, {pcand_afam}%
+      of candidates were African American and {pcand_hisp}% were
+      Hispanic. By contrast, in that year {pcens_afam}% of the 
+      American population was African American, and {pcens_hisp}% 
+      was Hispanic.
+      """.format(
         yr=last_yr,
         pcand_afam=get_perc(afam, "cands", last_yr),
         pcand_hisp=get_perc(hisp, "cands", last_yr),

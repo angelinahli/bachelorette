@@ -27,41 +27,31 @@ content = utils.TabContent(
     dcc.Graph(id=stub + "graph"),
     html.Br(),
     html.H5([
-      "While overall, POC candidates exit from the Bachelor/ette earlier in ",
-      "a shows' run than their non-POC counterparts, this difference is ",
-      "minimal in magnitude.", 
+      """
+      While overall, POC candidates exit from the Bachelor/ette earlier in
+      a shows' run than their non-POC counterparts, this difference is
+      minimal in magnitude.
+      """, 
       html.Br(), html.Br(),
-      "In fact, some populations of non-white candidates appear to outcompete ",
-      "their white peers; more data would be required to determine if this ",
-      "difference is significant."]),
+      """
+      In fact, some populations of non-white candidates appear to outcompete
+      their white peers; more data would be required to determine if this
+      difference is significant.
+      """]),
     html.H6(id=stub + "caption", className="caption")
   ])
 )
 
-def get_perm_p_val(y_white, y_poc):
-  mean_diff = np.mean(y_white) - np.mean(y_poc)
-  num_trials = 2000
-  all_y = y_white + y_poc
-  diff_vals = []
-  num_white = len(y_white)
-  for _ in range(num_trials):
-    np.random.shuffle(all_y)
-    mean_white = np.mean(all_y[:num_white])
-    mean_poc = np.mean(all_y[num_white:])
-    diff_vals.append(mean_white - mean_poc)
-  num_diff = len([d for d in diff_vals if d >= mean_diff])
-  return round(float(num_diff) / num_trials, 2)
-
 @app.callback(
-  Output(stub + "value", "children"),
+  Output(stub + "graph", "figure"),
   [Input(stub + inp, "value") for inp in ["shows", "years", "race"] ]
 )
-def clean_data(shows, years, race):
-  filtered_df = perf.get_filtered_df(shows, years)
-  data = dict(x=None, y=[], colors=[])
+def update_graph(shows, years, race):
   if not race:
-    return json.dumps(data)
-
+    return dict(data=[], layout=go.Layout())
+  
+  data = dict(x=None, y=[], colors=[])
+  filtered_df = perf.get_filtered_df(shows, years)
   title_dict = utils.POC_TITLES if race == "poc_flag" else utils.RACE_TITLES
   x_vals = utils.get_ordered_race_flags(title_dict.keys())
   for flag in x_vals:
@@ -69,19 +59,6 @@ def clean_data(shows, years, race):
       data["colors"].append(utils.get_race_color(flag))
       data["y"].append(round(series.mean() * 100, 1))
   data["x"] = list(map(title_dict.get, x_vals))
-  return json.dumps(data)
-
-@app.callback(
-  Output(stub + "graph", "figure"),
-  [
-    Input(stub + "value", "children"), 
-    Input(stub + "years", "value"),
-    Input(stub + "race", "value")
-  ])
-def update_graph(cleaned_data, years, race):
-  data = json.loads(cleaned_data)
-  if not data:
-    return dict(data=[], layout=go.Layout())
   
   start, end = years
   layout = go.Layout(
@@ -93,16 +70,6 @@ def update_graph(cleaned_data, years, race):
   bar = utils.Bar(text=data["y"], **data)
   layout.update(yaxis=dict(range=[0, max(bar.get("y", [0])) + 5]))
   return dict(data=[bar], layout=layout)
-
-@app.callback(
-  Output(stub + "caption", "children"), 
-  [Input(stub + "value", "children"), Input(stub + "race", "value")]
-)
-def get_caption(cleaned_data, race):
-  data = json.loads(cleaned_data)
-  if race == "poc_flag":
-    cap = "The probability that POC candidates last as long as white " \
-          + "contestants"
 
 @app.callback(
   Output("selected-" + stub + "years", "children"),
