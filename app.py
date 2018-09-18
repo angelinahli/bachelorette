@@ -3,6 +3,7 @@ import dash
 import flask
 
 server = flask.Flask("app")
+server.secret_key = os.environ.get("SECRET_KEY", "secret")
 app = dash.Dash(server=server)
 app.css.config.serve_locally = True
 app.scripts.config.serve_locally = True

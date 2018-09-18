@@ -32,7 +32,7 @@ content = utils.TabContent(
       """,
       html.Br(), html.Br(),
       """
-      All of the shows' three nonwhite Bachelor/ettes ended up selecting 
+      All of the franchise's three nonwhite Bachelor/ettes ended up selecting 
       white winners.
       """
     ])
@@ -71,7 +71,7 @@ def update_graph(shows, years, race):
   start = df.year.min()
   end = df.year.max()
   layout = Layout(
-    title="Winners on the {}<br>{}-{}".format(show_names, start, end),
+    title="Winners of the {}<br>{}-{}".format(show_names, start, end),
     xaxis=dict(tickfont=dict(size=14)),
     yaxis=dict(title="# People"),
     margin=dict(b=120 if race == "all" else 50),
