@@ -112,8 +112,7 @@ def get_all_fig(df, end_year, layout_all):
     fig.append_trace(scatter, row, col)
     fig.append_trace(reg, row, col)
 
-    fig["layout"].update( 
-      {yaxis: dict(title="% Candidates")})
+    fig["layout"]["yaxis{}".format(axis_num)].update(title="% Candidates")
     axis_num += 1
 
   min_y = min(0, min(all_y))
