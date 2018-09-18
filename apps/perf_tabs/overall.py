@@ -4,8 +4,8 @@ from dash.dependencies import Input, Output
 
 import json
 import numpy as np
-import plotly.graph_objs as go
 from collections import Counter
+from plotly.graph_objs import Layout
 
 import utils
 from app import app
@@ -35,8 +35,7 @@ content = utils.TabContent(
       html.Br(), html.Br(),
       """
       In fact, some populations of non-white candidates appear to outcompete
-      their white peers; more data would be required to determine if this
-      difference is significant.
+      their white peers.
       """]),
     html.H6(id=stub + "caption", className="caption")
   ])
@@ -48,28 +47,35 @@ content = utils.TabContent(
 )
 def update_graph(shows, years, race):
   if not race:
-    return dict(data=[], layout=go.Layout())
-  
-  data = dict(x=None, y=[], colors=[])
-  filtered_df = perf.get_filtered_df(shows, years)
+    return dict(data=[], layout=Layout())
+
+  traces = []
+  df = perf.get_filtered_df(shows, years)
   title_dict = utils.POC_TITLES if race == "poc_flag" else utils.RACE_TITLES
   x_vals = utils.get_ordered_race_flags(title_dict.keys())
   for flag in x_vals:
-      series = filtered_df[filtered_df[flag] == 1].perc_weeks
-      data["colors"].append(utils.get_race_color(flag))
-      data["y"].append(round(series.mean() * 100, 1))
-  data["x"] = list(map(title_dict.get, x_vals))
+    series = df[df[flag] == 1].perc_weeks
+    title = title_dict.get(flag)
+    trace = dict(
+      type="violin",
+      x=title,
+      y=series,
+      name=title,
+      box=dict(visible=True),
+      meanline=dict(visible=True),
+      showlegend=False,
+      line=dict(color=utils.get_race_color(flag)))
+    traces.append(trace)
   
-  start, end = years
-  layout = go.Layout(
-    title="Average Percentage of Season Candidates Last<br>{}-{}".format(
+  start = df.year.min()
+  end = df.year.max()
+  layout = Layout(
+    title="Percentage of Season Candidates Last<br>{}-{}".format(
       start, end),
     xaxis=dict(tickfont=dict(size=14)),
     margin=dict(b=120 if race == "all" else 50),
     **utils.LAYOUT_ALL)
-  bar = utils.Bar(text=data["y"], **data)
-  layout.update(yaxis=dict(range=[0, max(bar.get("y", [0])) + 5]))
-  return dict(data=[bar], layout=layout)
+  return dict(data=traces, layout=layout)
 
 @app.callback(
   Output("selected-" + stub + "years", "children"),

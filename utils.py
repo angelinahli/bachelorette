@@ -108,18 +108,6 @@ class FormElement(html.Div):
       self.children += add_elements
     self.children.append(html.Br())
 
-class Bar(go.Bar):
-  def __init__(self, x, y, colors, 
-               name=None, text=None, textposition="outside", **kwargs):
-    super().__init__(
-      x=x, y=y,
-      hoverinfo="x+y",
-      marker=dict(color=colors))
-    if text:
-      self.update(text=text, textposition=textposition)
-    if name:
-      self.update(name=name)
-
 class Scatter(go.Scatter):
   def __init__(self, x, y, color, name=None, size=8, mode="markers", **kwargs):
     super().__init__(

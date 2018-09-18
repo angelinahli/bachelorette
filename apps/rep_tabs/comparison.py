@@ -3,7 +3,7 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 
 import json
-import plotly.graph_objs as go
+from plotly.graph_objs import Layout
 
 import utils
 from app import app
@@ -77,14 +77,6 @@ def clean_data(shows, years, race):
 def update_graph(cleaned_data, years, race):
   data = json.loads(cleaned_data)
   traces = []
-  start, end = years
-  layout = go.Layout(
-    title="""Difference in Percentage POC of U.S. Population and<br>
-      Percentage POC of Bachelor/ette Contestants<br>
-      {}-{}""".format(start, end),
-    yaxis=dict(title="Percentage Point<br>Difference"),
-    height=550,
-    **utils.LAYOUT_ALL)
 
   x_vals = []
   y_vals = []
@@ -101,14 +93,21 @@ def update_graph(cleaned_data, years, race):
       color=values.get("color"),
       name=values.get("title"))
     if race == "poc_flag":
-      trace.update(
-        text=values.get("percs"),
-        mode="lines+text")
-    
+      trace.update(text=values.get("percs"), mode="lines+text")
     if not x_vals:
       x_vals = values.get("years")
     y_vals += values.get("percs")
     traces.append(trace)
+
+  start = min(x_vals)
+  end = max(x_vals)
+  layout = Layout(
+    title="""Difference in Percentage POC of U.S. Population and<br>
+      Percentage POC of Bachelor/ette Contestants<br>
+      {}-{}""".format(start, end),
+    yaxis=dict(title="Percentage Point<br>Difference"),
+    height=550,
+    **utils.LAYOUT_ALL)
 
   return dict(data=traces, layout=layout)
 

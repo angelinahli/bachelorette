@@ -2,9 +2,10 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 
-import plotly.graph_objs as go
 from numpy import polyfit
 from plotly import tools
+from plotly.graph_objs import Layout
+
 
 import utils
 from app import app
@@ -47,7 +48,7 @@ def get_reg(x, y, beta_1, beta_0, color, name, **kwargs):
     **kwargs)
 
 def get_poc_fig(df, layout_all):
-  layout = go.Layout(
+  layout = Layout(
     yaxis=dict(title="% Candidates"), 
     annotations=[],
     height=500,
@@ -125,8 +126,8 @@ def get_all_fig(df, end_year, layout_all):
 )
 def update_graph(shows, years, race):
   df = rep.get_filtered_df([False], shows, years)
-
-  start, end = years
+  start = df.year.min()
+  end = df.year.max()
   layout_all = dict(
     title="Percentage of Contestants that are POC<br>{}-{}".format(start, end),
     **utils.LAYOUT_ALL)
@@ -135,7 +136,7 @@ def update_graph(shows, years, race):
     return get_poc_fig(df, layout_all)
   elif race == "all":
     return get_all_fig(df, end, layout_all)
-  return dict(data=[], layout=go.Layout())
+  return dict(data=[], layout=Layout())
 
 @app.callback(
   Output("selected-" + stub + "years", "children"),

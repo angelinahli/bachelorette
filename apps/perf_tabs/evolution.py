@@ -2,9 +2,9 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 
-import plotly.graph_objs as go
 from numpy import polyfit
 from plotly import tools
+from plotly.graph_objs import Layout
 
 import utils
 from app import app
@@ -21,12 +21,15 @@ content = utils.TabContent(
     utils.RaceElement(elt_id=stub + "race")
   ]),
   panel=utils.Panel([
-    html.H4("POC representation has improved over time"),
+    html.H4(
+      """
+      The performance of POC candidates has been highly variable over time
+      """),
     dcc.Graph(id=stub + "graph"),
     html.H5([
       """
-      In recent years, a higher number of people of color have
-      participated in the Bachelor/ette.
+      POC candidates tend to do worse or about as well as their white
+      counterparts over time. 
       """,
       html.Br(), html.Br(),
       """
@@ -46,7 +49,7 @@ def get_pweeks_data(df, year_start, year_end):
   return x, y
 
 def get_poc_fig(df, year_start, year_end, layout_all):
-  layout = go.Layout(
+  layout = Layout(
     yaxis=dict(title="% Season", titlefont=dict(size=16)), 
     annotations=[],
     height=500,
@@ -74,7 +77,7 @@ def get_all_fig(df, year_start, year_end, layout_all):
 
   fig = tools.make_subplots(
     rows=rows, cols=cols, 
-    vertical_spacing = 0.1,
+    vertical_spacing=0.1,
     subplot_titles=tuple(race_titles.get(k) for k in race_keys) )
 
   # new subplot per racial category
@@ -112,10 +115,10 @@ def get_all_fig(df, year_start, year_end, layout_all):
 )
 def update_graph(shows, years, race):
   df = perf.get_filtered_df(shows, years)
-  start, end = years
-
+  start = df.year.min()
+  end = df.year.max()
   layout_all = dict(
-    title="Average Percentage of a Season Candidates Last" \
+    title="Average Percentage of Season Candidates Last" \
       + "<br>{}-{}".format(start, end),
     **utils.LAYOUT_ALL)
 
@@ -123,7 +126,7 @@ def update_graph(shows, years, race):
     return get_poc_fig(df, start, end, layout_all)
   elif race == "all":
     return get_all_fig(df, start, end, layout_all)
-  return dict(data=[], layout=go.Layout())
+  return dict(data=[], layout=Layout())
 
 @app.callback(
   Output("selected-" + stub + "years", "children"),

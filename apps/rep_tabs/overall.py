@@ -3,8 +3,8 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 
 import json
-import plotly.graph_objs as go
 from collections import Counter
+from plotly.graph_objs import Bar, Layout
 
 import utils
 from app import app
@@ -44,17 +44,19 @@ def get_lead_name(x):
     ["lead", "shows", "years", "race"] ]
 )
 def clean_data(lead, shows, years, race):
-  filtered_df = rep.get_filtered_df(lead, shows, years)
+  df = rep.get_filtered_df(lead, shows, years)
   data = dict(x=None, y=[], colors=[])
-
   if not race:
     return json.dumps(data)
+
+  data["start"] = int(df.year.min())
+  data["end"] = int(df.year.max())
 
   title_dict = utils.POC_TITLES if race == "poc_flag" else utils.RACE_TITLES
   x_vals = utils.get_ordered_race_flags(title_dict.keys())
   data["x"] = list(map(title_dict.get, x_vals))
   for flag in x_vals:
-    series = filtered_df[filtered_df[flag] == 1]
+    series = df[df[flag] == 1]
     data["colors"].append(utils.get_race_color(flag))
     data["y"].append(series.shape[0]) # first val: row count
   return json.dumps(data)
@@ -64,27 +66,32 @@ def clean_data(lead, shows, years, race):
   [
     Input(stub + "value", "children"),
     Input(stub + "race", "value"), 
-    Input(stub + "years", "value"),
     Input(stub + "lead", "value")
   ]
 )
-def update_graph(cleaned_data, race, years, lead):
+def update_graph(cleaned_data, race, lead):
   """ generates figure for overall tab """
   data = json.loads(cleaned_data)
   if not data:
-    return dict(data=[], layout=go.Layout())
+    return dict(data=[], layout=Layout())
 
-  start, end = years
+  bar = Bar(
+    x=data["x"], 
+    y=data["y"],
+    hoverinfo="x+y",
+    marker=dict(color=data["colors"]),
+    text=data["y"],
+    textposition="auto")
+
   title = get_lead_name(lead)
-  layout = go.Layout(
-    title="Number of {} on the Bachelor/ette<br>{}-{}".format(title, start, end),
+  layout = Layout(
+    title="Number of {} on the Bachelor/ette<br>{}-{}".format(
+      title, data["start"], data["end"]),
     xaxis=dict(tickfont=dict(size=14)),
     yaxis=dict(title="# People"),
     margin=dict(b=120 if race == "all" else 50),
     **utils.LAYOUT_ALL
   )
-
-  bar = utils.Bar(text=data["y"], textposition="auto", **data)
   return dict(data=[bar], layout=layout)
 
 @app.callback(
