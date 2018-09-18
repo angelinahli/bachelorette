@@ -51,6 +51,7 @@ def clean_data(lead, shows, years, race):
 
   data["start"] = int(df.year.min())
   data["end"] = int(df.year.max())
+  data["show_names"] = " & ".join(shows)
 
   title_dict = utils.POC_TITLES if race == "poc_flag" else utils.RACE_TITLES
   x_vals = utils.get_ordered_race_flags(title_dict.keys())
@@ -85,8 +86,8 @@ def update_graph(cleaned_data, race, lead):
 
   title = get_lead_name(lead)
   layout = Layout(
-    title="Number of {} on the Bachelor/ette<br>{}-{}".format(
-      title, data["start"], data["end"]),
+    title="Number of {l} on the {s}<br>{sy}-{ey}".format(
+      l=title, s=data["show_names"], sy=data["start"], ey=data["end"]),
     xaxis=dict(tickfont=dict(size=14)),
     yaxis=dict(title="# People"),
     margin=dict(b=120 if race == "all" else 50),

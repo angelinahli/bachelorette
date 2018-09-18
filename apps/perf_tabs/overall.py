@@ -37,8 +37,8 @@ content = utils.TabContent(
       """, 
       html.Br(), html.Br(),
       """
-      In fact, some populations of non-white candidates appear to outcompete
-      their white peers.
+      In fact, some populations of non-white candidates appear to stay on the
+      show for longer than their white peers.
       """]),
     html.H6(id=stub + "caption", className="caption")
   ])
@@ -70,12 +70,14 @@ def update_graph(shows, years, race):
       line=dict(color=utils.get_race_color(flag)))
     traces.append(trace)
   
+  show_names = " & ".join(shows)
   start = df.year.min()
   end = df.year.max()
   layout = Layout(
-    title="Percentage of Season Candidates Last<br>{}-{}".format(
-      start, end),
+    title="Percentage of Season {} Candidates Last<br>{}-{}".format(
+      show_names, start, end),
     xaxis=dict(tickfont=dict(size=14)),
+    yaxis=dict(title="% Season"), 
     margin=dict(b=120 if race == "all" else 50),
     **utils.LAYOUT_ALL)
   return dict(data=traces, layout=layout)

@@ -33,7 +33,7 @@ def get_lead_race_name(x):
 # place here to avoid circular imports
 from apps.perf_tabs import overall, winners
 
-title = "Part 2: How well do POC Bachelor/ette contestants fare on the show?"
+title = "Part 2: How well do POC Bachelor/ette contestants do?"
 subtitle = "POC contestants stick around but almost never win."
 
 main_content = html.Div([

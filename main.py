@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 import os
 
 from app import app
-from apps import index, rep, perf, notes
+from apps import index, rep, perf, notes, four_oh_four
 
 # define base template for application
 with open("templates/base.html", "r") as fl:
@@ -23,7 +23,7 @@ image_dir = "static"
 image_exts = [".png", ".jpeg", ".jpg"]
 valid_images = [os.path.basename(x) for x in os.listdir(image_dir)
   if os.path.splitext(x)[1] in image_exts]
-static_image_route = "/static/img"
+static_image_route = "static/img"
 
 # Add a static image route that serves images from desktop
 @app.server.route("/{route}/<image_name>".format(route=static_image_route))
@@ -44,8 +44,7 @@ def display_page(pathname):
     "performance": perf.layout,
     "notes": notes.layout
   }
-  # TODO change default behavior to return 404 error
-  return paths.get(pathname, index.layout)
+  return paths.get(pathname, four_oh_four.layout)
 
 # run app
 if __name__ == "__main__":

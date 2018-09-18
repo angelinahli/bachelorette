@@ -5,7 +5,7 @@ html {
 body {
   margin-bottom: 60px; /* Margin bottom by footer height */
   font-family:
-    'Karla', 
+    'Work Sans',
     BlinkMacSystemFont,
     -apple-system,
     "Segoe UI",
@@ -41,7 +41,7 @@ a:hover {
 }
 
 .caption {
-  color: #c95b83;
+  color: #c95b83; 
 }
 
 .VirtualizedSelectFocusedOption {

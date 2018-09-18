@@ -35,11 +35,11 @@ POC_TITLES = {
 ORDERED_FLAGS = ["white", "poc", "afam", "hisp", "asn_paci", "amin", "mult", "oth"]
 
 LAYOUT_ALL = dict(
-  font=dict(family="Karla"),
+  font=dict(family="Work Sans"),
   hovermode="closest")
 LAYOUT_ANN = dict(
     showarrow=False, 
-    font=dict(color=COLORS.get("secondary"), size=14, family="Karla"))
+    font=dict(color=COLORS.get("secondary"), size=14, family="Work Sans"))
 
 ###### app wide classes ######
 

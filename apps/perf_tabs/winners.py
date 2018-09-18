@@ -22,11 +22,11 @@ content = utils.TabContent(
   panel=utils.Panel([
     html.Div(id=stub + "value", style=dict(display="none")),
     html.H4(
-      "Very few POC candidates win the Bachelor/ette"),
+      "Very few people of color win the Bachelor/ette"),
     dcc.Graph(id=stub + "graph"),
     html.H5([
       """
-      While the average POC candidate on the Bachelorette stays on the show 
+      Although the average POC candidate on the Bachelorette stays on the show 
       for about as long as the average white candidate, when push comes to shove
       the shows' leads almost always choose non-POC winners.
       """,
@@ -67,10 +67,11 @@ def update_graph(shows, years, race):
     text=y,
     textposition="auto")
 
+  show_names = " & ".join(shows)
   start = df.year.min()
   end = df.year.max()
   layout = Layout(
-    title="Winners on the Bachelor/ette<br>{}-{}".format(start, end),
+    title="Winners on the {}<br>{}-{}".format(show_names, start, end),
     xaxis=dict(tickfont=dict(size=14)),
     yaxis=dict(title="# People"),
     margin=dict(b=120 if race == "all" else 50),

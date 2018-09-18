@@ -126,10 +126,12 @@ def get_all_fig(df, end_year, layout_all):
 )
 def update_graph(shows, years, race):
   df = rep.get_filtered_df([False], shows, years)
+  show_names = " & ".join(shows)
   start = df.year.min()
   end = df.year.max()
   layout_all = dict(
-    title="Percentage of Contestants that are POC<br>{}-{}".format(start, end),
+    title="Percentage of {} Contestants that are POC<br>{}-{}".format(
+      show_names, start, end),
     **utils.LAYOUT_ALL)
 
   if race == "poc_flag":

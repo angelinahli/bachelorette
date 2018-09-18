@@ -71,10 +71,10 @@ def clean_data(shows, years, race):
   Output(stub + "graph", "figure"), 
   [
     Input(stub + "value", "children"), 
-    Input(stub + "years", "value"),
+    Input(stub + "shows", "value"),
     Input(stub + "race", "value")
   ])
-def update_graph(cleaned_data, years, race):
+def update_graph(cleaned_data, shows, race):
   data = json.loads(cleaned_data)
   traces = []
 
@@ -101,10 +101,11 @@ def update_graph(cleaned_data, years, race):
 
   start = min(x_vals)
   end = max(x_vals)
+  show_names = " & ".join(shows)
   layout = Layout(
     title="""Difference in Percentage POC of U.S. Population and<br>
-      Percentage POC of Bachelor/ette Contestants<br>
-      {}-{}""".format(start, end),
+      Percentage POC of {} Contestants<br>
+      {}-{}""".format(show_names, start, end),
     yaxis=dict(title="Percentage Point<br>Difference"),
     height=550,
     **utils.LAYOUT_ALL)
